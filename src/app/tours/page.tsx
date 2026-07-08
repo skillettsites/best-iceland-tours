@@ -72,7 +72,7 @@ export default function ToursPage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {tours.map((tour) => (
+          {[...tours].sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount).map((tour) => (
             <TourCard key={tour.slug} tour={tour} />
           ))}
         </div>

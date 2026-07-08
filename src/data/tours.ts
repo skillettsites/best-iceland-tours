@@ -15,7 +15,7 @@ export const tours: Tour[] = [
     rating: 4.8,
     reviewCount: 26338,
     imageAlt: 'Reykjavik: Golden Circle Full-Day Tour with Kerid Crater — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/2a355a5246981467.jpeg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/2a355a5246981467.jpeg/145.jpg',
     categories: ['guided-tours'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -48,7 +48,7 @@ export const tours: Tour[] = [
     rating: 4.8,
     reviewCount: 12056,
     imageAlt: 'Reykjavík: South Coast Waterfalls, Black Sand & Glacier Tour — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/6266dbde3a6ed.jpeg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/6266dbde3a6ed.jpeg/145.jpg',
     categories: ['guided-tours'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -81,7 +81,7 @@ export const tours: Tour[] = [
     rating: 4.9,
     reviewCount: 1873,
     imageAlt: 'Reykjavik: Guided Foodie Walking Tour with 6 Tastings — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/78c3863a13543628de19a2dc5e6c62a8cabe1ba47e3ecada7ea0adbca4206c68.jpg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/78c3863a13543628de19a2dc5e6c62a8cabe1ba47e3ecada7ea0adbca4206c68.jpg/145.jpg',
     categories: ['guided-tours'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -114,7 +114,7 @@ export const tours: Tour[] = [
     rating: 4.9,
     reviewCount: 5774,
     imageAlt: 'Reykjavik: Golden Circle, Kerid Crater, & Blue Lagoon Tour — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/a4f5912d2dc95c8b.jpeg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/a4f5912d2dc95c8b.jpeg/145.jpg',
     categories: ['guided-tours'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -147,7 +147,7 @@ export const tours: Tour[] = [
     rating: 4.7,
     reviewCount: 1325,
     imageAlt: 'Reykjavík: Golden Circle Afternoon Small Group Tour — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/970725f87f8ddad73355ec763b7edd6b679f7fdbf64781d4f62a175859c248fa.jpg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/970725f87f8ddad73355ec763b7edd6b679f7fdbf64781d4f62a175859c248fa.jpg/145.jpg',
     categories: ['guided-tours'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -180,7 +180,7 @@ export const tours: Tour[] = [
     rating: 4.5,
     reviewCount: 10979,
     imageAlt: 'Reykjavík: Whale Watching and Marine Life Cruise — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/97c3e549d7e1d7d93de8356bd5d2d1dd9732045127bef033571357c0601b6826.jpeg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/97c3e549d7e1d7d93de8356bd5d2d1dd9732045127bef033571357c0601b6826.jpeg/145.jpg',
     categories: ['food-drink'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -213,7 +213,7 @@ export const tours: Tour[] = [
     rating: 4.4,
     reviewCount: 492,
     imageAlt: 'Reykjavik: Small Group Golden Circle from Cruise Terminal — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/c19c9de7d4a71b3962abe5901015d1d9d32016e07b509fa99737e50a87128f71.png/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/c19c9de7d4a71b3962abe5901015d1d9d32016e07b509fa99737e50a87128f71.png/145.jpg',
     categories: ['day-trips'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -246,7 +246,7 @@ export const tours: Tour[] = [
     rating: 4.6,
     reviewCount: 431,
     imageAlt: 'Reykjavik: 1-Hour Puffin Watching Tour — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/e0f441e41d4d3061d308a0f01c1788d91cc903cc831fc828c1ff706d5ec5b876.jpg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/e0f441e41d4d3061d308a0f01c1788d91cc903cc831fc828c1ff706d5ec5b876.jpg/145.jpg',
     categories: ['guided-tours'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -279,7 +279,7 @@ export const tours: Tour[] = [
     rating: 4.4,
     reviewCount: 596,
     imageAlt: 'Reykjavik: Whales and Puffins Express Cruise Combo Tour — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/5ab120b8cc17d.jpeg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/5ab120b8cc17d.jpeg/145.jpg',
     categories: ['guided-tours'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -312,7 +312,7 @@ export const tours: Tour[] = [
     rating: 4.6,
     reviewCount: 1257,
     imageAlt: 'Reykjavik: Puffin Watching Boat Tour — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/b90176684c3121fc.jpeg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/b90176684c3121fc.jpeg/145.jpg',
     categories: ['guided-tours'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -345,7 +345,7 @@ export const tours: Tour[] = [
     rating: 4.8,
     reviewCount: 427,
     imageAlt: 'Reykjavik: Golden Circle Day Tour with Local Surprise — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/81d05e0a608069368d6de84704cbdc669e43f34d88d8f7d26439ec86f3d90e51.jpg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/81d05e0a608069368d6de84704cbdc669e43f34d88d8f7d26439ec86f3d90e51.jpg/145.jpg',
     categories: ['guided-tours'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -378,7 +378,7 @@ export const tours: Tour[] = [
     rating: 4.8,
     reviewCount: 2579,
     imageAlt: 'Reykjavik: Red Lava Horse Riding Tour — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/9e044a957f934aa5.jpeg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/9e044a957f934aa5.jpeg/145.jpg',
     categories: ['guided-tours'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -411,7 +411,7 @@ export const tours: Tour[] = [
     rating: 4.8,
     reviewCount: 7182,
     imageAlt: 'Reykjavik: Sky Lagoon Entrance Pass With 7-Step Spa Ritual — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/9049b2e2ca5c8ec5ec155abcd495c402dca7f1a25df018257033555daacca90d.jpg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/9049b2e2ca5c8ec5ec155abcd495c402dca7f1a25df018257033555daacca90d.jpg/145.jpg',
     categories: ['skip-the-line'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -444,7 +444,7 @@ export const tours: Tour[] = [
     rating: 4.6,
     reviewCount: 5923,
     imageAlt: 'Official Blue Lagoon Iceland: Comfort admission — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/505136a2cb7147dbe4d05d74383aea532ae05da392b3c1de5de7bbb6bf8014b5.jpg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/505136a2cb7147dbe4d05d74383aea532ae05da392b3c1de5de7bbb6bf8014b5.jpg/145.jpg',
     categories: ['top-attractions'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -477,7 +477,7 @@ export const tours: Tour[] = [
     rating: 4.7,
     reviewCount: 385,
     imageAlt: 'Reykjavik: Whale and Puffin Watching RIB Boat Tour — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/c44569f752b211ef.jpeg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/c44569f752b211ef.jpeg/145.jpg',
     categories: ['guided-tours'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -510,7 +510,7 @@ export const tours: Tour[] = [
     rating: 4.7,
     reviewCount: 2038,
     imageAlt: 'Reykjavík: Silfra Fissure Snorkeling between Two Continents — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/497dafc0358a93bfb649d482151589e94746807976f596c2916328381b292b11.png/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/497dafc0358a93bfb649d482151589e94746807976f596c2916328381b292b11.png/145.jpg',
     categories: ['top-attractions'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -543,7 +543,7 @@ export const tours: Tour[] = [
     rating: 4.6,
     reviewCount: 768,
     imageAlt: 'Reykjavik: Whale Watching by RIB Speedboat — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/60e875f0eb8e1.jpeg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/60e875f0eb8e1.jpeg/145.jpg',
     categories: ['top-attractions'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -576,7 +576,7 @@ export const tours: Tour[] = [
     rating: 4.5,
     reviewCount: 1075,
     imageAlt: 'Reykjavik: the Original 3-Hour Whale Watching Tour — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/4377c23ea689df1a.jpeg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/4377c23ea689df1a.jpeg/145.jpg',
     categories: ['guided-tours'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -609,7 +609,7 @@ export const tours: Tour[] = [
     rating: 4.8,
     reviewCount: 1625,
     imageAlt: 'Reykjavik: Glacier Hike, Waterfalls and Black Sand Beach — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/f2b2e41e74d3ea0877bb87c2df2ac913d14db9c361ad222d90212c4c6446bb75.jpg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/f2b2e41e74d3ea0877bb87c2df2ac913d14db9c361ad222d90212c4c6446bb75.jpg/145.jpg',
     categories: ['top-attractions'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -642,7 +642,7 @@ export const tours: Tour[] = [
     rating: 4.8,
     reviewCount: 532,
     imageAlt: 'From Reykjavik: New Volcanic Area Helicopter Tour — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/d0957f109b48ba08.jpeg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/d0957f109b48ba08.jpeg/145.jpg',
     categories: ['guided-tours'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -675,7 +675,7 @@ export const tours: Tour[] = [
     rating: 4.7,
     reviewCount: 3906,
     imageAlt: 'Reykjavik: LAVA SHOW - Immersive Experience Entry Ticket — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/22d5cba8add9b3b74bdd45c7a9dff3e5e865598d758da30c3460bfa565c1722c.jpg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/22d5cba8add9b3b74bdd45c7a9dff3e5e865598d758da30c3460bfa565c1722c.jpg/145.jpg',
     categories: ['skip-the-line'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -708,7 +708,7 @@ export const tours: Tour[] = [
     rating: 4.7,
     reviewCount: 489,
     imageAlt: 'Reykjavik: City Walking tour in Small Group with Local Guide — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/3a1c449eede12585ad8b803b31524b44b9fc9e5c89bfd4f368c3a6b84d20cc74.jpeg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/3a1c449eede12585ad8b803b31524b44b9fc9e5c89bfd4f368c3a6b84d20cc74.jpeg/145.jpg',
     categories: ['guided-tours'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -741,7 +741,7 @@ export const tours: Tour[] = [
     rating: 4.7,
     reviewCount: 20719,
     imageAlt: 'Keflavik Airport (KEF): Bus Transfer to/from Reykjavik — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/a9ba649c0ced860f90998f2fdc129585055de13e169437cea7ecc93f1a9e2651.jpg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/a9ba649c0ced860f90998f2fdc129585055de13e169437cea7ecc93f1a9e2651.jpg/145.jpg',
     categories: ['day-trips'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -774,7 +774,7 @@ export const tours: Tour[] = [
     rating: 4.3,
     reviewCount: 14842,
     imageAlt: 'From Reykjavik: Northern Lights Bus Tour with Hot Cocoa — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/3c69064e7c539a14.jpeg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/3c69064e7c539a14.jpeg/145.jpg',
     categories: ['guided-tours'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -807,7 +807,7 @@ export const tours: Tour[] = [
     rating: 4.7,
     reviewCount: 3968,
     imageAlt: 'Reykjavik: Perlan - Wonders of Iceland Experience — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/5cc852b4c68922cb9c76760acc75b26fe4ee08d0ab784729ac4e6fb994aaf868.jpg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/5cc852b4c68922cb9c76760acc75b26fe4ee08d0ab784729ac4e6fb994aaf868.jpg/145.jpg',
     categories: ['top-attractions'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',
@@ -840,7 +840,7 @@ export const tours: Tour[] = [
     rating: 4.7,
     reviewCount: 3876,
     imageAlt: 'Reykjavik: FlyOver Iceland Entry Ticket — Iceland',
-    imageUrl: 'https://cdn.getyourguide.com/img/tour/3b32c8a6c7bdd1235b6e57e67fd694d93518a87aabb0096406fa01c3cc462c6c.jpg/53.jpg',
+    imageUrl: 'https://cdn.getyourguide.com/img/tour/3b32c8a6c7bdd1235b6e57e67fd694d93518a87aabb0096406fa01c3cc462c6c.jpg/145.jpg',
     categories: ['skip-the-line'],
     highlights: [
       'Booked through GetYourGuide with instant confirmation',

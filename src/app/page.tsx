@@ -14,7 +14,7 @@ import CategoryPill from '@/components/ds/CategoryPill';
 import PartnerBadge from '@/components/ds/PartnerBadge';
 import AffiliateDisclosure from '@/components/ui/AffiliateDisclosure';
 
-const byReviews = [...tours].sort((a, b) => b.reviewCount - a.reviewCount);
+const byReviews = [...tours].sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount);
 const mostBookedTours = byReviews.slice(0, 6);
 const featuredTours = byReviews.slice(6, 12);
 
