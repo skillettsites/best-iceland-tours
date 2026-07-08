@@ -102,6 +102,7 @@ export default function Footer() {
             <div>
               <h4 className="text-white text-sm font-semibold mb-3 uppercase tracking-wide">Information</h4>
               <ul className="space-y-2">
+                <li><Link href="/blog" className="text-sm hover:text-white transition-colors inline-flex items-center min-h-[32px]">Blog</Link></li>
                 <li><Link href="/about" className="text-sm hover:text-white transition-colors inline-flex items-center min-h-[32px]">About Us</Link></li>
                 <li><Link href="/privacy" className="text-sm hover:text-white transition-colors inline-flex items-center min-h-[32px]">Privacy Policy</Link></li>
                 <li><Link href="/affiliate-disclosure" className="text-sm hover:text-white transition-colors inline-flex items-center min-h-[32px]">Affiliate Disclosure</Link></li>

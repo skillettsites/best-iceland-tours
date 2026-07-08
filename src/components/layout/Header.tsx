@@ -132,6 +132,9 @@ export default function Header() {
                   </div>
                 )}
               </div>
+              <Link href="/blog" className={`px-3 py-2 rounded-md ${navLinkClass('/blog')}`}>
+                Blog
+              </Link>
               <Link href="/about" className={`px-3 py-2 rounded-md ${navLinkClass('/about')}`}>
                 About
               </Link>

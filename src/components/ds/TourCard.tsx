@@ -57,7 +57,7 @@ export default function TourCard({
   if (variant === 'wide') {
     return (
       <article className="group relative bg-surface rounded-card border border-border overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-300 grid sm:grid-cols-[280px_1fr] gap-0">
-        <Link href={`/tours/${tour.slug}`} className="block relative aspect-[16/9] sm:aspect-auto sm:h-full overflow-hidden ds-card-shimmer">
+        <TrackedGYGLink href={tour.affiliateUrl} tourName={tour.shortTitle} section="tour-card-image" variant={trackingVariant} destination={tour.destination} className="block relative aspect-[16/9] sm:aspect-auto sm:h-full overflow-hidden ds-card-shimmer">
           <Image
             src={tour.imageUrl}
             alt={tour.imageAlt}
@@ -69,7 +69,7 @@ export default function TourCard({
           <div className="absolute top-3 right-3 z-10 inline-flex items-center gap-1 rounded-full bg-success px-2.5 py-1 text-[11px] font-semibold text-white">
             Free cancellation
           </div>
-        </Link>
+        </TrackedGYGLink>
         <div className="flex flex-col p-5 sm:p-6">
           <Link href={`/tours/${tour.slug}`} className="block">
             <h3 className="text-lg sm:text-xl font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">
@@ -114,7 +114,7 @@ export default function TourCard({
       {...cardMotion}
       className="group relative bg-surface rounded-card border border-border overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-300 flex flex-col"
     >
-      <Link href={`/tours/${tour.slug}`} className="block">
+      <TrackedGYGLink href={tour.affiliateUrl} tourName={tour.shortTitle} section="tour-card-image" variant={trackingVariant} destination={tour.destination} className="block">
         <div className="relative aspect-[4/3] overflow-hidden ds-card-shimmer">
           <Image
             src={tour.imageUrl}
@@ -134,7 +134,7 @@ export default function TourCard({
             {tour.duration}
           </div>
         </div>
-      </Link>
+      </TrackedGYGLink>
       <div className="p-5 flex flex-col flex-1">
         <Link href={`/tours/${tour.slug}`} className="block">
           <h3 className="text-base font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2">

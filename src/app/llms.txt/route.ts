@@ -1,4 +1,4 @@
-import { SITE_URL, SITE_NAME, SITE_CITY, SITE_DESCRIPTION } from '@/lib/constants';
+import { SITE_URL, SITE_NAME, SITE_CITY, SITE_DESCRIPTION, CONTENT_DATE } from '@/lib/constants';
 import { tours } from '@/data/tours';
 import { guides } from '@/data/guides';
 import { categories } from '@/data/categories';
@@ -44,6 +44,7 @@ export function GET(): Response {
     `In-depth ${SITE_CITY} guides written to help travellers choose and book the right experience.`,
     '',
     ...guides.map((g) => `- [${g.title}](${SITE_URL}/guides/${g.slug}): ${g.excerpt}`),
+    `- [The 10 Best ${SITE_CITY} Tours for ${new Date(CONTENT_DATE).getFullYear()}](${SITE_URL}/blog/top-10-tours): the top 10 ${SITE_CITY} tours ranked #1 to #10 by real rating and verified reviews, each with a direct GetYourGuide booking link.`,
     '',
 
     '## Trust & Booking',

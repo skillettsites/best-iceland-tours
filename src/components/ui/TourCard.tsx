@@ -26,8 +26,8 @@ export default function TourCard({ tour }: { tour: Tour }) {
 
   return (
     <article className="group relative bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl active:shadow-lg transition-all duration-300 hover:-translate-y-1 active:translate-y-0">
-      {/* Entire card links to tour detail page */}
-      <Link href={`/tours/${tour.slug}`} className="block">
+      {/* Image links straight to GetYourGuide to maximise booking click-through */}
+      <TrackedGYGLink href={tour.affiliateUrl} tourName={tour.shortTitle} section="tour-card-image" className="block">
         {/* Tour image - shorter aspect ratio for mobile */}
         <div className="aspect-[16/9] relative overflow-hidden">
           <Image
@@ -65,7 +65,10 @@ export default function TourCard({ tour }: { tour: Tour }) {
             <span className="text-white text-sm font-medium">{tour.duration}</span>
           </div>
         </div>
+      </TrackedGYGLink>
 
+      {/* Content links to the internal tour detail page (kept for SEO and navigation) */}
+      <Link href={`/tours/${tour.slug}`} className="block">
         {/* Content */}
         <div className="p-4 sm:p-5">
           <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-900 transition-colors line-clamp-2 mb-2">
