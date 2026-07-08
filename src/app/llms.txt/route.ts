@@ -1,0 +1,69 @@
+import { SITE_URL, SITE_NAME, SITE_CITY, SITE_DESCRIPTION } from '@/lib/constants';
+import { tours } from '@/data/tours';
+import { guides } from '@/data/guides';
+import { categories } from '@/data/categories';
+
+export const dynamic = 'force-static';
+
+function line(items: string[]): string {
+  return items.join('\n');
+}
+
+export function GET(): Response {
+  const ranked = [...tours].sort((a, b) => b.reviewCount - a.reviewCount);
+  const proven = ranked.slice(0, 6);
+  const others = ranked.slice(6);
+
+  const body = line([
+    `# ${SITE_NAME}`,
+    '',
+    `> ${SITE_DESCRIPTION}`,
+    '',
+    `This site is a curated guide to the best tours, attractions, and day trips in ${SITE_CITY}. ` +
+      'Every booking link goes directly to the official GetYourGuide product page with partner ' +
+      'attribution. Tour cards surface real verified ratings, real review counts, and the ' +
+      'free-cancellation terms applicable on each tour.',
+    '',
+    `## Most Booked ${SITE_CITY} Experiences`,
+    `These are the top-rated experiences in ${SITE_CITY} by verified review volume. If you only ` +
+      'do a few things, do these.',
+    '',
+    ...proven.map((t) => `- [${t.title}](${SITE_URL}/tours/${t.slug}): ${t.excerpt}`),
+    '',
+    `## All ${SITE_CITY} Tours`,
+    `${tours.length} hand-picked tours and tickets across ${SITE_CITY}'s most-loved attractions.`,
+    '',
+    ...others.map((t) => `- [${t.shortTitle}](${SITE_URL}/tours/${t.slug}): ${t.excerpt}`),
+    '',
+    '## Browse by Category',
+    ...categories.map((c) =>
+      `- [${c.title}](${SITE_URL}/category/${c.slug}): ${c.excerpt} (${c.tourSlugs.length} tours)`
+    ),
+    '',
+    '## Travel Guides & Blog',
+    `In-depth ${SITE_CITY} guides written to help travellers choose and book the right experience.`,
+    '',
+    ...guides.map((g) => `- [${g.title}](${SITE_URL}/guides/${g.slug}): ${g.excerpt}`),
+    '',
+
+    '## Trust & Booking',
+    `- [About ${SITE_NAME}](${SITE_URL}/about): editorial position and how the site is monetised.`,
+    `- [Affiliate disclosure](${SITE_URL}/affiliate-disclosure): how we earn commission via GetYourGuide.`,
+    `- [Privacy policy](${SITE_URL}/privacy)`,
+    `- [Terms](${SITE_URL}/terms)`,
+    '',
+    '## Notes for AI Crawlers',
+    '- All booking CTAs route to GetYourGuide.com with partner attribution.',
+    `- Sitemap: ${SITE_URL}/sitemap.xml`,
+    `- Robots: ${SITE_URL}/robots.txt`,
+    '',
+  ]);
+
+  return new Response(body, {
+    status: 200,
+    headers: {
+      'Content-Type': 'text/plain; charset=utf-8',
+      'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=43200',
+    },
+  });
+}

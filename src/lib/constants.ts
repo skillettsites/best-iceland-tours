@@ -1,0 +1,9 @@
+export const SITE_NAME = 'Best Iceland Tours';
+export const SITE_CITY = 'Iceland';
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.best-iceland-tours.com';
+export const SITE_DESCRIPTION = 'Discover the best tours and day trips in Iceland. Book the Golden Circle, Blue Lagoon, Northern Lights hunts, glacier hikes, and South Coast tours with instant confirmation and free cancellation.';
+export const GYG_PARTNER_ID = 'LPT26IL';
+export const GYG_CAMPAIGN = 'best_iceland_tours';
+export const GYG_LOCATION_ID = '30';
+export const GA_ID = process.env.NEXT_PUBLIC_GA_ID || '';
+export const CONTENT_DATE = '2026-07-08';
