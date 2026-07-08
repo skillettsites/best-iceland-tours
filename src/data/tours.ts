@@ -4,7 +4,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-golden-circle-full-day-tour-with-kerid-crater',
     title: 'Reykjavik: Golden Circle Full-Day Tour with Kerid Crater',
-    shortTitle: 'Reykjavik',
+    shortTitle: 'Golden Circle Full-Day Tour with Kerid Crater',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: Golden Circle Full-Day Tour with Kerid Crater in Iceland. Instant confirmation, free cancellation on most options. Rated 4.8★ by 26,338…',
     description: 'Take a full-day tour of Iceland’s iconic Golden Circle. Experience the stunning natural scenery and see the spectacular Geysir area, Gullfoss waterfall…',
@@ -37,7 +37,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjav-k-south-coast-waterfalls-black-sand-and-glacier-tour',
     title: 'Reykjavík: South Coast Waterfalls, Black Sand & Glacier Tour',
-    shortTitle: 'Reykjavík',
+    shortTitle: 'South Coast Waterfalls, Black Sand & Glacier Tour',
     metaTitle: 'Reykjavík Tickets 2026',
     metaDescription: 'Book Reykjavík: South Coast Waterfalls, Black Sand & Glacier Tour in Iceland. Instant confirmation, free cancellation on most options. Rated 4.8★ by 12,056…',
     description: 'Experience nature at its best with waterfalls and black sand beaches. Walk behind the cascades of Seljalandsfoss & go to the glacier snout at…',
@@ -70,7 +70,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-guided-foodie-walking-tour-with-6-tastings',
     title: 'Reykjavik: Guided Foodie Walking Tour with 6 Tastings',
-    shortTitle: 'Reykjavik',
+    shortTitle: 'Guided Foodie Walking Tour with 6 Tastings',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: Guided Foodie Walking Tour with 6 Tastings in Iceland. Instant confirmation, free cancellation on most options. Rated 4.9★ by 1,873…',
     description: 'Learn about the culture of Reykjavik and Iceland through its tasty food on a guided walking tour. Visit 5 different Icelandic eateries as you explore the…',
@@ -103,7 +103,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-golden-circle-kerid-crater-and-blue-lagoon-tour',
     title: 'Reykjavik: Golden Circle, Kerid Crater, & Blue Lagoon Tour',
-    shortTitle: 'Reykjavik',
+    shortTitle: 'Golden Circle, Kerid Crater, & Blue Lagoon Tour',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: Golden Circle, Kerid Crater, & Blue Lagoon Tour in Iceland. Instant confirmation, free cancellation on most options. Rated 4.9★ by 5,774…',
     description: 'Enjoy the stunning Golden Circle and the Blue Lagoon in one amazing day. Explore Thingvellir National Park, Geysir, and Gullfoss. Relax in the Blue Lagoon…',
@@ -136,7 +136,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjav-k-golden-circle-afternoon-small-group-tour',
     title: 'Reykjavík: Golden Circle Afternoon Small Group Tour',
-    shortTitle: 'Reykjavík',
+    shortTitle: 'Golden Circle Afternoon Small Group Tour',
     metaTitle: 'Reykjavík Tickets 2026',
     metaDescription: 'Book Reykjavík: Golden Circle Afternoon Small Group Tour in Iceland. Instant confirmation, free cancellation on most options. Rated 4.7★ by 1,325…',
     description: 'Enjoy an afternoon tour visiting Iceland\'s most popular attractions on this small-group Golden Circle tour.',
@@ -169,7 +169,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjav-k-whale-watching-and-marine-life-cruise',
     title: 'Reykjavík: Whale Watching and Marine Life Cruise',
-    shortTitle: 'Reykjavík',
+    shortTitle: 'Whale Watching and Marine Life Cruise',
     metaTitle: 'Reykjavík Tickets 2026',
     metaDescription: 'Book Reykjavík: Whale Watching and Marine Life Cruise in Iceland. Instant confirmation, free cancellation on most options. Rated 4.5★ by 10,979 travellers.',
     description: 'Embark on a whale-watching cruise in Faxaflói Bay from Reykjavík. Witness the stunning landscapes and keep an eye out for a variety of local wildlife…',
@@ -202,7 +202,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-small-group-golden-circle-from-cruise-terminal',
     title: 'Reykjavik: Small Group Golden Circle from Cruise Terminal',
-    shortTitle: 'Reykjavik',
+    shortTitle: 'Small Group Golden Circle from Cruise Terminal',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: Small Group Golden Circle from Cruise Terminal in Iceland. Instant confirmation, free cancellation on most options. Rated 4.4★ by 492…',
     description: 'Explore Iceland\'s iconic Golden Circle in a personalized, 6.5-hour small group tour. Witness Thingvellir, Geysir, Gullfoss, and Oxarafoss. Tour starting…',
@@ -235,7 +235,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-1-hour-puffin-watching-tour',
     title: 'Reykjavik: 1-Hour Puffin Watching Tour',
-    shortTitle: 'Reykjavik',
+    shortTitle: '1-Hour Puffin Watching Tour',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: 1-Hour Puffin Watching Tour in Iceland. Instant confirmation, free cancellation on most options. Rated 4.6★ by 431 travellers.',
     description: 'Join a tour from Reykjavik and get up close to charismatic puffins and other seabirds on the small islands where they breed. Enjoy excellent views with…',
@@ -268,7 +268,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-whales-and-puffins-express-cruise-combo-tour',
     title: 'Reykjavik: Whales and Puffins Express Cruise Combo Tour',
-    shortTitle: 'Reykjavik',
+    shortTitle: 'Whales and Puffins Express Cruise Combo Tour',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: Whales and Puffins Express Cruise Combo Tour in Iceland. Instant confirmation, free cancellation on most options. Rated 4.4★ by 596…',
     description: 'Go whale and puffin watching in gloriously beautiful Reykjavík. Feel amazed at how many different types of whales you\'ll see.',
@@ -301,7 +301,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-puffin-watching-boat-tour',
     title: 'Reykjavik: Puffin Watching Boat Tour',
-    shortTitle: 'Reykjavik',
+    shortTitle: 'Puffin Watching Boat Tour',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: Puffin Watching Boat Tour in Iceland. Instant confirmation, free cancellation on most options. Rated 4.6★ by 1,257 travellers.',
     description: 'Take in the natural beauty and wildlife of Iceland on this puffin-watching boat trip. Depart from the Old Harbour in Reykjavik on an hour-long tour and…',
@@ -334,7 +334,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-golden-circle-day-tour-with-local-surprise',
     title: 'Reykjavik: Golden Circle Day Tour with Local Surprise',
-    shortTitle: 'Reykjavik',
+    shortTitle: 'Golden Circle Day Tour with Local Surprise',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: Golden Circle Day Tour with Local Surprise in Iceland. Instant confirmation, free cancellation on most options. Rated 4.8★ by 427…',
     description: 'Explore the Golden Circle on a guided tour from Reykjavik. Visit Þingvellir National Park, the Geysir Geothermal Area, the Gullfoss Waterfall, and the…',
@@ -367,7 +367,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-red-lava-horse-riding-tour',
     title: 'Reykjavik: Red Lava Horse Riding Tour',
-    shortTitle: 'Reykjavik',
+    shortTitle: 'Red Lava Horse Riding Tour',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: Red Lava Horse Riding Tour in Iceland. Instant confirmation, free cancellation on most options. Rated 4.8★ by 2,579 travellers.',
     description: 'Set off on a riding tour through the south of Iceland and admire some incredible volcanic landscapes. Explore the area on horseback with optional hotel…',
@@ -400,7 +400,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-sky-lagoon-entrance-pass-with-7-step-spa-ritual',
     title: 'Reykjavik: Sky Lagoon Entrance Pass With 7-Step Spa Ritual',
-    shortTitle: 'Reykjavik',
+    shortTitle: 'Sky Lagoon Entrance Pass With 7-Step Spa Ritual',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: Sky Lagoon Entrance Pass With 7-Step Spa Ritual in Iceland. Instant confirmation, free cancellation on most options. Rated 4.8★ by 7,182…',
     description: 'Get entry tickets to Sky Lagoon, an oceanside geothermal spa, located only minutes from downtown Reykjavík. Immerse yourself in a spa ritual as the North…',
@@ -466,7 +466,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-whale-and-puffin-watching-rib-boat-tour',
     title: 'Reykjavik: Whale and Puffin Watching RIB Boat Tour',
-    shortTitle: 'Reykjavik',
+    shortTitle: 'Whale and Puffin Watching RIB Boat Tour',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: Whale and Puffin Watching RIB Boat Tour in Iceland. Instant confirmation, free cancellation on most options. Rated 4.7★ by 385 travellers.',
     description: 'See Iceland\'s Whales, Puffins, and the capital of Reykjavik from a unique angle on this adventurous RIB tour. Enjoy personal guidance by a marine…',
@@ -499,7 +499,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjav-k-silfra-fissure-snorkeling-between-two-continents',
     title: 'Reykjavík: Silfra Fissure Snorkeling between Two Continents',
-    shortTitle: 'Reykjavík',
+    shortTitle: 'Silfra Fissure Snorkeling between Two Continents',
     metaTitle: 'Reykjavík Tickets 2026',
     metaDescription: 'Book Reykjavík: Silfra Fissure Snorkeling between Two Continents in Iceland. Instant confirmation, free cancellation on most options. Rated 4.7★ by 2,038…',
     description: 'Snorkel the Silfra Fissure with PADI-certified guides and drift between the tectonic plates in remarkably clear glacial water. Embark on this tour from…',
@@ -532,7 +532,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-whale-watching-by-rib-speedboat',
     title: 'Reykjavik: Whale Watching by RIB Speedboat',
-    shortTitle: 'Reykjavik',
+    shortTitle: 'Whale Watching by RIB Speedboat',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: Whale Watching by RIB Speedboat in Iceland. Instant confirmation, free cancellation on most options. Rated 4.6★ by 768 travellers.',
     description: 'Board an exciting RIB speedboat and see the wealth of marine wildlife just off the shores of Reykjavík, including whales, dolphins, and porpoises.',
@@ -565,7 +565,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-the-original-3-hour-whale-watching-tour',
     title: 'Reykjavik: the Original 3-Hour Whale Watching Tour',
-    shortTitle: 'Reykjavik',
+    shortTitle: 'The Original 3-Hour Whale Watching Tour',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: the Original 3-Hour Whale Watching Tour in Iceland. Instant confirmation, free cancellation on most options. Rated 4.5★ by 1,075 travellers.',
     description: 'Encounter whales, dolphins, porpoises, and birds on a cruise from Reykjavik. Experience the drama and poetry of whales, seen on more than 90% of our…',
@@ -598,7 +598,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-glacier-hike-waterfalls-and-black-sand-beach',
     title: 'Reykjavik: Glacier Hike, Waterfalls and Black Sand Beach',
-    shortTitle: 'Reykjavik',
+    shortTitle: 'Glacier Hike, Waterfalls and Black Sand Beach',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: Glacier Hike, Waterfalls and Black Sand Beach in Iceland. Instant confirmation, free cancellation on most options. Rated 4.8★ by 1,625…',
     description: 'Explore the wonders of Iceland’s south coast on a day trip from Reykjavik. Walk on the stunning Sólheimajökull glacier, marvel at two breathtaking…',
@@ -664,7 +664,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-lava-show-immersive-experience-entry-ticket',
     title: 'Reykjavik: LAVA SHOW - Immersive Experience Entry Ticket',
-    shortTitle: 'Reykjavik',
+    shortTitle: 'LAVA SHOW - Immersive Experience Entry Ticket',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: LAVA SHOW - Immersive Experience Entry Ticket in Iceland. Instant confirmation, free cancellation on most options. Rated 4.7★ by 3,906…',
     description: 'Get close to real lava with an entry ticket to the award-winning Lava Show in Reykjavík. Experience the intense heat that radiates off red-hot molten lava…',
@@ -697,7 +697,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-city-walking-tour-in-small-group-with-local-guide',
     title: 'Reykjavik: City Walking tour in Small Group with Local Guide',
-    shortTitle: 'Reykjavik',
+    shortTitle: 'City Walking tour in Small Group with Local Guide',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: City Walking tour in Small Group with Local Guide in Iceland. Instant confirmation, free cancellation on most options. Rated 4.7★ by 489…',
     description: 'Enjoy a small-group walking tour of Reykjavík with a local. See the Harpa Concert Hall, Parliament, Hallgrímskirkja Church, and more landmarks while…',
@@ -796,7 +796,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-perlan-wonders-of-iceland-experience',
     title: 'Reykjavik: Perlan - Wonders of Iceland Experience',
-    shortTitle: 'Reykjavik',
+    shortTitle: 'Perlan - Wonders of Iceland Experience',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: Perlan - Wonders of Iceland Experience in Iceland. Instant confirmation, free cancellation on most options. Rated 4.7★ by 3,968 travellers.',
     description: 'Perlan is Iceland\'s largest museum and the top attraction in Reykjavík. Explore a real ice cave, feel the power of volcanoes and sit back in the…',
@@ -829,7 +829,7 @@ export const tours: Tour[] = [
   {
     slug: 'reykjavik-flyover-iceland-entry-ticket',
     title: 'Reykjavik: FlyOver Iceland Entry Ticket',
-    shortTitle: 'Reykjavik',
+    shortTitle: 'FlyOver Iceland Entry Ticket',
     metaTitle: 'Reykjavik Tickets 2026',
     metaDescription: 'Book Reykjavik: FlyOver Iceland Entry Ticket in Iceland. Instant confirmation, free cancellation on most options. Rated 4.7★ by 3,876 travellers.',
     description: 'Experience FlyOver in Reykjavik and go on an exhilarating and immersive flying theatre experience over the world’s most spectacular scenery, from…',
