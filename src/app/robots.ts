@@ -30,7 +30,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/'],
       },
-      // Explicit welcome for AI crawlers — see /llms.txt for a curated content index
+      // Explicit welcome for AI crawlers, see /llms.txt for a curated content index
       ...AI_CRAWLERS.map((userAgent) => ({
         userAgent,
         allow: '/',

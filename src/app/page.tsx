@@ -55,7 +55,7 @@ export default function HomePage() {
             Our most popular {SITE_CITY} tours
           </h1>
           <p className="mt-4 text-lg text-on-surface-2 leading-relaxed">
-            The top-rated {SITE_CITY} experiences travellers book most &mdash; skip-the-line tickets, guided tours and day trips, direct through GetYourGuide with instant confirmation and free cancellation on most bookings.
+            {`Top-rated ${SITE_CITY} experiences, booked direct through GetYourGuide. Instant confirmation, free cancellation on most bookings.`}
           </p>
           <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-surface-muted px-4 py-1.5 text-sm font-medium text-on-surface-2 ring-1 ring-border">
             <span className="text-highlight">&#9733;</span>
