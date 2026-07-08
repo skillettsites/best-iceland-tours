@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Clear the fixed bottom booking bars so page content is never hidden behind them (mobile especially). */
+main {
+  padding-bottom: 5rem;
+}
+
 :root {
   --background: #fafafa;
   --foreground: #18181b;
