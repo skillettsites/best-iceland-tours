@@ -57,7 +57,7 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
       } catch {}
       if (!rates) {
         try {
-          const r = await fetch('https://api.frankfurter.app/latest?base=GBP');
+          const r = await fetch('https://api.frankfurter.dev/v1/latest?base=GBP');
           if (r.ok) { rates = (await r.json()).rates; localStorage.setItem('fx', JSON.stringify({ t: Date.now(), r: rates })); }
         } catch {}
       }
