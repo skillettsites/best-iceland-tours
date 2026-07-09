@@ -11,7 +11,10 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  return NextResponse.next();
+  const res = NextResponse.next();
+  const country = request.headers.get('x-vercel-ip-country') || '';
+  if (country) res.cookies.set('country', country, { path: '/', maxAge: 2592000, sameSite: 'lax' });
+  return res;
 }
 
 export const config = {

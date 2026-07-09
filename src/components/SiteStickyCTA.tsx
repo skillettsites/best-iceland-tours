@@ -1,5 +1,6 @@
 'use client';
 
+import LocalPrice from '@/components/LocalPrice';
 import { usePathname } from 'next/navigation';
 import { SITE_CITY, GYG_CITY_URL } from '@/lib/constants';
 import { trustStats } from '@/lib/trust';
@@ -23,7 +24,7 @@ export default function SiteStickyCTA() {
             {trustStats.totalTours}+ top-rated {SITE_CITY} tours
           </p>
           <p className="text-xs text-on-surface-2">
-            From &pound;{trustStats.minPrice} &middot; Free cancellation on most
+            From <LocalPrice gbp={trustStats.minPrice} /> &middot; Free cancellation on most
           </p>
         </div>
         <TrackedGYGLink

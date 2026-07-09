@@ -1,3 +1,4 @@
+import LocalPrice from '@/components/LocalPrice';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -96,7 +97,7 @@ export default async function GuidePage({ params }: { params: Params }) {
                       {relatedTours[0].rating} ({relatedTours[0].reviewCount.toLocaleString()} reviews)
                     </span>
                     <span>{relatedTours[0].duration}</span>
-                    <span className="font-bold text-gray-900">From &pound;{relatedTours[0].price}</span>
+                    <span className="font-bold text-gray-900">From <LocalPrice gbp={relatedTours[0].price} /></span>
                   </div>
                 </div>
                 <div className="flex flex-col items-start sm:items-end gap-1">
@@ -106,7 +107,7 @@ export default async function GuidePage({ params }: { params: Params }) {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-green-500 transition-colors whitespace-nowrap"
                   >
-                    Book now from &pound;{relatedTours[0].price}
+                    Book now from <LocalPrice gbp={relatedTours[0].price} />
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                     </svg>

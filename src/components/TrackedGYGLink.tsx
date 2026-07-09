@@ -1,6 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
+import { useCurrency } from '@/components/CurrencyProvider';
 
 interface TrackedGYGLinkProps {
   href: string;
@@ -34,6 +35,9 @@ export default function TrackedGYGLink({
   children,
   onClick,
 }: TrackedGYGLinkProps) {
+  const { code } = useCurrency();
+  const sep = href.includes('?') ? '&' : '?';
+  const finalHref = code && code !== 'GBP' ? `${href}${sep}currency=${code}` : href;
   const handleClick = (e: React.MouseEvent) => {
     const payload = JSON.stringify({
       type: 'gyg',
@@ -60,7 +64,7 @@ export default function TrackedGYGLink({
 
   return (
     <a
-      href={href}
+      href={finalHref}
       target="_blank"
       rel="noopener noreferrer sponsored"
       onClick={handleClick}

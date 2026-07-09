@@ -1,3 +1,4 @@
+import LocalPrice from '@/components/LocalPrice';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -66,7 +67,7 @@ export default async function AttractionPage({ params }: { params: Params }) {
                 section="attraction-hero-cta"
                 className="inline-flex items-center gap-2 rounded-xl bg-green-600 hover:bg-green-500 text-white font-bold px-6 py-3 shadow-sm transition-colors"
               >
-                Book {a.name} tickets from &pound;{fromPrice}
+                Book {a.name} tickets from <LocalPrice gbp={fromPrice} />
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
               </TrackedGYGLink>
             )}

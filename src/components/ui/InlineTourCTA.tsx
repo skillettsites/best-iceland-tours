@@ -1,5 +1,6 @@
 'use client';
 
+import LocalPrice from '@/components/LocalPrice';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Tour } from '@/lib/types';
@@ -54,7 +55,7 @@ export default function InlineTourCTA({ tours }: { tours: Tour[] }) {
                     {tour.rating} ({formatReviewCount(tour.reviewCount)})
                   </span>
                   <span>{tour.duration}</span>
-                  <span className="font-semibold text-gray-900">From &pound;{tour.price}</span>
+                  <span className="font-semibold text-gray-900">From <LocalPrice gbp={tour.price} /></span>
                 </div>
               </div>
               <TrackedGYGLink

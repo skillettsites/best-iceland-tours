@@ -1,5 +1,6 @@
 'use client';
 
+import LocalPrice from '@/components/LocalPrice';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Tour } from '@/lib/types';
@@ -89,7 +90,7 @@ export default function TourCard({ tour }: { tour: Tour }) {
           {/* Price - large and prominent */}
           <div className="mb-4 bg-gray-50 rounded-lg p-3 text-center sm:text-left">
             <span className="text-sm text-gray-500 block sm:inline">From</span>
-            <span className="text-2xl sm:text-3xl font-extrabold text-gray-900 sm:ml-1">&pound;{tour.price}</span>
+            <span className="text-2xl sm:text-3xl font-extrabold text-gray-900 sm:ml-1"><LocalPrice gbp={tour.price} /></span>
             <span className="text-sm text-gray-500 block sm:inline sm:ml-1">per person</span>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import LocalPrice from '@/components/LocalPrice';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -43,7 +44,7 @@ export default function AttractionsIndex() {
               </div>
               <div className="p-5">
                 <h2 className="text-lg font-bold text-gray-900 group-hover:text-green-700 transition-colors">{a.name}</h2>
-                <p className="mt-1 text-sm text-gray-500">{count} tour{count === 1 ? '' : 's'} and ticket{count === 1 ? '' : 's'} &middot; from &pound;{from}</p>
+                <p className="mt-1 text-sm text-gray-500">{count} tour{count === 1 ? '' : 's'} and ticket{count === 1 ? '' : 's'} &middot; from <LocalPrice gbp={from} /></p>
               </div>
             </Link>
           ))}

@@ -1,5 +1,6 @@
 'use client';
 
+import CurrencySelector from '@/components/CurrencySelector';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
@@ -145,6 +146,7 @@ export default function Header() {
 
             {/* Right side: CTA + hamburger */}
             <div className="flex items-center gap-2 sm:gap-3">
+              <CurrencySelector className="hidden sm:inline-flex" />
               <Link
                 href="/tours"
                 className="inline-flex items-center gap-1.5 bg-amber-400 hover:bg-amber-500 text-[#1e3a5f] font-semibold text-sm px-4 py-2 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md min-h-[44px]"

@@ -1,5 +1,6 @@
 'use client';
 
+import LocalPrice from '@/components/LocalPrice';
 import Link from 'next/link';
 import Image from 'next/image';
 import { m, useReducedMotion } from 'framer-motion';
@@ -86,7 +87,7 @@ export default function TourCard({
           <div className="mt-4 flex items-center justify-between gap-3">
             <div className="text-on-surface">
               <span className="text-xs text-on-surface-2 mr-1">From</span>
-              <span className="font-display text-2xl">{currency}{tour.price}</span>
+              <span className="font-display text-2xl"><LocalPrice gbp={tour.price} /></span>
             </div>
             <TrackedGYGLink
               href={tour.affiliateUrl}
@@ -150,7 +151,7 @@ export default function TourCard({
         <div className="mt-auto pt-4 flex items-end justify-between gap-2">
           <div>
             <span className="block text-[11px] text-on-surface-2 uppercase tracking-wider">From</span>
-            <span className="font-display text-3xl text-on-surface leading-none">{currency}{tour.price}</span>
+            <span className="font-display text-3xl text-on-surface leading-none"><LocalPrice gbp={tour.price} /></span>
           </div>
           <TrackedGYGLink
             href={tour.affiliateUrl}
