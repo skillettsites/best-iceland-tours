@@ -13,6 +13,7 @@ import RevealOnScroll from '@/components/ds/RevealOnScroll';
 import CategoryPill from '@/components/ds/CategoryPill';
 import PartnerBadge from '@/components/ds/PartnerBadge';
 import AffiliateDisclosure from '@/components/ui/AffiliateDisclosure';
+import SisterSites from '@/components/SisterSites';
 
 const byReviews = [...tours].sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount);
 const mostBookedTours = byReviews.slice(0, 6);
@@ -154,6 +155,10 @@ export default function HomePage() {
           <div data-gyg-href="https://widget.getyourguide.com/default/city.frame" data-gyg-location-id={GYG_LOCATION_ID} data-gyg-locale-code="en-US" data-gyg-widget="city" data-gyg-partner-id={GYG_PARTNER_ID} />
         </div>
       </section>
+
+      <SisterSites currentCity={SITE_CITY} />
+
+
 
       {/* Sticky mobile CTA */}
       <div className="fixed bottom-0 inset-x-0 z-50 sm:hidden bg-white/95 backdrop-blur border-t border-border shadow-[0_-4px_20px_rgba(0,0,0,0.1)] p-3">
