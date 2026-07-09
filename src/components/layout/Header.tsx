@@ -135,6 +135,9 @@ export default function Header() {
               <Link href="/blog" className={`px-3 py-2 rounded-md ${navLinkClass('/blog')}`}>
                 Blog
               </Link>
+              <Link href="/attractions" className={`px-3 py-2 rounded-md ${navLinkClass('/attractions')}`}>
+                Attractions
+              </Link>
               <Link href="/about" className={`px-3 py-2 rounded-md ${navLinkClass('/about')}`}>
                 About
               </Link>
@@ -269,6 +272,12 @@ export default function Header() {
               <span className="flex items-center gap-3">
                 <span className="text-lg">&#128218;</span>
                 Travel Guides
+              </span>
+            </Link>
+            <Link href="/attractions" onClick={() => setDrawerOpen(false)} className={mobileLinkClass('/attractions')}>
+              <span className="flex items-center gap-3">
+                <span className="text-lg">&#127963;&#65039;</span>
+                Attractions
               </span>
             </Link>
             <Link href="/about" onClick={() => setDrawerOpen(false)} className={mobileLinkClass('/about')}>

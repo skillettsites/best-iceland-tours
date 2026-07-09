@@ -1,6 +1,7 @@
 import { SITE_URL, SITE_NAME, SITE_CITY, SITE_DESCRIPTION, CONTENT_DATE } from '@/lib/constants';
 import { tours } from '@/data/tours';
 import { guides } from '@/data/guides';
+import { attractions } from '@/data/attractions';
 import { categories } from '@/data/categories';
 
 export const dynamic = 'force-static';
@@ -46,6 +47,12 @@ export function GET(): Response {
       `- [${c.title}](${SITE_URL}/category/${c.slug}): ${c.excerpt} (${c.tourSlugs.length} tours)`
     ),
     '',
+    `## ${SITE_CITY} Attractions`,
+    'High-intent ticket and tour pages for the top attractions, each ranked by reviews.',
+    '',
+    ...attractions.map((a) => `- [${a.name} tickets and tours](${SITE_URL}/attractions/${a.slug})`),
+    '',
+
     '## Travel Guides & Blog',
     `In-depth ${SITE_CITY} guides written to help travellers choose and book the right experience.`,
     '',

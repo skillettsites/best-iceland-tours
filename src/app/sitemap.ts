@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { tours } from '@/data/tours';
 import { categories } from '@/data/categories';
 import { guides } from '@/data/guides';
+import { attractions } from '@/data/attractions';
 import { SITE_URL, CONTENT_DATE } from '@/lib/constants';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -10,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: SITE_URL, lastModified, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${SITE_URL}/tours`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${SITE_URL}/attractions`, lastModified, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${SITE_URL}/blog`, lastModified, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${SITE_URL}/blog/top-10-tours`, lastModified, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${SITE_URL}/about`, lastModified, changeFrequency: 'monthly', priority: 0.3 },
@@ -36,6 +38,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const attractionPages: MetadataRoute.Sitemap = attractions.map((a) => ({
+    url: `${SITE_URL}/attractions/${a.slug}`,
+    lastModified,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
   const guidePages: MetadataRoute.Sitemap = guides.map((guide) => ({
     url: `${SITE_URL}/guides/${guide.slug}`,
     lastModified: new Date(guide.updatedDate),
@@ -43,5 +52,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...tourPages, ...categoryPages, ...guidePages];
+  return [...staticPages, ...tourPages, ...attractionPages, ...categoryPages, ...guidePages];
 }
