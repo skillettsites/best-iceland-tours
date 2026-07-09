@@ -1,8 +1,9 @@
 import LocalPrice from '@/components/LocalPrice';
 import Link from 'next/link';
+import TrackedGYGLink from '@/components/TrackedGYGLink';
 import { tours } from '@/data/tours';
 import { categories } from '@/data/categories';
-import { SITE_CITY, GYG_PARTNER_ID, GYG_LOCATION_ID } from '@/lib/constants';
+import { SITE_CITY, GYG_PARTNER_ID, GYG_LOCATION_ID, GYG_CITY_URL } from '@/lib/constants';
 import { trustStats } from '@/lib/trust';
 
 import SectionHeader from '@/components/ds/SectionHeader';
@@ -74,10 +75,10 @@ export default function HomePage() {
         </div>
 
         <div className="mt-8 sm:mt-10 flex justify-center">
-          <Link href="/tours" className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent hover:bg-accent-ink text-on-accent font-semibold text-base px-7 py-3.5 shadow-lg shadow-accent/25 transition-all active:scale-[0.98] min-h-[52px]">
+          <TrackedGYGLink href={GYG_CITY_URL} tourName={SITE_CITY} section="home-browse-gyg" className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent hover:bg-accent-ink text-on-accent font-semibold text-base px-7 py-3.5 shadow-lg shadow-accent/25 transition-all active:scale-[0.98] min-h-[52px]">
             Browse all {tours.length} {SITE_CITY} tours
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
-          </Link>
+          </TrackedGYGLink>
         </div>
       </section>
 
@@ -163,10 +164,10 @@ export default function HomePage() {
 
       {/* Sticky mobile CTA */}
       <div className="fixed bottom-0 inset-x-0 z-50 sm:hidden bg-white/95 backdrop-blur border-t border-border shadow-[0_-4px_20px_rgba(0,0,0,0.1)] p-3">
-        <Link href="/tours" className="flex items-center justify-center gap-2 w-full rounded-xl bg-accent hover:bg-accent-ink text-on-accent font-semibold text-base py-3.5 shadow-lg shadow-accent/25 transition-all active:scale-[0.98]">
+        <TrackedGYGLink href={GYG_CITY_URL} tourName={SITE_CITY} section="home-browse-gyg" className="flex items-center justify-center gap-2 w-full rounded-xl bg-accent hover:bg-accent-ink text-on-accent font-semibold text-base py-3.5 shadow-lg shadow-accent/25 transition-all active:scale-[0.98]">
           Browse tours: from <LocalPrice gbp={trustStats.minPrice} />
           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
-        </Link>
+        </TrackedGYGLink>
       </div>
       <div className="h-16 sm:hidden" />
     </>
