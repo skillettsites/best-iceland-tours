@@ -50,6 +50,13 @@ export function tourSchema(tour: Tour) {
     url: `${SITE_URL}/tours/${tour.slug}`,
     image: tour.imageUrl || `${SITE_URL}/og-image.png`,
     category: 'Tours & Activities',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: tour.rating,
+      reviewCount: tour.reviewCount,
+      bestRating: 5,
+      worstRating: 1,
+    },
     brand: {
       '@type': 'Organization',
       name: SITE_NAME,
