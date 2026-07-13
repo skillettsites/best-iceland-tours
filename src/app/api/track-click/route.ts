@@ -23,6 +23,10 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { type, city, section, variant, destination, activity_id, url_type, page_path } = body;
 
+    const geo_city = req.headers.get('x-vercel-ip-city') || null;
+    const geo_region = req.headers.get('x-vercel-ip-country-region') || null;
+    const geo_country = req.headers.get('x-vercel-ip-country') || null;
+
     if (!type || !city) {
       return NextResponse.json({ error: 'Missing type or city' }, { status: 400 });
     }
@@ -41,6 +45,9 @@ export async function POST(req: NextRequest) {
         activity_id: activity_id ? String(activity_id) : null,
         url_type: url_type ? String(url_type) : null,
         page_path: page_path ? String(page_path) : (req.headers.get('referer') || null),
+        geo_city,
+        geo_region,
+        geo_country,
       };
 
       // Try full payload first; if extended columns don't exist (PGRST204 -> 400),
