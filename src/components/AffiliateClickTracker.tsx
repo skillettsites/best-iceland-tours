@@ -14,6 +14,7 @@ export default function AffiliateClickTracker() {
         | HTMLAnchorElement
         | null;
       if (!anchor) return;
+      if (anchor.hasAttribute('data-gyg-tracked')) return; // fired by TrackedGYGLink
       const href = anchor.href;
       const idMatch = href.match(/-t(\d+)(?:\/|\?|$)/);
       const urlType = /getyourguide\.com\/s\/\?/.test(href)

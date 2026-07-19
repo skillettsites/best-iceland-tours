@@ -50,6 +50,19 @@ export default function TrackedGYGLink({
       page_path: typeof window !== 'undefined' ? window.location.pathname : undefined,
     });
     try {
+      const w = window as unknown as { gtag?: (...a: unknown[]) => void };
+      if (typeof w.gtag === 'function') {
+        w.gtag('event', 'affiliate_click', {
+          affiliate: 'getyourguide',
+          activity_id: deriveActivityId(href),
+          url_type: deriveUrlType(href),
+          link_text: (tourName || '').slice(0, 80),
+          page_path: typeof window !== 'undefined' ? window.location.pathname : undefined,
+          section,
+        });
+      }
+    } catch {}
+    try {
       navigator.sendBeacon('/api/track-click', payload);
     } catch {
       fetch('/api/track-click', {
@@ -69,6 +82,7 @@ export default function TrackedGYGLink({
       rel="noopener noreferrer sponsored"
       onClick={handleClick}
       className={className}
+      data-gyg-tracked=""
     >
       {children}
     </a>
