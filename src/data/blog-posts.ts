@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
       'Golden Circle or South Coast day tour from Reykjavik? An honest comparison of scenery, driving time, price and season so you book the right Iceland tour first.',
     excerpt:
       'The two most-booked day trips from Reykjavik go in opposite directions. Here is how to choose between the Golden Circle and the South Coast if you only have time for one.',
-    heroImage: 'https://cdn.getyourguide.com/img/tour/2a355a5246981467.jpeg/145.jpg',
+    heroImage: 'https://cdn.getyourguide.com/img/tour/2a355a5246981467.jpeg/99.jpg',
     heroImageAlt: 'Gullfoss waterfall on the Golden Circle route in Iceland',
     content: `<p>If you have one free day in Reykjavik, it almost always comes down to two choices: the <strong>Golden Circle</strong> or the <strong>South Coast</strong>. Both are full-day loops, both leave from the capital, and both sell out in peak season. But they show you completely different sides of Iceland, and picking the wrong one for your trip is the most common regret we hear about.</p>
 
@@ -94,7 +94,7 @@ export const blogPosts: BlogPost[] = [
       'Are Iceland Northern Lights tours worth the money, or can you see the aurora for free? An honest look at odds, season, price and the free re-try guarantee.',
     excerpt:
       'The aurora is never guaranteed, so is paying for a Northern Lights tour worth it? Here is the honest answer, including who should skip it.',
-    heroImage: 'https://cdn.getyourguide.com/img/tour/3c69064e7c539a14.jpeg/145.jpg',
+    heroImage: 'https://cdn.getyourguide.com/img/tour/3c69064e7c539a14.jpeg/99.jpg',
     heroImageAlt: 'Northern Lights over the Icelandic countryside near Reykjavik',
     content: `<p>Seeing the Northern Lights is the reason a lot of people book Iceland in the first place. It is also the single experience most likely to disappoint, because nobody, no guide and no app, can promise the aurora will show up. So is a paid Northern Lights tour actually worth it? The honest answer is: yes, in the right season, for the right person.</p>
 
@@ -161,7 +161,7 @@ export const blogPosts: BlogPost[] = [
       'Blue Lagoon or Sky Lagoon? Compare price, location, the views, the ritual and the crowds so you book the right Iceland geothermal spa for your trip.',
     excerpt:
       'Iceland has two famous geothermal spas and most people only have time for one. Here is the honest difference between the Blue Lagoon and Sky Lagoon.',
-    heroImage: 'https://cdn.getyourguide.com/img/tour/505136a2cb7147dbe4d05d74383aea532ae05da392b3c1de5de7bbb6bf8014b5.jpg/145.jpg',
+    heroImage: 'https://cdn.getyourguide.com/img/tour/505136a2cb7147dbe4d05d74383aea532ae05da392b3c1de5de7bbb6bf8014b5.jpg/99.jpg',
     heroImageAlt: 'Milky blue geothermal water at the Blue Lagoon in Iceland',
     content: `<p>Iceland's two headline geothermal spas sound similar and are anything but. The <strong>Blue Lagoon</strong> is the world-famous milky-blue lagoon near the airport. <strong>Sky Lagoon</strong> is the newer oceanside spa minutes from central Reykjavik. If you only have time and budget for one, here is how to choose without regret.</p>
 
@@ -230,7 +230,7 @@ export const blogPosts: BlogPost[] = [
       'Is the Golden Circle tour worth it, or is it too touristy? An honest verdict on the sights, the crowds, the price and whether a guided tour beats self-driving.',
     excerpt:
       'The Golden Circle is Iceland\'s most-booked day trip, which makes some travellers wary. Here is whether it genuinely earns its reputation.',
-    heroImage: 'https://cdn.getyourguide.com/img/tour/2a355a5246981467.jpeg/145.jpg',
+    heroImage: 'https://cdn.getyourguide.com/img/tour/2a355a5246981467.jpeg/99.jpg',
     heroImageAlt: 'Strokkur geyser erupting in the Geysir area on the Golden Circle',
     content: `<p>The Golden Circle is the first thing almost every guidebook recommends, and that popularity makes some travellers suspicious. Is it a genuine highlight, or a tourist conveyor belt? Having weighed the sights against the crowds and the price, here is the honest verdict.</p>
 
@@ -305,7 +305,7 @@ export const blogPosts: BlogPost[] = [
       'The best Iceland day tours from Reykjavik, ranked by what they deliver: Golden Circle, South Coast, glacier hikes, whale watching and the aurora, with real prices.',
     excerpt:
       'Reykjavik is the launchpad for almost every Iceland adventure. These are the day tours actually worth your one or two free days, with honest picks by traveller type.',
-    heroImage: 'https://cdn.getyourguide.com/img/tour/f2b2e41e74d3ea0877bb87c2df2ac913d14db9c361ad222d90212c4c6446bb75.jpg/145.jpg',
+    heroImage: 'https://cdn.getyourguide.com/img/tour/f2b2e41e74d3ea0877bb87c2df2ac913d14db9c361ad222d90212c4c6446bb75.jpg/99.jpg',
     heroImageAlt: 'Hikers on a glacier during a South Coast day tour from Reykjavik',
     content: `<p>Almost everything worth seeing in southern Iceland can be done as a day trip from Reykjavik, which is why so many visitors base themselves there and never change hotels. The catch is choosing well when you only have one, two or three free days. Here are the day tours that genuinely earn their place, grouped by what kind of traveller you are.</p>
 
@@ -383,7 +383,7 @@ export const blogPosts: BlogPost[] = [
       'Should you chase the Iceland aurora on a guided tour or self-drive? An honest comparison of odds, cost, safety and the free re-try, so you pick the right way.',
     excerpt:
       'Chasing the aurora yourself sounds romantic, but a guided tour has one big advantage. Here is how self-driving really compares for Northern Lights in Iceland.',
-    heroImage: 'https://cdn.getyourguide.com/img/tour/3c69064e7c539a14.jpeg/145.jpg',
+    heroImage: 'https://cdn.getyourguide.com/img/tour/3c69064e7c539a14.jpeg/99.jpg',
     heroImageAlt: 'Aurora borealis glowing green over a dark Icelandic landscape',
     content: `<p>Once you have decided to chase the Northern Lights in Iceland, the next question is how: join a guided tour, or rent a car and hunt them yourself. Both work. But they suit very different travellers, and one has a safety net the other cannot match.</p>
 
@@ -454,7 +454,7 @@ export const blogPosts: BlogPost[] = [
       'Glacier hike or ice cave experience in Iceland? Compare season, effort, price and what you actually see, so you book the right cold-weather adventure.',
     excerpt:
       'Walking on a glacier and stepping inside an ice cave are two very different Iceland experiences, and one of them depends heavily on the season. Here is how to choose.',
-    heroImage: 'https://cdn.getyourguide.com/img/tour/f2b2e41e74d3ea0877bb87c2df2ac913d14db9c361ad222d90212c4c6446bb75.jpg/145.jpg',
+    heroImage: 'https://cdn.getyourguide.com/img/tour/f2b2e41e74d3ea0877bb87c2df2ac913d14db9c361ad222d90212c4c6446bb75.jpg/99.jpg',
     heroImageAlt: 'Guided group hiking on Solheimajokull glacier in Iceland',
     content: `<p>Two of Iceland's most tempting "ice" experiences sound interchangeable but are not: a <strong>glacier hike</strong> outdoors on a real glacier, and an <strong>ice cave experience</strong>. The right choice depends on how active you want to be, what season you are visiting in, and how much you want to leave to the weather.</p>
 
@@ -523,7 +523,7 @@ export const blogPosts: BlogPost[] = [
       'Guided day tours or a rental car in Iceland? An honest cost and hassle comparison for getting around, including the best-value way to see the sights.',
     excerpt:
       'The cheapest and least stressful way to get around Iceland depends on the season and your confidence behind the wheel. Here is the honest comparison.',
-    heroImage: 'https://cdn.getyourguide.com/img/tour/a9ba649c0ced860f90998f2fdc129585055de13e169437cea7ecc93f1a9e2651.jpg/145.jpg',
+    heroImage: 'https://cdn.getyourguide.com/img/tour/a9ba649c0ced860f90998f2fdc129585055de13e169437cea7ecc93f1a9e2651.jpg/99.jpg',
     heroImageAlt: 'Airport transfer coach on the road between Keflavik and Reykjavik',
     content: `<p>One of the first decisions on any Iceland trip is how you will actually get around: rent a car and drive yourself, or book guided day tours from Reykjavik. There is no universally "best priced" answer, it genuinely depends on your group size, the season, and how much you want to drive. Here is the honest math.</p>
 

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { tours, getTourBySlug, getRelatedTours } from '@/data/tours';
 import { categories } from '@/data/categories';
 import { guides } from '@/data/guides';
+import { blogPosts } from '@/data/blog-posts';
 import { tourSchema, touristTripSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 import { SITE_URL } from '@/lib/constants';
 import { TOP_CONVERTER_BY_DESTINATION } from '@/lib/trust';
@@ -33,6 +34,36 @@ const categoryGuideMap: Record<string, string[]> = {
 };
 
 const REDIRECTED = new Set<string>([]);
+
+// Decision-content blog posts surfaced on tour pages. Keyword-match the tour to
+// the most relevant guides, then top up to three with a proven default set.
+const DECISION_GUIDE_DEFAULTS = [
+  'golden-circle-vs-south-coast-which-tour',
+  'is-a-northern-lights-tour-worth-it',
+  'best-iceland-day-tours-from-reykjavik',
+];
+const DECISION_GUIDE_KEYWORDS: Array<{ match: RegExp; slugs: string[] }> = [
+  { match: /golden.?circle/i, slugs: ['is-the-golden-circle-tour-worth-it', 'golden-circle-vs-south-coast-which-tour'] },
+  { match: /south.?coast/i, slugs: ['golden-circle-vs-south-coast-which-tour', 'best-iceland-day-tours-from-reykjavik'] },
+  { match: /northern.?light|aurora/i, slugs: ['is-a-northern-lights-tour-worth-it', 'northern-lights-tour-vs-self-drive'] },
+  { match: /lagoon|spa/i, slugs: ['blue-lagoon-vs-sky-lagoon-which-to-book'] },
+  { match: /glacier|ice.?cave|perlan/i, slugs: ['glacier-hike-vs-ice-cave-tour', 'best-iceland-day-tours-from-reykjavik'] },
+  { match: /transfer|airport|self.?drive|rental/i, slugs: ['how-to-get-around-iceland-tours-vs-rental-car', 'northern-lights-tour-vs-self-drive'] },
+];
+
+function pickDecisionGuides(haystack: string) {
+  const ordered: string[] = [];
+  DECISION_GUIDE_KEYWORDS.forEach(({ match, slugs }) => {
+    if (match.test(haystack)) slugs.forEach((s) => ordered.push(s));
+  });
+  DECISION_GUIDE_DEFAULTS.forEach((s) => ordered.push(s));
+  const seen = new Set<string>();
+  return ordered
+    .filter((s) => (seen.has(s) ? false : seen.add(s)))
+    .map((s) => blogPosts.find((p) => p.slug === s))
+    .filter((p): p is NonNullable<typeof p> => p !== undefined)
+    .slice(0, 3);
+}
 
 export function generateStaticParams() {
   return tours.filter((t) => !REDIRECTED.has(t.slug)).map((tour) => ({ slug: tour.slug }));
@@ -323,6 +354,28 @@ export default async function TourPage({ params }: { params: Params }) {
                     <Link href={`/guides/${guide.slug}`} className="block group">
                       <span className="text-primary font-medium group-hover:underline">{guide.title}</span>
                       <p className="text-sm text-on-surface-2 mt-0.5">{guide.excerpt}</p>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          );
+        })()}
+
+        {/* Related decision guides */}
+        {(() => {
+          const decisionGuides = pickDecisionGuides(`${tour.slug} ${tour.title} ${tour.categories.join(' ')}`);
+          if (decisionGuides.length === 0) return null;
+          return (
+            <section className="mt-16 rounded-card-lg border border-border bg-surface p-6 sm:p-8">
+              <h2 className="text-xl font-semibold text-on-surface mb-1">Related guides</h2>
+              <p className="text-sm text-on-surface-2 mb-4">Honest verdicts to help you choose before you book.</p>
+              <ul className="space-y-3">
+                {decisionGuides.map((post) => (
+                  <li key={post.slug}>
+                    <Link href={`/blog/${post.slug}`} className="block group">
+                      <span className="text-primary font-medium group-hover:underline">{post.title}</span>
+                      <p className="text-sm text-on-surface-2 mt-0.5">{post.excerpt}</p>
                     </Link>
                   </li>
                 ))}

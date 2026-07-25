@@ -3,6 +3,7 @@ import Link from 'next/link';
 import TrackedGYGLink from '@/components/TrackedGYGLink';
 import { tours } from '@/data/tours';
 import { categories } from '@/data/categories';
+import { blogPosts } from '@/data/blog-posts';
 import { SITE_CITY, GYG_PARTNER_ID, GYG_LOCATION_ID, GYG_CITY_URL } from '@/lib/constants';
 import { trustStats } from '@/lib/trust';
 
@@ -20,6 +21,20 @@ import SisterSites from '@/components/SisterSites';
 const byReviews = [...tours].sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount);
 const mostBookedTours = byReviews.slice(0, 6);
 const featuredTours = byReviews.slice(6, 12);
+
+// Decision-content guides surfaced from the homepage to spread link equity and
+// help visitors choose the right tour before they book.
+const guideSlugOrder = [
+  'golden-circle-vs-south-coast-which-tour',
+  'is-a-northern-lights-tour-worth-it',
+  'best-iceland-day-tours-from-reykjavik',
+  'blue-lagoon-vs-sky-lagoon-which-to-book',
+  'is-the-golden-circle-tour-worth-it',
+  'how-to-get-around-iceland-tours-vs-rental-car',
+];
+const decisionGuides = guideSlugOrder
+  .map((slug) => blogPosts.find((p) => p.slug === slug))
+  .filter((p): p is NonNullable<typeof p> => p !== undefined);
 
 const testimonials = [
   { quote: `Booking ahead through the site was effortless. We skipped the long queue and walked straight in. Easily the highlight of our trip to ${SITE_CITY}.`, author: 'Sarah M.', location: 'United States', rating: 5 },
@@ -157,6 +172,37 @@ export default function HomePage() {
           <div data-gyg-href="https://widget.getyourguide.com/default/city.frame" data-gyg-location-id={GYG_LOCATION_ID} data-gyg-locale-code="en-US" data-gyg-widget="city" data-gyg-partner-id={GYG_PARTNER_ID} />
         </div>
       </section>
+
+      {/* Decision guides: help visitors pick the right tour before booking */}
+      {decisionGuides.length > 0 && (
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+          <SectionHeader
+            eyebrow="Plan your trip"
+            title="Is it worth it? Iceland trip-planning guides"
+            subtitle="Honest, no-nonsense verdicts to help you choose the right tour before you book."
+            action={{ label: 'View all guides', href: '/blog' }}
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+            {decisionGuides.map((post, i) => (
+              <RevealOnScroll key={post.slug} delay={(i % 3) * 0.08}>
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="group flex h-full flex-col rounded-card-lg border border-border bg-surface p-6 shadow-card transition-all hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <h3 className="text-lg font-semibold text-on-surface group-hover:text-primary transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="mt-2 flex-1 text-sm text-on-surface-2 leading-relaxed">{post.excerpt}</p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">
+                    Read the guide
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                  </span>
+                </Link>
+              </RevealOnScroll>
+            ))}
+          </div>
+        </section>
+      )}
 
       <SisterSites currentCity={SITE_CITY} />
 
