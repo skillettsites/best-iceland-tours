@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { tours } from '@/data/tours';
+import { blogPosts } from '@/data/blog-posts';
 import { SITE_URL, SITE_CITY, CONTENT_DATE } from '@/lib/constants';
 import { breadcrumbSchema } from '@/lib/schema';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
@@ -24,6 +25,13 @@ const posts = [
     image: [...tours].sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount)[0]?.imageUrl,
     tag: 'Rankings',
   },
+  ...blogPosts.map((p) => ({
+    href: `/blog/${p.slug}`,
+    title: p.title,
+    excerpt: p.excerpt,
+    image: p.heroImage,
+    tag: 'Decision Guide',
+  })),
 ];
 
 export default function BlogIndex() {

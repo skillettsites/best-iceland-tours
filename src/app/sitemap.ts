@@ -3,6 +3,7 @@ import { tours } from '@/data/tours';
 import { categories } from '@/data/categories';
 import { guides } from '@/data/guides';
 import { attractions } from '@/data/attractions';
+import { blogPosts } from '@/data/blog-posts';
 import { SITE_URL, CONTENT_DATE } from '@/lib/constants';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -52,5 +53,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...tourPages, ...attractionPages, ...categoryPages, ...guidePages];
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${SITE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedDate),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...tourPages, ...attractionPages, ...categoryPages, ...guidePages, ...blogPages];
 }
