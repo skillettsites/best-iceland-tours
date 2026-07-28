@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { attractions, getAttractionBySlug } from '@/data/attractions';
 import { getTourBySlug } from '@/data/tours';
+import { getBlogPostBySlug } from '@/data/blog-posts';
 import { itemListSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 import { SITE_URL, SITE_CITY } from '@/lib/constants';
 import TourCard from '@/components/ui/TourCard';
@@ -38,6 +39,9 @@ export default async function AttractionPage({ params }: { params: Params }) {
   const tours = a.tourSlugs.map((s) => getTourBySlug(s)).filter((t): t is NonNullable<typeof t> => Boolean(t));
   const top = tours[0];
   const fromPrice = Math.min(...tours.map((t) => t.price).filter(Boolean));
+  const relatedPosts = (a.relatedBlogSlugs ?? [])
+    .map((s) => getBlogPostBySlug(s))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   return (
     <>
@@ -58,6 +62,11 @@ export default async function AttractionPage({ params }: { params: Params }) {
 
         <div className="mt-4 max-w-3xl">
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">{a.title}</h1>
+          {a.capsule && (
+            <p className="mt-4 rounded-xl border-l-4 border-green-600 bg-green-50 px-4 py-3 text-base text-gray-800 leading-relaxed">
+              {a.capsule}
+            </p>
+          )}
           <p className="mt-3 text-lg text-gray-600">{a.intro}</p>
           <div className="mt-4 flex flex-wrap items-center gap-3">
             {top && (
@@ -84,10 +93,36 @@ export default async function AttractionPage({ params }: { params: Params }) {
           ))}
         </div>
 
+        {a.sections && a.sections.length > 0 && (
+          <div className="guide-content mt-14 max-w-3xl">
+            {a.sections.map((section, i) => (
+              <section key={i} id={section.heading.toLowerCase().replace(/[^a-z0-9]+/g, '-')}>
+                <h2>{section.heading}</h2>
+                <div dangerouslySetInnerHTML={{ __html: section.content }} />
+              </section>
+            ))}
+          </div>
+        )}
+
         <section className="mt-14">
           <h2 className="text-2xl font-bold text-gray-900 mb-5">{a.name} tickets: FAQ</h2>
           <FAQ faqs={a.faqs} />
         </section>
+
+        {relatedPosts.length > 0 && (
+          <section className="mt-14 rounded-xl bg-gray-50 border border-gray-200 p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-1">Before you book: {a.name} guides</h2>
+            <p className="text-sm text-gray-500 mb-4">Honest verdicts from our {SITE_CITY} trip-planning guides.</p>
+            <ul className="space-y-3">
+              {relatedPosts.map((p) => (
+                <li key={p.slug}>
+                  <Link href={`/blog/${p.slug}`} className="text-green-700 font-medium hover:underline">{p.title}</Link>
+                  <p className="text-sm text-gray-500 mt-0.5">{p.excerpt}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         <div className="mt-12 rounded-xl bg-gradient-to-r from-green-700 to-emerald-800 p-5 sm:p-6 text-center text-white">
           <p className="font-bold text-lg mb-1">Ready to book {a.name}?</p>

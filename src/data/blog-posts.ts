@@ -173,9 +173,13 @@ export const blogPosts: BlogPost[] = [
 
 <p>The honest downside: it is the most popular attraction in the country, it must be pre-booked for a timed slot, and it can feel busy. It is also the pricier of the two.</p>
 
+<p>Full prices, what Comfort admission includes and the advance-booking rules are on our <a href="/attractions/blue-lagoon">Blue Lagoon tickets</a> page.</p>
+
 <h2>Sky Lagoon: the view</h2>
 
-<p>Sky Lagoon's signature is a 70-metre infinity edge that appears to spill straight into the North Atlantic. Its seven-step spa ritual (warm lagoon, cold plunge, sauna, cold mist, salt scrub, steam and back to the lagoon) is more of a guided sequence than the Blue Lagoon's free-roam soak. Entry <strong>starts from £86</strong>, and it is only a few minutes from downtown Reykjavik, so you do not need a car or a transfer to reach it.</p>
+<p>Sky Lagoon's signature is an infinity edge that appears to spill straight into the North Atlantic. Its seven-step Skjol ritual (warm lagoon, cold plunge, sauna, cold mist, body scrub, steam room, then a taste of Icelandic crowberry juice) is more of a guided sequence than the Blue Lagoon's free-roam soak. Entry <strong>starts from £86</strong>, and it is only a few minutes from downtown Reykjavik, so you do not need a car or a transfer to reach it.</p>
+
+<p>The ritual step by step, plus the difference between the SAMAN and SER passes, is on our <a href="/attractions/sky-lagoon">Sky Lagoon tickets</a> page.</p>
 
 <p>${link('400599', 'See Sky Lagoon entry with the 7-step spa ritual')}</p>
 
@@ -243,6 +247,8 @@ export const blogPosts: BlogPost[] = [
 <li><strong>The Geysir geothermal area</strong>, where Strokkur reliably blasts a column of boiling water skyward every few minutes.</li>
 <li><strong>Gullfoss</strong>, a powerful two-tiered waterfall that thunders into a canyon.</li>
 </ul>
+
+<p>We rank every departure, from the £67 full-day coach to the £191 combined lagoon day, on our <a href="/attractions/golden-circle">Golden Circle tickets and tours</a> page.</p>
 
 <p>Most tours add Kerid, a volcanic crater with a vivid blue-green lake and rust-red walls. None of these are manufactured attractions; they are real, dramatic natural features. On that basis alone the Golden Circle earns its place.</p>
 
@@ -329,7 +335,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Best for families: whale watching</h2>
 
-<p>Leaving straight from Reykjavik's old harbour, a whale-watching cruise across Faxafloi Bay is short, awe-inspiring and easy with children. Sightings are common but not guaranteed. It <strong>starts from £76</strong>.</p>
+<p>Leaving straight from Reykjavik's old harbour, a whale-watching cruise across Faxafloi Bay is short, awe-inspiring and easy with children. Sightings are common but not guaranteed. It <strong>starts from £76</strong>. All five options, the best months and what happens if you see nothing are on our <a href="/attractions/whale-watching">whale watching tours in Iceland</a> page.</p>
 
 <p>${link('248622', 'See the whale watching and marine life cruise')}</p>
 
@@ -343,7 +349,9 @@ export const blogPosts: BlogPost[] = [
 
 <p>With <strong>one day</strong>, choose the Golden Circle. With <strong>two days</strong>, add the South Coast or a glacier hike. With <strong>three days</strong>, mix a big landscape day, a wildlife or spa day, and (in winter) an evening aurora hunt. Because daylight swings enormously by season, book longer tours like the South Coast and glacier hikes for summer trips, and lean on the shorter Golden Circle and city-based experiences in deep winter.</p>
 
-<p>One honest reality across all of them: Icelandic weather changes fast and some tours cancel for safety. Book options with free cancellation, keep a spare day where you can, and treat any wildlife or aurora sighting as a bonus rather than a promise.</p>`,
+<p>One honest reality across all of them: Icelandic weather changes fast and some tours cancel for safety. Book options with free cancellation, keep a spare day where you can, and treat any wildlife or aurora sighting as a bonus rather than a promise.</p>
+
+<p>Browse every option in one place on our <a href="/category/day-trips">Iceland day trips and excursions</a> page, or check <a href="/guides/iceland-tours-on-a-budget">what Iceland tours cost in 2026</a> before you commit to a budget.</p>`,
     relatedTourSlugs: [
       'reykjavik-golden-circle-full-day-tour-with-kerid-crater',
       'reykjav-k-south-coast-waterfalls-black-sand-and-glacier-tour',

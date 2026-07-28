@@ -79,6 +79,16 @@ export default function HomePage() {
             <span className="text-highlight">&#9733;</span>
             <span>{trustStats.avgRating.toFixed(1)} average across {(trustStats.totalReviews / 1000).toFixed(0)}k+ verified reviews</span>
           </div>
+
+          <p className="mt-5 text-base text-on-surface-2 leading-relaxed">
+            New here? Start with our ranked list of the{' '}
+            <Link href="/blog/top-10-tours" className="font-semibold text-primary hover:underline">best Iceland tours</Link>, or go
+            straight to{' '}
+            <Link href="/attractions/whale-watching" className="font-semibold text-primary hover:underline">whale watching tours in Iceland</Link>,{' '}
+            <Link href="/attractions/golden-circle" className="font-semibold text-primary hover:underline">Golden Circle tickets</Link>,{' '}
+            <Link href="/attractions/blue-lagoon" className="font-semibold text-primary hover:underline">Blue Lagoon tickets</Link> and{' '}
+            <Link href="/guides/iceland-tours-on-a-budget" className="font-semibold text-primary hover:underline">cheap Iceland tours on a budget</Link>.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">

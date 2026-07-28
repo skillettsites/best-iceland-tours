@@ -94,6 +94,14 @@ export default function Top10Page() {
             confirmation and free cancellation on most options. Tap any image or the Book Now button to check live prices
             and availability.
           </p>
+          <p className="mt-4 text-base text-gray-700 leading-relaxed">
+            Looking for one thing in particular? Jump to{' '}
+            <Link href="/attractions/whale-watching" className="font-semibold text-green-700 hover:underline">whale watching tours in Iceland</Link>,{' '}
+            <Link href="/attractions/golden-circle" className="font-semibold text-green-700 hover:underline">Golden Circle tickets</Link>,{' '}
+            <Link href="/attractions/blue-lagoon" className="font-semibold text-green-700 hover:underline">Blue Lagoon tickets</Link>,{' '}
+            <Link href="/attractions/sky-lagoon" className="font-semibold text-green-700 hover:underline">Sky Lagoon tickets</Link>, or see{' '}
+            <Link href="/guides/iceland-tours-on-a-budget" className="font-semibold text-green-700 hover:underline">what Iceland tours cost in 2026</Link>.
+          </p>
           <p className="mt-3 text-sm text-gray-500">
             Updated {new Date(CONTENT_DATE).toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })} &middot;{' '}
             {top10.length} tours ranked #1 to #{top10.length}

@@ -41,6 +41,13 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // De-cannibalisation: the "best Iceland tours" guide was a near-duplicate of the
+      // top-10 blog post, which ranks better and carries far more impressions.
+      {
+        source: '/guides/best-iceland-tours-2026',
+        destination: '/blog/top-10-tours',
+        permanent: true,
+      },
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'bestlondontours.co.uk' }],

@@ -2,26 +2,6 @@ import { Guide } from '@/lib/types';
 
 export const guides: Guide[] = [
   {
-    slug: 'best-iceland-tours-2026',
-    title: 'Best Iceland Tours in 2026: Top-Rated Picks',
-    metaTitle: 'Best Iceland Tours 2026: Top-Rated and Most Booked',
-    metaDescription: 'The best Iceland tours in 2026, ranked by verified reviews. Skip-the-line tickets and day trips from £28, with instant confirmation and free cancellation.',
-    excerpt: 'The highest-rated, most-booked Iceland tours and tickets in 2026, ranked.',
-    sections: [
-      { heading: 'The top-rated Iceland tours right now', content: '<p>Ranked by verified traveller reviews, these are the most-booked experiences in Iceland in 2026. Each links straight to GetYourGuide, so prices and availability are always live.</p><ul><li><strong>Golden Circle, Kerid Crater, & Blue Lagoon Tour</strong>: 4.9&#9733; from 5,774 reviews, from £191.</li><li><strong>Guided Foodie Walking Tour with 6 Tastings</strong>: 4.9&#9733; from 1,873 reviews, from £112.</li><li><strong>Golden Circle Full-Day Tour with Kerid Crater</strong>: 4.8&#9733; from 26,338 reviews, from £67.</li><li><strong>South Coast Waterfalls, Black Sand & Glacier Tour</strong>: 4.8&#9733; from 12,056 reviews, from £88.</li><li><strong>Sky Lagoon Entrance Pass With 7-Step Spa Ritual</strong>: 4.8&#9733; from 7,182 reviews, from £86.</li><li><strong>Red Lava Horse Riding Tour</strong>: 4.8&#9733; from 2,579 reviews, from £107.</li></ul>' },
-      { heading: 'Book early to lock in your date', content: '<p>The most popular Iceland experiences sell out fast in peak season, and the best time slots go first. Most tours offer free cancellation up to 24 hours before, so booking early carries almost no risk.</p>' },
-      { heading: 'Skip-the-line and mobile tickets', content: '<p>Where a skip-the-line option exists it is usually worth the small premium, since queues at the top sights can run to hours in summer. Tickets arrive on your phone instantly, so there is nothing to print.</p>' },
-    ],
-    relatedTourSlugs: ['reykjavik-golden-circle-kerid-crater-and-blue-lagoon-tour', 'reykjavik-guided-foodie-walking-tour-with-6-tastings', 'reykjavik-golden-circle-full-day-tour-with-kerid-crater', 'reykjav-k-south-coast-waterfalls-black-sand-and-glacier-tour', 'reykjavik-sky-lagoon-entrance-pass-with-7-step-spa-ritual', 'reykjavik-red-lava-horse-riding-tour', 'reykjavik-glacier-hike-waterfalls-and-black-sand-beach', 'from-reykjavik-new-volcanic-area-helicopter-tour'],
-    faqs: [
-      { question: 'What is the best tour in Iceland?', answer: 'The top-rated experience is Golden Circle, Kerid Crater, & Blue Lagoon Tour, rated 4.9 stars by 5,774 travellers, from £191. The full ranked list is above.' },
-      { question: 'How much do Iceland tours cost?', answer: 'Tours and tickets in Iceland start from around £28, with premium guided tours and day trips up to £470.' },
-      { question: 'Can I cancel a Iceland tour?', answer: 'Most Iceland tours offer free cancellation up to 24 hours before for a full refund. Check the option on the booking page.' },
-    ],
-    publishedDate: '2026-07-09',
-    updatedDate: '2026-07-09',
-  },
-  {
     slug: 'skip-the-line-iceland',
     title: 'How to Skip the Line in Iceland (2026)',
     metaTitle: 'Skip the Line in Iceland: Tickets and Tips 2026',
@@ -44,19 +24,37 @@ export const guides: Guide[] = [
     slug: 'iceland-tours-on-a-budget',
     title: 'Iceland on a Budget: Cheapest Tours in 2026',
     metaTitle: 'Iceland on a Budget: Cheapest Tours 2026',
-    metaDescription: 'The best cheap Iceland tours and tickets in 2026, from £28. High-rated, low-cost experiences with free cancellation and instant tickets.',
+    metaDescription: 'What Iceland tours cost in 2026, from £28. Cheap Iceland tours by category, real from-prices, and what you actually give up by booking the budget option.',
     excerpt: 'The best-value Iceland tours that keep costs down without missing the highlights.',
+    answerCapsule: 'The cheapest well-rated Iceland tours start at £28 for the Keflavik airport bus transfer, £33 for a FlyOver Iceland entry ticket and £38 for a small-group Reykjavik walking tour. For the headline experiences, budget from £62 for a Northern Lights bus hunt, £67 for a full-day Golden Circle tour, £76 for whale watching, £86 for Sky Lagoon and £97 for Blue Lagoon Comfort admission. Almost everything can be cancelled free up to 24 hours before, so booking early costs nothing.',
     sections: [
-      { heading: 'Cheapest highly-rated Iceland tours', content: '<p>The lowest-priced experiences that still earn excellent reviews, ranked by value:</p><ul><li><strong>Keflavik Airport (KEF)</strong>: 4.7&#9733; from 20,719 reviews, from £28.</li><li><strong>FlyOver Iceland Entry Ticket</strong>: 4.7&#9733; from 3,876 reviews, from £33.</li><li><strong>City Walking tour in Small Group with Local Guide</strong>: 4.7&#9733; from 489 reviews, from £38.</li><li><strong>LAVA SHOW - Immersive Experience Entry Ticket</strong>: 4.7&#9733; from 3,906 reviews, from £39.</li><li><strong>Perlan - Wonders of Iceland Experience</strong>: 4.7&#9733; from 3,968 reviews, from £43.</li><li><strong>Puffin Watching Boat Tour</strong>: 4.6&#9733; from 1,257 reviews, from £47.</li></ul>' },
-      { heading: 'Save even more', content: '<p>Travel in shoulder season for lower prices and thinner crowds, book combo tickets that bundle several attractions, and pick options with free cancellation so you can rebook if a better rate appears.</p>' },
+      {
+        heading: 'What Iceland tours cost in 2026',
+        content: '<p>Iceland has a reputation for being expensive, and the flights and the food earn it. The tours are less brutal than people expect, as long as you know the going rate before you start booking. These are the current from-prices on the tours we list, by category, so you can budget a trip in about two minutes.</p><div class="table-scroll"><table><thead><tr><th>Type of tour</th><th>From</th><th>Rating</th><th>Cheapest option</th></tr></thead><tbody><tr><td>Airport transfer</td><td>£28</td><td>4.7 (20,719)</td><td>Keflavik Airport bus to/from Reykjavik</td></tr><tr><td>Attraction entry ticket</td><td>£33</td><td>4.7 (3,876)</td><td>FlyOver Iceland</td></tr><tr><td>Reykjavik walking tour</td><td>£38</td><td>4.7 (489)</td><td>Small-group city walking tour</td></tr><tr><td>Puffin boat trip</td><td>£47</td><td>4.6 (1,257)</td><td>Puffin Watching Boat Tour</td></tr><tr><td>Northern Lights hunt</td><td>£62</td><td>4.3 (14,842)</td><td>Northern Lights bus tour with hot cocoa</td></tr><tr><td>Golden Circle day tour</td><td>£67</td><td>4.8 (26,338)</td><td>Full-day tour with Kerid Crater</td></tr><tr><td>Whale watching</td><td>£76</td><td>4.5 (10,979)</td><td>Whale Watching and Marine Life Cruise</td></tr><tr><td>Geothermal spa</td><td>£86</td><td>4.8 (7,182)</td><td>Sky Lagoon entrance pass</td></tr><tr><td>South Coast day tour</td><td>£88</td><td>4.8 (12,056)</td><td>Waterfalls, black sand and glacier</td></tr><tr><td>Blue Lagoon admission</td><td>£97</td><td>4.6 (5,923)</td><td>Official Comfort admission</td></tr><tr><td>Food tour</td><td>£112</td><td>4.9 (1,873)</td><td>Foodie walking tour with 6 tastings</td></tr><tr><td>Glacier hike day</td><td>£142</td><td>4.8 (1,625)</td><td>Glacier hike, waterfalls and black sand</td></tr><tr><td>Multi-icon combo day</td><td>£191</td><td>4.9 (5,774)</td><td>Golden Circle, Kerid Crater and Blue Lagoon</td></tr><tr><td>Helicopter tour</td><td>£470</td><td>4.8 (532)</td><td>New volcanic area helicopter tour</td></tr></tbody></table></div><p>A realistic budget: two headline day tours and one spa comes to roughly £230 per person. Add the airport bus both ways and you are at about £286 before food. Prices move with season and demand, so treat these as the floor rather than a fixed rate. The live price is always the one on the booking page.</p>',
+      },
+      {
+        heading: 'Cheapest highly-rated Iceland tours',
+        content: '<p>The lowest-priced experiences that still earn excellent reviews, ranked by value:</p><ul><li><strong>Keflavik Airport (KEF) bus transfer</strong>: 4.7&#9733; from 20,719 reviews, from £28.</li><li><strong>FlyOver Iceland Entry Ticket</strong>: 4.7&#9733; from 3,876 reviews, from £33.</li><li><strong>City Walking tour in Small Group with Local Guide</strong>: 4.7&#9733; from 489 reviews, from £38.</li><li><strong>LAVA SHOW - Immersive Experience Entry Ticket</strong>: 4.7&#9733; from 3,906 reviews, from £39.</li><li><strong>Perlan - Wonders of Iceland Experience</strong>: 4.7&#9733; from 3,968 reviews, from £43.</li><li><strong>Puffin Watching Boat Tour</strong>: 4.6&#9733; from 1,257 reviews, from £47.</li></ul><p>Every one of these is rated 4.6 or better by thousands of travellers, which is the point: cheap in Iceland does not mean poor. It usually means shorter, closer to Reykjavik, or a ticket rather than a guided day.</p>',
+      },
+      {
+        heading: 'Cheap versus expensive: what you actually give up',
+        content: '<p>The gap between a £67 Golden Circle tour and a £191 one is not a quality gap, it is a scope gap. Here is what the extra money genuinely buys in Iceland, so you can decide what to pay for and what to skip.</p><ul><li><strong>Group size.</strong> The cheapest day tours run on full-size coaches. Small-group versions cost roughly 15 to 20% more: the Golden Circle Afternoon Small Group Tour is £78 against £67 for the standard full-day coach. If you hate queuing for the coach steps at every stop, this is the upgrade worth taking.</li><li><strong>Pickup.</strong> Budget tours often meet at a central bus stop rather than collecting you. On the Golden Circle full-day tour, hotel pickup is an option you select, not a default. Walking ten minutes to a meeting point in January is worth knowing about in advance.</li><li><strong>How much is included.</strong> The £88 South Coast tour drives you along the coast and stops at the glacier snout. The £142 version puts you on the ice with crampons, harness, ice axe and helmet, and a professional glacier guide. Same coastline, completely different day.</li><li><strong>Comfort on the water.</strong> The £76 whale watching cruise has a heated indoor cabin, toilets and a cafe. The £116 RIB speedboat gets you closer and faster with none of that. Neither is better, but one of them is a bad idea in February with children.</li><li><strong>Doing two things in one day.</strong> The £191 Golden Circle plus Blue Lagoon tour costs more than the two bookings separately would, but it removes a hire car, a 45-minute drive and the timing risk of missing a pre-booked lagoon slot.</li></ul><p>What you never give up by going cheap: the sights themselves. Thingvellir, Gullfoss and Geysir are free to walk around, and no operator gets a better view than another.</p>',
+      },
+      {
+        heading: 'How to save even more on Iceland tours',
+        content: '<ul><li><strong>Travel in shoulder season.</strong> April to May and September to October have lower prices, thinner crowds and, for whale watching, still sit inside the April to October peak season.</li><li><strong>Book combos rather than singles.</strong> Bundled days remove transport costs you would otherwise pay twice.</li><li><strong>Book early, cancel free.</strong> Most Iceland tours are cancellable free of charge up to 24 hours before. Reserving early locks the cheaper slot with no downside if you find better.</li><li><strong>Take the bus from the airport.</strong> At £28 the Keflavik transfer is the single cheapest well-rated booking in the country and it beats a taxi comfortably.</li><li><strong>Skip the hire car if you are staying in Reykjavik.</strong> Two or three day tours usually work out cheaper than car hire, fuel and parking. We compared the two properly in <a href="/blog/how-to-get-around-iceland-tours-vs-rental-car">tours vs rental car in Iceland</a>.</li></ul>',
+      },
     ],
     relatedTourSlugs: ['keflavik-airport-kef-bus-transfer-to-from-reykjavik', 'reykjavik-flyover-iceland-entry-ticket', 'reykjavik-city-walking-tour-in-small-group-with-local-guide', 'reykjavik-lava-show-immersive-experience-entry-ticket', 'reykjavik-perlan-wonders-of-iceland-experience', 'reykjavik-puffin-watching-boat-tour', 'reykjavik-1-hour-puffin-watching-tour', 'from-reykjavik-northern-lights-bus-tour-with-hot-cocoa'],
     faqs: [
-      { question: 'What is the cheapest Iceland tour?', answer: 'The lowest-priced option is Keflavik Airport (KEF), from £28, and it still holds a 4.7-star rating.' },
-      { question: 'Are cheap Iceland tours any good?', answer: 'Price does not determine quality. Many of the best-value tours in Iceland have thousands of positive reviews. The ranked list above shows options travellers rate highly.' },
+      { question: 'How much do tours in Iceland cost?', answer: 'Iceland tours start from £28 for the Keflavik airport bus and £33 for an attraction entry ticket. A full-day Golden Circle tour is from £67, whale watching from £76, Sky Lagoon from £86, a South Coast day from £88 and Blue Lagoon Comfort admission from £97. Premium days such as a glacier hike (£142) or a helicopter flight (£470) sit at the top end.' },
+      { question: 'What is the cheapest Iceland tour?', answer: 'The lowest-priced option is the Keflavik Airport (KEF) bus transfer to and from Reykjavik, from £28, and it still holds a 4.7-star rating from more than 20,000 travellers.' },
+      { question: 'How much should I budget for tours on a trip to Iceland?', answer: 'Around £230 per person covers two headline day tours and a geothermal spa. Add roughly £56 for the airport bus both ways. Travelling in shoulder season and booking combos rather than separate tours brings that down further.' },
+      { question: 'Are there same-day deals on tours in Iceland?', answer: 'Many Iceland tours can still be booked on the day if slots remain, because tickets are issued instantly to your phone and there is nothing to collect. The catch is that the cheapest departures sell out first, so same-day booking usually means paying for whatever is left rather than getting a discount. Booking a day or two ahead with free cancellation is the better play.' },
+      { question: 'Are cheap Iceland tours any good?', answer: 'Price does not determine quality. Every tour in our cheapest list is rated 4.6 stars or better by thousands of travellers. Cheaper usually means a bigger group, a meeting point instead of a hotel pickup, or a shorter day, not a worse guide.' },
     ],
     publishedDate: '2026-07-09',
-    updatedDate: '2026-07-09',
+    updatedDate: '2026-07-28',
   },
   {
     slug: 'first-time-in-iceland',
@@ -79,21 +77,38 @@ export const guides: Guide[] = [
   },
   {
     slug: 'best-day-trips-from-iceland',
-    title: 'Best Day Trips from Iceland in 2026',
-    metaTitle: 'Best Day Trips from Iceland 2026',
-    metaDescription: 'The best day trips in Iceland for 2026, ranked by reviews, with instant confirmation and free cancellation on most options.',
-    excerpt: 'The top-rated day trips to book in Iceland, chosen for value and ratings.',
+    title: 'Best Day Trips from Reykjavik in 2026',
+    metaTitle: 'Best Day Trips from Reykjavik, Iceland 2026',
+    metaDescription: 'The best day trips from Reykjavik in 2026: Golden Circle from £67, South Coast from £88, whale watching from £76 and glacier hikes, all ranked by real reviews.',
+    excerpt: 'The top-rated day trips to book from Reykjavik, chosen for value and ratings.',
+    answerCapsule: 'Almost every Iceland day trip starts in Reykjavik. The best all-rounder is the Golden Circle from £67, the biggest scenery is the South Coast from £88, the best wildlife day is whale watching from £76, and the most adventurous is a guided glacier hike from £142. All of them return to the city the same evening, so you never need to change hotel.',
     sections: [
-      { heading: 'Top day trips in Iceland', content: '<p>Some of the best experiences near Iceland are a short trip away, and a guided day trip removes the transport and planning hassle. These are the highest-rated options, ranked:</p><ul><li><strong>Keflavik Airport (KEF)</strong>: 4.7&#9733; from 20,719 reviews, from £28.</li><li><strong>Small Group Golden Circle from Cruise Terminal</strong>: 4.4&#9733; from 492 reviews, from £120.</li></ul>' },
-      { heading: 'Booking tips', content: '<p>These are popular and can sell out in peak months, so book ahead for your date. Free cancellation on most options means you can reserve early and adjust later.</p>' },
+      {
+        heading: 'The best day trips from Reykjavik, ranked',
+        content: '<p>Reykjavik is the launchpad for southern Iceland, which is why most visitors base themselves there for the whole trip. These are the day trips that consistently earn their place:</p><div class="table-scroll"><table><thead><tr><th>Day trip</th><th>From</th><th>Rating</th><th>Best for</th></tr></thead><tbody><tr><td>Golden Circle full-day tour</td><td>£67</td><td>4.8 (26,338)</td><td>The all-rounder first day trip</td></tr><tr><td>Whale watching cruise</td><td>£76</td><td>4.5 (10,979)</td><td>Wildlife, half a day, no driving</td></tr><tr><td>South Coast waterfalls and black sand</td><td>£88</td><td>4.8 (12,056)</td><td>Biggest scenery of the lot</td></tr><tr><td>Silfra fissure snorkelling</td><td>£94</td><td>4.7 (2,038)</td><td>Something you cannot do anywhere else</td></tr><tr><td>Glacier hike with waterfalls</td><td>£142</td><td>4.8 (1,625)</td><td>Getting on the ice properly</td></tr><tr><td>Golden Circle plus Blue Lagoon</td><td>£191</td><td>4.9 (5,774)</td><td>Two icons in a single day</td></tr></tbody></table></div><p>For the full breakdown by traveller type, including which to pick if you only have one free day, read <a href="/blog/best-iceland-day-tours-from-reykjavik">the best Iceland day tours from Reykjavik</a>.</p>',
+      },
+      {
+        heading: 'Golden Circle or South Coast?',
+        content: '<p>This is the choice almost every visitor faces. The <a href="/attractions/golden-circle">Golden Circle</a> is shorter, closer and covers three famous sights in one efficient loop, which makes it the safer first day trip. The <a href="/attractions/south-coast">South Coast</a> is a longer day with wilder scenery: Seljalandsfoss, which you can walk behind, Skogafoss, the black sand at Reynisfjara and the Solheimajokull glacier snout.</p><p>If you have two days, do both. If you have one, we compared them properly in <a href="/blog/golden-circle-vs-south-coast-which-tour">Golden Circle vs South Coast</a>.</p>',
+      },
+      {
+        heading: 'Arriving and getting around',
+        content: '<p>You do not need a hire car for any of these. Day trips either pick up from central Reykjavik hotels or meet at a city bus stop, and the Keflavik airport bus transfer runs from £28 each way, which is the cheapest well-rated booking in the country.</p><p>Cruise passengers have their own option: a 6.5-hour small-group Golden Circle tour that starts and ends at the cruise terminal, from £120.</p>',
+      },
+      {
+        heading: 'Booking tips',
+        content: '<p>Day trips are the first thing to sell out in peak months, and the earliest departures go first because they reach the big stops before the crowds. Free cancellation on most options means you can reserve your date now and adjust later at no cost.</p>',
+      },
     ],
-    relatedTourSlugs: ['keflavik-airport-kef-bus-transfer-to-from-reykjavik', 'reykjavik-small-group-golden-circle-from-cruise-terminal'],
+    relatedTourSlugs: ['reykjavik-golden-circle-full-day-tour-with-kerid-crater', 'reykjav-k-south-coast-waterfalls-black-sand-and-glacier-tour', 'reykjav-k-whale-watching-and-marine-life-cruise', 'reykjav-k-silfra-fissure-snorkeling-between-two-continents', 'reykjavik-glacier-hike-waterfalls-and-black-sand-beach', 'reykjavik-golden-circle-kerid-crater-and-blue-lagoon-tour', 'reykjavik-small-group-golden-circle-from-cruise-terminal', 'keflavik-airport-kef-bus-transfer-to-from-reykjavik'],
     faqs: [
-      { question: 'What is the best day trip from Iceland?', answer: 'The top-rated option is Keflavik Airport (KEF), from £28.' },
-      { question: 'Do I need to book in advance?', answer: 'It is strongly recommended in peak season, as the best-rated options fill up. Most include free cancellation, so early booking carries little risk.' },
+      { question: 'What is the best day trip from Reykjavik?', answer: 'The Golden Circle full-day tour from £67 is the best all-rounder and the most-booked day trip in Iceland, rated 4.8 by 26,338 travellers. For bigger scenery, the South Coast day from £88 is the strongest alternative.' },
+      { question: 'How much do day trips from Reykjavik cost?', answer: 'Expect from £67 for a Golden Circle day, £76 for whale watching, £88 for the South Coast, £142 for a guided glacier hike and £191 for a combined Golden Circle and Blue Lagoon day.' },
+      { question: 'Do you need a car for day trips in Iceland?', answer: 'No. Every day trip on this page either collects you from a central Reykjavik hotel or meets at a city bus stop, and the airport bus transfer runs from £28.' },
+      { question: 'Do I need to book in advance?', answer: 'It is strongly recommended in peak season, as the best-rated departures fill up. Most include free cancellation up to 24 hours before, so early booking carries little risk.' },
     ],
     publishedDate: '2026-07-09',
-    updatedDate: '2026-07-09',
+    updatedDate: '2026-07-28',
   },
   {
     slug: 'iceland-tours-booking-faq',
@@ -103,18 +118,19 @@ export const guides: Guide[] = [
     excerpt: 'Clear answers to the common questions about booking tours in Iceland.',
     sections: [
       { heading: 'How booking works', content: '<p>Choose a tour, pick your date and party size, and pay securely through GetYourGuide, our booking partner. Your ticket arrives instantly by email and on your phone. Nothing to print, just show the mobile ticket at entry.</p>' },
-      { heading: 'Prices and what is included', content: '<p>Iceland tours and tickets start from around £28. Every listing shows exactly what is included, the duration, the rating and the number of verified reviews, so you know what you are getting before you book.</p>' },
+      { heading: 'Prices and what is included', content: '<p>Iceland tours and tickets start from around £28. Every listing shows exactly what is included, the duration, the rating and the number of verified reviews, so you know what you are getting before you book. For the full price list by category, see <a href="/guides/iceland-tours-on-a-budget">what Iceland tours cost in 2026</a>.</p>' },
       { heading: 'Cancellation and changes', content: '<p>Most experiences offer free cancellation up to 24 hours before for a full refund. If plans change you can cancel or often rebook for a different date through your confirmation.</p>' },
     ],
     relatedTourSlugs: ['reykjavik-golden-circle-kerid-crater-and-blue-lagoon-tour', 'reykjavik-guided-foodie-walking-tour-with-6-tastings', 'reykjavik-golden-circle-full-day-tour-with-kerid-crater', 'reykjav-k-south-coast-waterfalls-black-sand-and-glacier-tour', 'reykjavik-sky-lagoon-entrance-pass-with-7-step-spa-ritual', 'reykjavik-red-lava-horse-riding-tour', 'reykjavik-glacier-hike-waterfalls-and-black-sand-beach', 'from-reykjavik-new-volcanic-area-helicopter-tour'],
     faqs: [
       { question: 'Is it safe to book Iceland tours online?', answer: 'Yes. All bookings are processed securely by GetYourGuide with encrypted payment and instant confirmation.' },
       { question: 'How do I get my tickets?', answer: 'Tickets are delivered instantly to your email and phone. Show the mobile ticket at entry.' },
+      { question: 'Can I cancel an Iceland tour?', answer: 'Most Iceland tours offer free cancellation up to 24 hours before for a full refund. Check the option on the booking page before you book.' },
       { question: 'Can I get a refund?', answer: 'Most tours offer free cancellation up to 24 hours before for a full refund. Terms are shown on each booking page.' },
       { question: 'What is the cheapest way to see Iceland?', answer: 'Book online in advance, choose combo tickets that bundle attractions, and travel in shoulder season. Tours start from £28.' },
     ],
     publishedDate: '2026-07-09',
-    updatedDate: '2026-07-09',
+    updatedDate: '2026-07-28',
   },
 ];
 

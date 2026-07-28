@@ -10,7 +10,31 @@ import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import AffiliateDisclosure from '@/components/ui/AffiliateDisclosure';
 import FAQ from '@/components/ui/FAQ';
 
-const categorySeoContent: Record<string, { paragraphs: string[]; relatedGuides: { slug: string; title: string }[] }> = {};
+const categorySeoContent: Record<
+  string,
+  {
+    paragraphs: string[];
+    relatedGuides: { slug: string; title: string }[];
+    relatedPosts?: { slug: string; title: string }[];
+  }
+> = {
+  'day-trips': {
+    paragraphs: [
+      'Almost every Iceland day trip starts in Reykjavik, not somewhere else in the country. The city sits within striking distance of the Golden Circle, the south coast waterfalls and the whale-watching grounds of Faxafloi Bay, which is why most visitors book a hotel there and never move it.',
+      'Day trips either collect you from a central Reykjavik hotel or meet at a city bus stop, so you do not need a hire car. Prices start from £67 for a full-day Golden Circle tour and £88 for the South Coast, and the Keflavik airport bus transfer runs from £28 each way. Cruise passengers have a dedicated 6.5-hour small-group Golden Circle tour from the cruise terminal.',
+      'The best-rated departures sell out first in peak season, and the earliest slots go quickest because they reach the big stops ahead of the crowds. Most options are cancellable free of charge up to 24 hours before, so booking early costs nothing in flexibility.',
+    ],
+    relatedGuides: [
+      { slug: 'best-day-trips-from-iceland', title: 'Best Day Trips from Reykjavik in 2026' },
+      { slug: 'iceland-tours-on-a-budget', title: 'Iceland on a Budget: Cheapest Tours in 2026' },
+    ],
+    relatedPosts: [
+      { slug: 'best-iceland-day-tours-from-reykjavik', title: 'The Best Iceland Day Tours from Reykjavik' },
+      { slug: 'golden-circle-vs-south-coast-which-tour', title: 'Golden Circle vs South Coast: Which Iceland Tour Should You Book?' },
+      { slug: 'how-to-get-around-iceland-tours-vs-rental-car', title: 'How to Get Around Iceland: Guided Tours vs Rental Car' },
+    ],
+  },
+};
 
 export function generateStaticParams() {
   return categories.map((cat) => ({ slug: cat.slug }));
@@ -123,6 +147,21 @@ export default async function CategoryPage({ params }: { params: Params }) {
                     <li key={guide.slug}>
                       <Link href={`/guides/${guide.slug}`} className="text-blue-900 hover:underline">
                         {guide.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {(categorySeoContent[category.slug].relatedPosts?.length ?? 0) > 0 && (
+              <div className="mt-8">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Read before you book</h3>
+                <ul className="space-y-2">
+                  {categorySeoContent[category.slug].relatedPosts!.map((post) => (
+                    <li key={post.slug}>
+                      <Link href={`/blog/${post.slug}`} className="text-blue-900 hover:underline">
+                        {post.title}
                       </Link>
                     </li>
                   ))}

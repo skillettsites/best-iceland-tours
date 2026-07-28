@@ -41,6 +41,8 @@ export interface Guide {
   metaTitle: string;
   metaDescription: string;
   excerpt: string;
+  /** Short direct answer rendered under the H1 for answer-engine and featured-snippet capture. */
+  answerCapsule?: string;
   sections: GuideSection[];
   relatedTourSlugs: string[];
   faqs: FAQ[];

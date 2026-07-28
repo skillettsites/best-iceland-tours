@@ -1,6 +1,7 @@
 import LocalPrice from '@/components/LocalPrice';
 import Link from 'next/link';
 import { categories } from '@/data/categories';
+import { guides } from '@/data/guides';
 import { tours } from '@/data/tours';
 import { SITE_NAME, SITE_CITY, SITE_URL } from '@/lib/constants';
 
@@ -37,7 +38,7 @@ export default function Footer() {
       {/* Main footer */}
       <div className="bg-gray-900 text-gray-300">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Brand */}
             <div className="sm:col-span-2 lg:col-span-1">
               <Link href="/" className="flex items-center mb-3">
@@ -96,6 +97,33 @@ export default function Footer() {
                     </Link>
                   </li>
                 ))}
+              </ul>
+            </div>
+
+            {/* Guides */}
+            <div>
+              <h4 className="text-white text-sm font-semibold mb-3 uppercase tracking-wide">Guides</h4>
+              <ul className="space-y-2">
+                {guides.map((guide) => (
+                  <li key={guide.slug}>
+                    <Link
+                      href={`/guides/${guide.slug}`}
+                      className="text-sm hover:text-white transition-colors inline-flex items-center min-h-[32px]"
+                    >
+                      <span className="line-clamp-2">{guide.title}</span>
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <Link href="/blog/top-10-tours" className="text-sm hover:text-white transition-colors inline-flex items-center min-h-[32px]">
+                    The 10 best {SITE_CITY} tours
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/guides" className="text-sm hover:text-white transition-colors inline-flex items-center min-h-[32px]">
+                    All guides
+                  </Link>
+                </li>
               </ul>
             </div>
 
