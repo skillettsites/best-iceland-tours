@@ -335,7 +335,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Best for families: whale watching</h2>
 
-<p>Leaving straight from Reykjavik's old harbour, a whale-watching cruise across Faxafloi Bay is short, awe-inspiring and easy with children. Sightings are common but not guaranteed. It <strong>starts from £76</strong>. All five options, the best months and what happens if you see nothing are on our <a href="/attractions/whale-watching">whale watching tours in Iceland</a> page.</p>
+<p>Leaving straight from Reykjavik's old harbour, a whale-watching cruise across Faxafloi Bay is short, awe-inspiring and easy with children. Sightings are common but not guaranteed. It <strong>starts from £72</strong>. All five options, the best months and what happens if you see nothing are on our <a href="/attractions/whale-watching">whale watching tours in Iceland</a> page.</p>
 
 <p>${link('248622', 'See the whale watching and marine life cruise')}</p>
 

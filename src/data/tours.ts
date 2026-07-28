@@ -174,7 +174,7 @@ export const tours: Tour[] = [
     metaDescription: 'Book Reykjavík: Whale Watching and Marine Life Cruise in Iceland. Instant confirmation, free cancellation on most options. Rated 4.5★ by 10,979 travellers.',
     description: 'Embark on a whale-watching cruise in Faxaflói Bay from Reykjavík. Witness the stunning landscapes and keep an eye out for a variety of local wildlife…',
     excerpt: 'Embark on a whale-watching cruise in Faxaflói Bay from Reykjavík. Witness the stunning landscapes and keep an eye out…',
-    price: 76,
+    price: 72,
     currency: 'GBP',
     duration: 'Varies',
     rating: 4.5,
