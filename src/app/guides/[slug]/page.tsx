@@ -187,7 +187,14 @@ export default async function GuidePage({ params }: { params: Params }) {
 
           {/* Related Guides */}
           {(() => {
-            const otherGuides = guides.filter(g => g.slug !== guide.slug).slice(0, 4);
+            // Rotate the window by the current guide's index. A fixed slice(0, 4) linked the
+            // same four guides from every guide page, so later entries never earned an
+            // inbound link from a sibling guide.
+            const pool = guides.filter(g => g.slug !== guide.slug);
+            const start = Math.max(0, guides.findIndex(g => g.slug === guide.slug));
+            const otherGuides = pool.length <= 4
+              ? pool
+              : Array.from({ length: 4 }, (_, i) => pool[(start + i) % pool.length]);
             return otherGuides.length > 0 ? (
               <section className="mt-12 bg-gray-50 rounded-xl p-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-4">More Iceland Guides</h2>
