@@ -29,7 +29,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>The Golden Circle is a compact loop of three headline sights: Thingvellir National Park (where two tectonic plates pull apart), the Geysir geothermal area (with the reliably erupting Strokkur), and Gullfoss, a thunderous two-tier waterfall. Most tours add Kerid crater, a flooded volcanic caldera with startlingly red rims.</p>
 
-<p>The big advantage is efficiency. Total driving is modest, the stops come thick and fast, and you are rarely more than an hour from Reykjavik. That makes it the safer bet in winter when weather can turn, and the better pick if you get restless on long coach transfers. A <strong>full-day Golden Circle tour costs from £67</strong>, which is the cheapest full day out of the two.</p>
+<p>The big advantage is efficiency. Total driving is modest, the stops come thick and fast, and you are rarely more than an hour from Reykjavik. That makes it the safer bet in winter when weather can turn, and the better pick if you get restless on long coach transfers. A <strong>full-day Golden Circle tour costs from £68</strong>, which is the cheapest full day out of the two.</p>
 
 <p>${link('67012', 'Check dates and prices for the Golden Circle full-day tour')}</p>
 
@@ -39,7 +39,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>The South Coast is a straight-line drive east and it is, frankly, the more cinematic day. You walk behind the cascade at Seljalandsfoss, stand under the wall of water at Skogafoss, cross the black volcanic sand at Reynisfjara near Vik, and get close to a glacier snout. The landscapes feel bigger and emptier than the Golden Circle.</p>
 
-<p>The trade-off is time in the coach. The South Coast involves considerably more driving, often two hours or more each way, so you spend a good chunk of the day on the road. A <strong>South Coast day tour costs from £88</strong>, reflecting the longer distance.</p>
+<p>The trade-off is time in the coach. The South Coast involves considerably more driving, often two hours or more each way, so you spend a good chunk of the day on the road. A <strong>South Coast day tour costs from £89</strong>, reflecting the longer distance.</p>
 
 <p>${link('67018', 'See the South Coast Waterfalls, Black Sand and Glacier tour')}</p>
 
@@ -80,7 +80,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'How much do these Iceland day tours cost?',
         answer:
-          'A full-day Golden Circle tour starts from around £67 and a South Coast day tour from around £88. Both include hotel-area pickup on most options and are booked with free cancellation up to 24 hours before departure.',
+          'A full-day Golden Circle tour starts from around £68 and a South Coast day tour from around £89. Both include hotel-area pickup on most options and are booked with free cancellation up to 24 hours before departure.',
       },
     ],
     publishedDate: '2026-07-25',
@@ -167,7 +167,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Blue Lagoon: the icon</h2>
 
-<p>The Blue Lagoon is the picture you have already seen: opaque, silica-rich, milky-blue water surrounded by black lava. Comfort admission includes full access, a towel, a drink and a silica face mask, and <strong>starts from £97</strong>. Its location is the clever part: it sits between Keflavik Airport and Reykjavik, so it is the perfect first or last stop of a trip, bags in the car, spa on the way.</p>
+<p>The Blue Lagoon is the picture you have already seen: opaque, silica-rich, milky-blue water surrounded by black lava. Comfort admission includes full access, a towel, a drink and a silica face mask, and <strong>starts from £108</strong>. Its location is the clever part: it sits between Keflavik Airport and Reykjavik, so it is the perfect first or last stop of a trip, bags in the car, spa on the way.</p>
 
 <p>${link('393203', 'Check Blue Lagoon comfort admission tickets')}</p>
 
@@ -177,7 +177,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Sky Lagoon: the view</h2>
 
-<p>Sky Lagoon's signature is an infinity edge that appears to spill straight into the North Atlantic. Its seven-step Skjol ritual (warm lagoon, cold plunge, sauna, cold mist, body scrub, steam room, then a taste of Icelandic crowberry juice) is more of a guided sequence than the Blue Lagoon's free-roam soak. Entry <strong>starts from £86</strong>, and it is only a few minutes from downtown Reykjavik, so you do not need a car or a transfer to reach it.</p>
+<p>Sky Lagoon's signature is an infinity edge that appears to spill straight into the North Atlantic. Its seven-step ritual (warm lagoon, cold plunge, sauna, cold mist, body scrub, steam room, then a taste of Icelandic crowberry juice) is more of a guided sequence than the Blue Lagoon's free-roam soak. Entry <strong>starts from £86</strong>, and it is only a few minutes from downtown Reykjavik, so you do not need a car or a transfer to reach it.</p>
 
 <p>The ritual step by step, plus the difference between the SAMAN and SER passes, is on our <a href="/attractions/sky-lagoon">Sky Lagoon tickets</a> page.</p>
 
@@ -210,7 +210,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'Is the Blue Lagoon or Sky Lagoon better value?',
         answer:
-          'Sky Lagoon is a little cheaper, from around £86 versus around £97 for Blue Lagoon comfort admission, and it is easier to reach from central Reykjavik. The Blue Lagoon justifies its price with the iconic milky-blue water and its handy location on the airport route.',
+          'Sky Lagoon is noticeably cheaper, from around £86 versus around £108 for Blue Lagoon comfort admission, and it is easier to reach from central Reykjavik. The Blue Lagoon justifies its price with the iconic milky-blue water and its handy location on the airport route.',
       },
       {
         question: 'Do you need to book Iceland lagoons in advance?',
@@ -248,11 +248,11 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Gullfoss</strong>, a powerful two-tiered waterfall that thunders into a canyon.</li>
 </ul>
 
-<p>We rank every departure, from the £67 full-day coach to the £191 combined lagoon day, on our <a href="/attractions/golden-circle">Golden Circle tickets and tours</a> page.</p>
+<p>We rank every departure, from the £68 full-day coach to the £192 combined lagoon day, on our <a href="/attractions/golden-circle">Golden Circle tickets and tours</a> page.</p>
 
 <p>Most tours add Kerid, a volcanic crater with a vivid blue-green lake and rust-red walls. None of these are manufactured attractions; they are real, dramatic natural features. On that basis alone the Golden Circle earns its place.</p>
 
-<p>A <strong>full-day Golden Circle tour costs from £67</strong>, which for three major sights plus pickup is strong value for a full day in Iceland.</p>
+<p>A <strong>full-day Golden Circle tour costs from £68</strong>, which for three major sights plus pickup is strong value for a full day in Iceland.</p>
 
 <p>${link('67012', 'Check the Golden Circle full-day tour with Kerid crater')}</p>
 
@@ -260,7 +260,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>It is the busiest route in the country. Geysir and Gullfoss draw coaches all day, and midday in summer is the peak crush. If your idea of Iceland is wild solitude, the Golden Circle will not deliver that.</p>
 
-<p>The fix is simple: book a <strong>small-group or afternoon tour</strong>. Smaller groups move faster, and afternoon departures reach the big sights as the morning coaches leave. An afternoon small-group Golden Circle tour starts from £78.</p>
+<p>The fix is simple: book a <strong>small-group or afternoon tour</strong>. Smaller groups move faster, and afternoon departures reach the big sights as the morning coaches leave. An afternoon small-group Golden Circle tour starts from £79.</p>
 
 <p>${link('396783', 'See the small-group afternoon Golden Circle tour')}</p>
 
@@ -287,7 +287,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'Is the Golden Circle too touristy?',
         answer:
-          'It is the busiest route in Iceland, but the sights are genuinely world-class. Booking a small-group or afternoon tour, from around £78, avoids the worst of the midday coach crowds and makes the day feel far less packed.',
+          'It is the busiest route in Iceland, but the sights are genuinely world-class. Booking a small-group or afternoon tour, from around £79, avoids the worst of the midday coach crowds and makes the day feel far less packed.',
       },
       {
         question: 'Should you take a tour or self-drive the Golden Circle?',
@@ -297,7 +297,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'How long is the Golden Circle tour?',
         answer:
-          'A full-day Golden Circle tour typically runs six to eight hours including hotel-area pickup, and starts from around £67. Afternoon small-group options are shorter and reach the sights as the morning crowds thin out.',
+          'A full-day Golden Circle tour typically runs six to eight hours including hotel-area pickup, and starts from around £68. Afternoon small-group options are shorter and reach the sights as the morning crowds thin out.',
       },
     ],
     publishedDate: '2026-07-25',
@@ -317,19 +317,19 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Best all-rounder: the Golden Circle</h2>
 
-<p>If you do one tour, do this. Thingvellir, Geysir and Gullfoss in a single efficient loop, close to the city and reliable in any season. A <strong>full-day Golden Circle tour starts from £67</strong>.</p>
+<p>If you do one tour, do this. Thingvellir, Geysir and Gullfoss in a single efficient loop, close to the city and reliable in any season. A <strong>full-day Golden Circle tour starts from £68</strong>.</p>
 
 <p>${link('67012', 'Check the Golden Circle full-day tour')}</p>
 
 <h2>Best scenery: the South Coast</h2>
 
-<p>Waterfalls you can walk behind, black sand beaches and a glacier snout. It is more driving than the Golden Circle but the landscapes are bigger and wilder. A <strong>South Coast day tour starts from £88</strong>.</p>
+<p>Waterfalls you can walk behind, black sand beaches and a glacier snout. It is more driving than the Golden Circle but the landscapes are bigger and wilder. A <strong>South Coast day tour starts from £89</strong>.</p>
 
 <p>${link('67018', 'See the South Coast Waterfalls and Black Sand tour')}</p>
 
 <h2>Best adventure: a glacier hike</h2>
 
-<p>For travellers who want to actually do something rather than just look, a guided glacier hike on Solheimajokull, combined with South Coast waterfalls and a black sand beach, is the standout active day. Crampons and guide are provided. It <strong>starts from £142</strong>.</p>
+<p>For travellers who want to actually do something rather than just look, a guided glacier hike on Solheimajokull, combined with South Coast waterfalls and a black sand beach, is the standout active day. Crampons and guide are provided. It <strong>starts from £141</strong>.</p>
 
 <p>${link('408523', 'Check the glacier hike, waterfalls and black sand beach day')}</p>
 
@@ -367,7 +367,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'What is the best day tour from Reykjavik?',
         answer:
-          'For a first visit, the Golden Circle is the best single day tour: three world-class sights in one efficient loop, reliable in any season, from around £67. For bigger scenery on a second day, choose the South Coast from around £88.',
+          'For a first visit, the Golden Circle is the best single day tour: three world-class sights in one efficient loop, reliable in any season, from around £68. For bigger scenery on a second day, choose the South Coast from around £89.',
       },
       {
         question: 'How many day tours can you do from Reykjavik?',
@@ -470,7 +470,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>A guided glacier hike puts crampons on your feet and takes you out onto a living glacier, typically Solheimajokull on the South Coast. You walk among crevasses, ridges and ice formations with a certified guide, usually as part of a longer day that also takes in waterfalls and a black sand beach. It is genuinely active, memorable, and available year-round because the guides pick safe routes on the glacier surface.</p>
 
-<p>A <strong>glacier hike day including South Coast waterfalls and black sand starts from £142</strong>. It is the pricier option, but you get a full adventure day, not just a single stop.</p>
+<p>A <strong>glacier hike day including South Coast waterfalls and black sand starts from £141</strong>. It is the pricier option, but you get a full adventure day, not just a single stop.</p>
 
 <p>${link('408523', 'Check the glacier hike, waterfalls and black sand beach day')}</p>
 
@@ -517,7 +517,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'Which is cheaper, a glacier hike or the Perlan ice cave?',
         answer:
-          'Perlan is much cheaper, from around £43, because it is a single indoor attraction. A guided glacier hike starts from around £142, but that price buys a full adventure day including South Coast waterfalls and a black sand beach.',
+          'Perlan is much cheaper, from around £43, because it is a single indoor attraction. A guided glacier hike starts from around £141, but that price buys a full adventure day including South Coast waterfalls and a black sand beach.',
       },
     ],
     publishedDate: '2026-07-25',
@@ -539,7 +539,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>Base yourself in Reykjavik and take day tours to the sights. You pay per person per tour, but you pay for nothing else: no car hire, no fuel (which is expensive in Iceland), no parking, no insurance excess, and no stress about winter roads. Someone else drives while you look out of the window.</p>
 
-<p>Rough per-person tour prices: the <strong>Golden Circle from £67</strong>, the <strong>South Coast from £88</strong>, and for airport journeys the <strong>Keflavik transfer bus from £28</strong> each way instead of an airport car hire.</p>
+<p>Rough per-person tour prices: the <strong>Golden Circle from £68</strong>, the <strong>South Coast from £89</strong>, and for airport journeys the <strong>Keflavik transfer bus from £28</strong> each way instead of an airport car hire.</p>
 
 <p>${link('67012', 'Check the Golden Circle day tour')}</p>
 <p>${link('400146', 'See the Keflavik Airport transfer bus')}</p>

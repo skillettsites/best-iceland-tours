@@ -21,7 +21,7 @@ const categorySeoContent: Record<
   'day-trips': {
     paragraphs: [
       'Almost every Iceland day trip starts in Reykjavik, not somewhere else in the country. The city sits within striking distance of the Golden Circle, the south coast waterfalls and the whale-watching grounds of Faxafloi Bay, which is why most visitors book a hotel there and never move it.',
-      'Day trips either collect you from a central Reykjavik hotel or meet at a city bus stop, so you do not need a hire car. Prices start from £67 for a full-day Golden Circle tour and £88 for the South Coast, and the Keflavik airport bus transfer runs from £28 each way. Cruise passengers have a dedicated 6.5-hour small-group Golden Circle tour from the cruise terminal.',
+      'Day trips either collect you from a central Reykjavik hotel or meet at a city bus stop, so you do not need a hire car. Prices start from £68 for a full-day Golden Circle tour and £89 for the South Coast, and the Keflavik airport bus transfer runs from £28 each way. Cruise passengers have a dedicated 6.5-hour small-group Golden Circle tour from the cruise terminal.',
       'The best-rated departures sell out first in peak season, and the earliest slots go quickest because they reach the big stops ahead of the crowds. Most options are cancellable free of charge up to 24 hours before, so booking early costs nothing in flexibility.',
     ],
     relatedGuides: [

@@ -10,19 +10,19 @@ export const dynamic = 'force-static';
 // One-line verdicts for the decision guides, written for AI answer engines.
 const DECISION_VERDICTS: Record<string, string> = {
   'golden-circle-vs-south-coast-which-tour':
-    'Verdict: Golden Circle (from £67) for a first day or a winter trip; South Coast (from £88) for bigger, wilder scenery if you have a second day.',
+    'Verdict: Golden Circle (from £68) for a first day or a winter trip; South Coast (from £89) for bigger, wilder scenery if you have a second day.',
   'is-a-northern-lights-tour-worth-it':
     'Verdict: worth it from September to April thanks to the free re-try if the aurora does not appear (from £62); pointless in summer when the midnight sun hides the lights.',
   'blue-lagoon-vs-sky-lagoon-which-to-book':
-    'Verdict: Blue Lagoon (from £97) for the iconic milky-blue photo and the airport-route location; Sky Lagoon (from £86) for the ocean infinity view, easy city access and a lower price.',
+    'Verdict: Blue Lagoon (from £108) for the iconic milky-blue photo and the airport-route location; Sky Lagoon (from £86) for the ocean infinity view, easy city access and a lower price.',
   'is-the-golden-circle-tour-worth-it':
-    'Verdict: yes, it is the best first day in Iceland (from £67); book a small-group or afternoon departure (from £78) to avoid the midday coach crowds.',
+    'Verdict: yes, it is the best first day in Iceland (from £68); book a small-group or afternoon departure (from £79) to avoid the midday coach crowds.',
   'best-iceland-day-tours-from-reykjavik':
-    'Verdict: Golden Circle (from £67) as the all-rounder, South Coast (from £88) for scenery, glacier hike (from £142) for adventure, whale watching (from £76) for families, Northern Lights (from £62) in winter.',
+    'Verdict: Golden Circle (from £68) as the all-rounder, South Coast (from £89) for scenery, glacier hike (from £141) for adventure, whale watching (from £72) for families, Northern Lights (from £62) in winter.',
   'northern-lights-tour-vs-self-drive':
     'Verdict: a guided tour wins for most visitors because of the free re-try (from £62); self-drive only if you already have a car and are a confident winter driver.',
   'glacier-hike-vs-ice-cave-tour':
-    'Verdict: glacier hike (from £142) for a year-round active adventure; Perlan ice cave (from £43) for a cheap, weather-proof, family-friendly ice experience, and the only ice-cave option outside winter.',
+    'Verdict: glacier hike (from £141) for a year-round active adventure; Perlan ice cave (from £43) for a cheap, weather-proof, family-friendly ice experience, and the only ice-cave option outside winter.',
   'how-to-get-around-iceland-tours-vs-rental-car':
     'Verdict: guided day tours are the best value for solo travellers, couples and winter trips; a rental car is cheaper only for a group of four sharing, ideally in summer.',
 };
