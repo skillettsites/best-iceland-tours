@@ -4,6 +4,7 @@ import { categories } from '@/data/categories';
 import { guides } from '@/data/guides';
 import { attractions } from '@/data/attractions';
 import { blogPosts } from '@/data/blog-posts';
+import { months } from '@/data/months';
 import { SITE_URL, CONTENT_DATE } from '@/lib/constants';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -60,5 +61,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...tourPages, ...attractionPages, ...categoryPages, ...guidePages, ...blogPages];
+  const seasonalPages: MetadataRoute.Sitemap = [
+    {
+      url: `${SITE_URL}/best-time-to-visit-iceland`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    ...months.map((m) => ({
+      url: `${SITE_URL}/iceland-in-${m.slug}`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
+  ];
+
+  return [
+    ...staticPages,
+    ...tourPages,
+    ...attractionPages,
+    ...categoryPages,
+    ...guidePages,
+    ...blogPages,
+    ...seasonalPages,
+  ];
 }

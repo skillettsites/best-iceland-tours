@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { categories } from '@/data/categories';
 import { guides } from '@/data/guides';
 import { tours } from '@/data/tours';
+import { monthsByCalendar } from '@/data/months';
 import { SITE_NAME, SITE_CITY, SITE_URL } from '@/lib/constants';
 
 const popularTours = [...tours].sort((a, b) => b.reviewCount - a.reviewCount).slice(0, 6);
@@ -120,6 +121,11 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/best-time-to-visit-iceland" className="text-sm hover:text-white transition-colors inline-flex items-center min-h-[32px]">
+                    Best time to visit {SITE_CITY}
+                  </Link>
+                </li>
+                <li>
                   <Link href="/guides" className="text-sm hover:text-white transition-colors inline-flex items-center min-h-[32px]">
                     All guides
                   </Link>
@@ -137,6 +143,30 @@ export default function Footer() {
                 <li><Link href="/affiliate-disclosure" className="text-sm hover:text-white transition-colors inline-flex items-center min-h-[32px]">Affiliate Disclosure</Link></li>
                 <li><Link href="/terms" className="text-sm hover:text-white transition-colors inline-flex items-center min-h-[32px]">Terms of Use</Link></li>
               </ul>
+            </div>
+          </div>
+
+          {/* Seasonal month strip */}
+          <div className="mt-10 pt-8 border-t border-gray-800">
+            <h4 className="text-white text-sm font-semibold mb-3 uppercase tracking-wide">
+              {SITE_CITY} month by month
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              <Link
+                href="/best-time-to-visit-iceland"
+                className="rounded-md bg-gray-800 px-3 py-1.5 text-xs font-medium text-gray-200 hover:bg-gray-700 transition-colors"
+              >
+                Best time to visit
+              </Link>
+              {monthsByCalendar.map((m) => (
+                <Link
+                  key={m.slug}
+                  href={`/iceland-in-${m.slug}`}
+                  className="rounded-md bg-gray-800 px-3 py-1.5 text-xs font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition-colors"
+                >
+                  {m.name}
+                </Link>
+              ))}
             </div>
           </div>
 
