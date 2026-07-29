@@ -641,7 +641,7 @@ export const tours: Tour[] = [
   {
     slug: 'from-reykjavik-new-volcanic-area-helicopter-tour',
     title: 'From Reykjavik: New Volcanic Area Helicopter Tour',
-    shortTitle: 'From Reykjavik',
+    shortTitle: 'New Volcanic Area Helicopter Tour',
     metaTitle: 'New Volcanic Area Helicopter Tour 2026',
     metaDescription: 'Book From Reykjavik: New Volcanic Area Helicopter Tour in Iceland. Instant confirmation, free cancellation on most options. Rated 4.8★ by 539 travellers.',
     description: 'Take a scenic helicopter flight from Reykjavik and discover the Reykjanes Peninsula\'s extensive lava fields and streams. Experience breathtaking views of…',
@@ -774,7 +774,7 @@ export const tours: Tour[] = [
   {
     slug: 'from-reykjavik-northern-lights-bus-tour-with-hot-cocoa',
     title: 'From Reykjavik: Northern Lights Bus Tour with Hot Cocoa',
-    shortTitle: 'From Reykjavik',
+    shortTitle: 'Northern Lights Bus Tour with Hot Cocoa',
     metaTitle: 'Northern Lights Bus Tour with Hot Cocoa 2026',
     metaDescription: 'Book From Reykjavik: Northern Lights Bus Tour with Hot Cocoa in Iceland. Instant confirmation, free cancellation on most options. Rated 4.3★ by 14,846…',
     description: 'Experience one of the world’s great natural phenomena on a 4-hour evening bus tour of Iceland. Depart the bright lights of Reykjavik to search for the…',
