@@ -26,7 +26,6 @@ export function organizationSchema() {
     sameAs: [
       'https://postcodecheck.co.uk',
       'https://carcostcheck.co.uk',
-      'https://findyourstay.com',
       'https://askyourstay.com',
       'https://aicareerswap.com',
       'https://guardmybusiness.com',
