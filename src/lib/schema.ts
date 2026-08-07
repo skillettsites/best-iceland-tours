@@ -1,5 +1,5 @@
 import { Tour, Category, Guide, FAQ, BlogPost } from './types';
-import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from './constants';
+import { SITE_NAME, SITE_URL, SITE_DESCRIPTION, DATA_CHECKED } from './constants';
 
 export function websiteSchema() {
   return {
@@ -44,6 +44,7 @@ export function tourSchema(tour: Tour) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
+    dateModified: DATA_CHECKED,
     name: tour.title,
     description: tour.description,
     url: `${SITE_URL}/tours/${tour.slug}`,
@@ -75,6 +76,7 @@ export function touristTripSchema(tour: Tour) {
   return {
     '@context': 'https://schema.org',
     '@type': 'TouristTrip',
+    dateModified: DATA_CHECKED,
     name: tour.title,
     description: tour.description,
     url: `${SITE_URL}/tours/${tour.slug}`,

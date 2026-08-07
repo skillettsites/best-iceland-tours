@@ -6,7 +6,7 @@ import { categories } from '@/data/categories';
 import { guides } from '@/data/guides';
 import { blogPosts } from '@/data/blog-posts';
 import { tourSchema, touristTripSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
-import { SITE_URL } from '@/lib/constants';
+import { SITE_URL, DATA_CHECKED } from '@/lib/constants';
 import { TOP_CONVERTER_BY_DESTINATION } from '@/lib/trust';
 
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
@@ -159,6 +159,7 @@ export default async function TourPage({ params }: { params: Params }) {
                   <span className="font-normal text-on-surface-2 ml-1">
                     ({tour.reviewCount.toLocaleString()} verified GetYourGuide reviews)
                   </span>
+                  <span className="text-xs text-gray-500">Price and rating checked {new Date(DATA_CHECKED).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
                 </span>
                 <span className="text-on-surface-2">&middot; {tour.duration}</span>
                 <ViewerCounter seed={tour.slug} />

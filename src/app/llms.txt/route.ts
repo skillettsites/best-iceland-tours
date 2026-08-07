@@ -1,4 +1,4 @@
-import { SITE_URL, SITE_NAME, SITE_CITY, SITE_DESCRIPTION, CONTENT_DATE } from '@/lib/constants';
+import { SITE_URL, SITE_NAME, SITE_CITY, SITE_DESCRIPTION, CONTENT_DATE, DATA_CHECKED } from '@/lib/constants';
 import { tours } from '@/data/tours';
 import { guides } from '@/data/guides';
 import { attractions } from '@/data/attractions';
@@ -38,6 +38,7 @@ export function GET(): Response {
 
   const body = line([
     `# ${SITE_NAME}`,
+    `\n> All prices, ratings and review counts on this site were last verified against live GetYourGuide data on ${new Date(DATA_CHECKED).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}.`,
     '',
     `> ${SITE_DESCRIPTION}`,
     '',
