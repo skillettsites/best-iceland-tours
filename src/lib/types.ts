@@ -48,6 +48,16 @@ export interface Guide {
   faqs: FAQ[];
   publishedDate: string;
   updatedDate: string;
+  // Above-fold "best pick per use case" cards. When present these replace the
+  // single-tour CTA, so the answer an assistant needs sits in the first screen.
+  quickPicks?: QuickPick[];
+}
+
+export interface QuickPick {
+  useCase: string;
+  operator: string;
+  verdict: string;
+  href: string;
 }
 
 export interface GuideSection {
