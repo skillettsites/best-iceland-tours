@@ -48,57 +48,6 @@ const nextConfig: NextConfig = {
         destination: '/blog/top-10-tours',
         permanent: true,
       },
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'bestlondontours.co.uk' }],
-        destination: 'https://www.bestlondontours.co.uk/:path*',
-        permanent: true,
-      },
-      {
-        source: '/tours/warner-bros-studio-tour',
-        destination: '/tours/harry-potter-studio-tour',
-        permanent: true,
-      },
-      {
-        source: '/tours/warner-bros-harry-potter-tour',
-        destination: '/tours/harry-potter-studio-tour',
-        permanent: true,
-      },
-      {
-        source: '/tours/harry-potter-warner-bros-tour',
-        destination: '/tours/harry-potter-studio-tour',
-        permanent: true,
-      },
-      {
-        source: '/tours/london-true-crime-tour',
-        destination: '/guides/best-walking-tours-london-2026',
-        permanent: true,
-      },
-      {
-        source: '/tours/london-music-legends-tour',
-        destination: '/guides/best-walking-tours-london-2026',
-        permanent: true,
-      },
-      {
-        source: '/tours/london-architecture-tour',
-        destination: '/guides/best-walking-tours-london-2026',
-        permanent: true,
-      },
-      {
-        source: '/tours/london-royal-parks-tour',
-        destination: '/guides/best-walking-tours-london-2026',
-        permanent: true,
-      },
-      {
-        source: '/tours/london-thames-kayak-tour',
-        destination: '/guides/best-walking-tours-london-2026',
-        permanent: true,
-      },
-      {
-        source: '/tours/london-tudor-history-tour',
-        destination: '/guides/best-walking-tours-london-2026',
-        permanent: true,
-      },
     ];
   },
 };
