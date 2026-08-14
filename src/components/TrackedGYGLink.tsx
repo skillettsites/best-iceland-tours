@@ -2,6 +2,7 @@
 
 import { ReactNode } from 'react';
 import { useCurrency } from '@/components/CurrencyProvider';
+import { SITE_CURRENCY } from '@/lib/constants';
 
 interface TrackedGYGLinkProps {
   href: string;
@@ -37,7 +38,7 @@ export default function TrackedGYGLink({
 }: TrackedGYGLinkProps) {
   const { code } = useCurrency();
   const sep = href.includes('?') ? '&' : '?';
-  const finalHref = code && code !== 'GBP' ? `${href}${sep}currency=${code}` : href;
+  const finalHref = code && code !== SITE_CURRENCY ? `${href}${sep}currency=${code}` : href;
   const handleClick = (e: React.MouseEvent) => {
     const payload = JSON.stringify({
       type: 'gyg',

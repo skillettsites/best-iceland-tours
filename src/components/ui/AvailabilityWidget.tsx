@@ -1,6 +1,6 @@
 'use client';
 
-import { GYG_PARTNER_ID } from '@/lib/constants';
+import { GYG_LOCATION_ID, GYG_PARTNER_ID, SITE_CITY, SITE_CURRENCY } from '@/lib/constants';
 import TrackedGYGLink from '@/components/TrackedGYGLink';
 
 export default function AvailabilityWidget({
@@ -29,14 +29,18 @@ export default function AvailabilityWidget({
           data-gyg-href="https://widget.getyourguide.com/default/availability.frame"
           data-gyg-tour-id={tourId}
           data-gyg-locale-code="en-US"
-          data-gyg-currency="GBP"
+          data-gyg-currency={SITE_CURRENCY}
           data-gyg-widget="availability"
           data-gyg-variant="horizontal"
           data-gyg-partner-id={GYG_PARTNER_ID}
         >
           <span>
             Powered by{' '}
-            <a target="_blank" rel="sponsored" href="https://www.getyourguide.com/iceland-l57/">
+            <a
+              target="_blank"
+              rel="sponsored"
+              href={`https://www.getyourguide.com/${SITE_CITY.toLowerCase().replace(/\s+/g, '-')}-l${GYG_LOCATION_ID}/`}
+            >
               GetYourGuide
             </a>
           </span>

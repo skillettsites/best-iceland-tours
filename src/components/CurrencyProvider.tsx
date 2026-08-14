@@ -1,12 +1,13 @@
 'use client';
 
+import { SITE_CURRENCY } from '@/lib/constants';
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 
-type Info = { symbol: string; rate: number }; // rate = units per 1 GBP
+type Info = { symbol: string; rate: number }; // rate = units per 1 stored GBP amount
 const CURRENCIES: Record<string, { symbol: string; fallback: number }> = {
+  EUR: { symbol: '€', fallback: 1.18 },
   GBP: { symbol: '£', fallback: 1 },
   USD: { symbol: '$', fallback: 1.27 },
-  EUR: { symbol: '€', fallback: 1.18 },
   CAD: { symbol: 'C$', fallback: 1.73 },
   AUD: { symbol: 'A$', fallback: 1.93 },
   NZD: { symbol: 'NZ$', fallback: 2.08 },
@@ -32,23 +33,35 @@ const COUNTRY_TO_CUR: Record<string, string> = {
   FI: 'EUR', GR: 'EUR', LU: 'EUR', SK: 'EUR', SI: 'EUR', EE: 'EUR', LV: 'EUR', LT: 'EUR', CY: 'EUR', MT: 'EUR', HR: 'EUR',
 };
 
+const DEFAULT_CURRENCY = SITE_CURRENCY;
+const DEFAULT_INFO: Info = {
+  symbol: CURRENCIES[DEFAULT_CURRENCY].symbol,
+  rate: CURRENCIES[DEFAULT_CURRENCY].fallback,
+};
+
 type Ctx = { code: string; info: Info; setCurrency: (c: string) => void; ready: boolean; options: string[] };
-const CurrencyCtx = createContext<Ctx>({ code: 'GBP', info: { symbol: '£', rate: 1 }, setCurrency: () => {}, ready: false, options: Object.keys(CURRENCIES) });
+const CurrencyCtx = createContext<Ctx>({
+  code: DEFAULT_CURRENCY,
+  info: DEFAULT_INFO,
+  setCurrency: () => {},
+  ready: false,
+  options: Object.keys(CURRENCIES),
+});
 
 const readCookie = (name: string) => (typeof document !== 'undefined' ? (document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]+)')) || [])[1] : undefined);
 
 export function CurrencyProvider({ children }: { children: ReactNode }) {
-  const [code, setCode] = useState('GBP');
-  const [rate, setRate] = useState(1);
+  const [code, setCode] = useState(DEFAULT_CURRENCY);
+  const [rate, setRate] = useState(DEFAULT_INFO.rate);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    // 1) decide currency: manual choice > geo cookie (Vercel) > GBP
+    // 1) decide currency: manual choice > geo cookie (Vercel) > market default (EUR)
     const manual = (() => { try { return localStorage.getItem('cur'); } catch { return null; } })();
     const country = (readCookie('country') || '').toUpperCase();
-    const chosen = manual && CURRENCIES[manual] ? manual : (COUNTRY_TO_CUR[country] || 'GBP');
+    const chosen = manual && CURRENCIES[manual] ? manual : (COUNTRY_TO_CUR[country] || DEFAULT_CURRENCY);
     setCode(chosen);
-    // 2) load FX rates (cached 12h), else fallbacks
+    // 2) load FX rates (cached 12h), else fallbacks. Catalogue amounts are stored GBP.
     (async () => {
       let rates: Record<string, number> | null = null;
       try {
@@ -61,7 +74,7 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
           if (r.ok) { rates = (await r.json()).rates; localStorage.setItem('fx', JSON.stringify({ t: Date.now(), r: rates })); }
         } catch {}
       }
-      setRate(rates && rates[chosen] ? rates[chosen] : CURRENCIES[chosen].fallback);
+      setRate(chosen === 'GBP' ? 1 : (rates && rates[chosen] ? rates[chosen] : CURRENCIES[chosen].fallback));
       setReady(true);
     })();
   }, []);
@@ -73,12 +86,12 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
     try {
       const cached = JSON.parse(localStorage.getItem('fx') || 'null');
       const r = cached?.r?.[c];
-      setRate(r || CURRENCIES[c].fallback);
-    } catch { setRate(CURRENCIES[c].fallback); }
+      setRate(c === 'GBP' ? 1 : (r || CURRENCIES[c].fallback));
+    } catch { setRate(c === 'GBP' ? 1 : CURRENCIES[c].fallback); }
   };
 
   return (
-    <CurrencyCtx.Provider value={{ code, info: { symbol: CURRENCIES[code]?.symbol || '£', rate }, setCurrency, ready, options: Object.keys(CURRENCIES) }}>
+    <CurrencyCtx.Provider value={{ code, info: { symbol: CURRENCIES[code]?.symbol || DEFAULT_INFO.symbol, rate }, setCurrency, ready, options: Object.keys(CURRENCIES) }}>
       {children}
     </CurrencyCtx.Provider>
   );
@@ -86,9 +99,9 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
 
 export const useCurrency = () => useContext(CurrencyCtx);
 
-// Convert a GBP amount to the active currency's whole-number amount.
+// Convert a stored GBP amount to the active currency's whole-number amount.
 export function convertGBP(gbp: number, code: string, rate: number): number {
   if (code === 'GBP') return Math.round(gbp);
   const v = gbp * rate;
-  return v >= 100 ? Math.round(v) : Math.round(v); // whole units (tours are low-precision)
+  return Math.round(v);
 }
