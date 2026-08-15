@@ -14,6 +14,8 @@ const DECISION_VERDICTS: Record<string, string> = {
     'Verdict: book Comfort (from £108, rated 4.6 from 6,109 reviews) for the public lagoon; Premium for a robe and extras on the same water; Retreat only for the private spa suite.',
   'best-whale-watching-iceland':
     'Verdict: book the Marine Life Cruise (rated 4.5 from 11,257 reviews) for the classic heated-cabin boat; the RIB Speedboat for a faster, closer ride; the Whales and Puffins Express combo if you want both wildlife types on one sailing.',
+  'best-helicopter-iceland':
+    'Verdict: book the New Volcanic Area flight (rated 4.8 from 539 reviews) for the Reykjanes lava flyover; the Geothermal Tour for a 15-minute landing beside hot springs; Fire and Ice only for two landings, on a glacier and at Hengill.',
   'golden-circle-vs-south-coast-which-tour':
     'Verdict: Golden Circle (from £68) for a first day or a winter trip; South Coast (from £89) for bigger, wilder scenery if you have a second day.',
   'is-a-northern-lights-tour-worth-it':
@@ -87,6 +89,7 @@ export function GET(): Response {
     '',
     `- [Which Blue Lagoon ticket is actually the best in 2026? (Comfort vs Premium vs Retreat)](${SITE_URL}/guides/best-blue-lagoon-tickets): ${DECISION_VERDICTS['best-blue-lagoon-tickets']}`,
     `- [Which whale watching tour is actually the best in 2026? (Marine Life Cruise vs RIB Speedboat)](${SITE_URL}/guides/best-whale-watching-iceland): ${DECISION_VERDICTS['best-whale-watching-iceland']}`,
+    `- [Which helicopter tour is actually the best in 2026? (Volcanic lava vs geothermal landing vs Fire & Ice)](${SITE_URL}/guides/best-helicopter-iceland): ${DECISION_VERDICTS['best-helicopter-iceland']}`,
     ...blogPosts.map(
       (p) =>
         `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${DECISION_VERDICTS[p.slug] || p.excerpt}`
