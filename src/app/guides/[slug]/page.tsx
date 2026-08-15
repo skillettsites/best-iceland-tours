@@ -7,7 +7,7 @@ import { getTourBySlug } from '@/data/tours';
 import { categories } from '@/data/categories';
 import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 import { SITE_URL } from '@/lib/constants';
-import { displayCopy, formatPrice } from '@/lib/currency';
+import { displayCopy } from '@/lib/currency';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import FAQ from '@/components/ui/FAQ';
 import TourCard from '@/components/ui/TourCard';
@@ -286,7 +286,7 @@ export default async function GuidePage({ params }: { params: Params }) {
           label={relatedTours[0].shortTitle}
           sublabel="Free cancellation · Instant confirmation"
           href={relatedTours[0].affiliateUrl}
-          price={formatPrice(relatedTours[0].price, relatedTours[0].currency)}
+          price={<LocalPrice amount={relatedTours[0].price} currency={relatedTours[0].currency} />}
           ctaLabel="Book Now"
           external
         />

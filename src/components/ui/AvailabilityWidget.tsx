@@ -1,7 +1,21 @@
 'use client';
 
-import { GYG_CITY_URL, GYG_PARTNER_ID, SITE_CURRENCY } from '@/lib/constants';
+import { useEffect, useRef } from 'react';
+import { useCurrency } from '@/components/CurrencyProvider';
+import { GYG_CITY_URL, GYG_PARTNER_ID } from '@/lib/constants';
 import TrackedGYGLink from '@/components/TrackedGYGLink';
+
+function scanGygWidgets(root: HTMLElement | null) {
+  if (!root || typeof window === 'undefined') return;
+  const w = window as unknown as { GYG?: { Widget?: (el: Element) => void } };
+  try {
+    if (typeof w.GYG?.Widget === 'function') {
+      root.querySelectorAll('[data-gyg-widget]').forEach((node) => {
+        try { w.GYG!.Widget!(node); } catch {}
+      });
+    }
+  } catch {}
+}
 
 export default function AvailabilityWidget({
   tourId,
@@ -10,6 +24,14 @@ export default function AvailabilityWidget({
   tourId: string;
   affiliateUrl?: string;
 }) {
+  const { code, ready } = useCurrency();
+  const mountRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!ready) return;
+    scanGygWidgets(mountRef.current);
+  }, [ready, code]);
+
   return (
     <div className="my-10">
       <div className="rounded-2xl border-2 border-green-100 bg-gradient-to-b from-green-50 to-white p-6 sm:p-8 shadow-sm">
@@ -25,28 +47,32 @@ export default function AvailabilityWidget({
           </div>
         </div>
 
-        <div
-          data-gyg-href="https://widget.getyourguide.com/default/availability.frame"
-          data-gyg-tour-id={tourId}
-          data-gyg-locale-code="en-US"
-          data-gyg-currency={SITE_CURRENCY}
-          data-gyg-widget="availability"
-          data-gyg-variant="horizontal"
-          data-gyg-partner-id={GYG_PARTNER_ID}
-        >
-          <span>
-            Powered by{' '}
-            <a
-              target="_blank"
-              rel="sponsored"
-              href={GYG_CITY_URL}
+        <div ref={mountRef}>
+          {ready && (
+            <div
+              key={code}
+              data-gyg-href="https://widget.getyourguide.com/default/availability.frame"
+              data-gyg-tour-id={tourId}
+              data-gyg-locale-code="en-US"
+              data-gyg-currency={code}
+              data-gyg-widget="availability"
+              data-gyg-variant="horizontal"
+              data-gyg-partner-id={GYG_PARTNER_ID}
             >
-              GetYourGuide
-            </a>
-          </span>
+              <span>
+                Powered by{' '}
+                <a
+                  target="_blank"
+                  rel="sponsored"
+                  href={GYG_CITY_URL}
+                >
+                  GetYourGuide
+                </a>
+              </span>
+            </div>
+          )}
         </div>
 
-        {/* Fallback CTA if widget doesn't load */}
         {affiliateUrl && (
           <noscript>
             <a

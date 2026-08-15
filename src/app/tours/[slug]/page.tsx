@@ -22,7 +22,6 @@ import ViewerCounter from '@/components/ds/ViewerCounter';
 import RevealOnScroll from '@/components/ds/RevealOnScroll';
 import StickyBookingBar from '@/components/ds/StickyBookingBar';
 import LocalPrice from '@/components/LocalPrice';
-import { formatPrice } from '@/lib/currency';
 
 const categoryGuideMap: Record<string, string[]> = {
   landmarks: ['first-time-visiting-iceland', 'iceland-3-day-itinerary', 'best-walking-tours-iceland-2026'],
@@ -124,9 +123,9 @@ export default async function TourPage({ params }: { params: Params }) {
 
       <StickyBookingBar
         label={tour.shortTitle}
-        sublabel={`From ${formatPrice(tour.price, tour.currency)} · Free cancellation`}
+        sublabel="Free cancellation on most options"
         href={tour.affiliateUrl}
-        price={formatPrice(tour.price, tour.currency)}
+        price={<LocalPrice amount={tour.price} currency={tour.currency} />}
         ctaLabel="Book Now"
         external
       />

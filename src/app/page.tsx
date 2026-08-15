@@ -4,7 +4,7 @@ import TrackedGYGLink from '@/components/TrackedGYGLink';
 import { tours } from '@/data/tours';
 import { categories } from '@/data/categories';
 import { blogPosts } from '@/data/blog-posts';
-import { SITE_CITY, GYG_PARTNER_ID, GYG_LOCATION_ID, GYG_CITY_URL, SITE_CURRENCY } from '@/lib/constants';
+import { SITE_CITY, GYG_CITY_URL } from '@/lib/constants';
 import { trustStats } from '@/lib/trust';
 
 import SectionHeader from '@/components/ds/SectionHeader';
@@ -17,6 +17,7 @@ import CategoryPill from '@/components/ds/CategoryPill';
 import PartnerBadge from '@/components/ds/PartnerBadge';
 import AffiliateDisclosure from '@/components/ui/AffiliateDisclosure';
 import SisterSites from '@/components/SisterSites';
+import CityWidget from '@/components/ui/CityWidget';
 
 const byReviews = [...tours].sort((a, b) => b.rating - a.rating || b.reviewCount - a.reviewCount);
 const mostBookedTours = byReviews.slice(0, 6);
@@ -179,7 +180,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <SectionHeader eyebrow="Explore" title={`Hundreds more ${SITE_CITY} experiences`} subtitle="Browse the full GetYourGuide catalogue, with live pricing and availability." />
         <div className="bg-surface rounded-card-lg p-4 sm:p-6 border border-border">
-          <div data-gyg-href="https://widget.getyourguide.com/default/city.frame" data-gyg-location-id={GYG_LOCATION_ID} data-gyg-locale-code="en-US" data-gyg-currency={SITE_CURRENCY} data-gyg-widget="city" data-gyg-partner-id={GYG_PARTNER_ID} />
+          <CityWidget />
         </div>
       </section>
 

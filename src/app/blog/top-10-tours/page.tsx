@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { tours } from '@/data/tours';
 import { SITE_URL, SITE_CITY, SITE_NAME, GYG_CITY_URL, CONTENT_DATE } from '@/lib/constants';
-import { formatPrice } from '@/lib/currency';
+import LocalPrice from '@/components/LocalPrice';
 import { breadcrumbSchema } from '@/lib/schema';
 import TrackedGYGLink from '@/components/TrackedGYGLink';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
@@ -135,7 +135,7 @@ export default function Top10Page() {
               </TrackedGYGLink>
 
               <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600">
-                <span className="font-semibold text-gray-900">From {formatPrice(tour.price, tour.currency)}</span>
+                <span className="font-semibold text-gray-900">From <LocalPrice amount={tour.price} currency={tour.currency} /></span>
                 <span>&middot; {tour.duration}</span>
                 <span>&middot; Free cancellation on most options</span>
               </div>

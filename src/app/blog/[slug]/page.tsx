@@ -1,3 +1,5 @@
+import LocalPrice from '@/components/LocalPrice';
+import DisplayCopy, { DisplayCopyHtml } from '@/components/DisplayCopy';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -6,7 +8,7 @@ import { blogPosts, getBlogPostBySlug } from '@/data/blog-posts';
 import { getTourBySlug } from '@/data/tours';
 import { blogArticleSchema, faqSchema, breadcrumbSchema } from '@/lib/schema';
 import { SITE_URL } from '@/lib/constants';
-import { displayCopy, formatPrice } from '@/lib/currency';
+import { displayCopy } from '@/lib/currency';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import FAQ from '@/components/ui/FAQ';
 
@@ -106,7 +108,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         {/* Header */}
         <header className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{post.title}</h1>
-          <p className="text-lg text-gray-600 leading-relaxed mb-4">{displayCopy(post.excerpt)}</p>
+          <DisplayCopy as="p" className="text-lg text-gray-600 leading-relaxed mb-4" text={post.excerpt} />
           <div className="flex items-center gap-4 text-sm text-gray-500">
             <span>
               Published:{' '}
@@ -133,7 +135,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         </header>
 
         {/* Blog content */}
-        <div
+        <DisplayCopyHtml
           className="blog-content prose prose-gray prose-lg max-w-none
             prose-headings:text-gray-900 prose-headings:font-bold
             prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
@@ -143,7 +145,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
             prose-li:text-gray-700
             prose-img:rounded-xl prose-img:shadow-sm
             prose-strong:text-gray-900"
-          dangerouslySetInnerHTML={{ __html: displayCopy(post.content) }}
+          html={post.content}
         />
 
         {/* FAQ */}
@@ -174,7 +176,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                       {t.shortTitle}
                     </h3>
                     <p className="mt-1 text-sm text-gray-500">
-                      From {formatPrice(t.price, t.currency)}
+                      From <LocalPrice amount={t.price} currency={t.currency} />
                     </p>
                   </div>
                 </Link>
