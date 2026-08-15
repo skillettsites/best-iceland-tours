@@ -1,11 +1,15 @@
 'use client';
 
 import { useState } from 'react';
+import { useCurrency } from '@/components/CurrencyProvider';
 import { FAQ as FAQType } from '@/lib/types';
+import { SITE_CURRENCY } from '@/lib/constants';
 import { displayCopy } from '@/lib/currency';
 
 export default function FAQ({ faqs, title = 'Frequently Asked Questions' }: { faqs: FAQType[]; title?: string }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { code, ready, rates } = useCurrency();
+  const to = ready ? code : SITE_CURRENCY;
 
   if (faqs.length === 0) return null;
 
@@ -19,7 +23,7 @@ export default function FAQ({ faqs, title = 'Frequently Asked Questions' }: { fa
               onClick={() => setOpenIndex(openIndex === i ? null : i)}
               className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors"
             >
-              <span className="font-medium text-gray-900 pr-4">{displayCopy(faq.question)}</span>
+              <span className="font-medium text-gray-900 pr-4">{displayCopy(faq.question, to, rates)}</span>
               <svg
                 className={`h-5 w-5 text-gray-500 shrink-0 transition-transform ${openIndex === i ? 'rotate-180' : ''}`}
                 fill="none"
@@ -32,7 +36,7 @@ export default function FAQ({ faqs, title = 'Frequently Asked Questions' }: { fa
             </button>
             {openIndex === i && (
               <div className="px-4 pb-4 text-gray-600 leading-relaxed">
-                {displayCopy(faq.answer)}
+                {displayCopy(faq.answer, to, rates)}
               </div>
             )}
           </div>

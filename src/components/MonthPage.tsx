@@ -18,7 +18,7 @@ import { breadcrumbSchema, faqSchema } from '@/lib/schema';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import FAQ from '@/components/ui/FAQ';
 import LocalPrice from '@/components/LocalPrice';
-import { displayCopy, formatPrice } from '@/lib/currency';
+import { displayCopy } from '@/lib/currency';
 import TrackedGYGLink from '@/components/TrackedGYGLink';
 import StickyBookingBar from '@/components/ds/StickyBookingBar';
 
@@ -667,7 +667,7 @@ export default function MonthPage({ slug }: { slug: string }) {
           label={displayName(lead.tour)}
           sublabel={`Top pick for ${month.name} · Free cancellation on most options`}
           href={lead.tour.affiliateUrl}
-          price={formatPrice(lead.tour.price, lead.tour.currency)}
+          price={<LocalPrice amount={lead.tour.price} currency={lead.tour.currency} />}
           ctaLabel="Book Now"
           external
         />

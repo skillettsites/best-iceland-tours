@@ -2,13 +2,13 @@
 
 import Link from 'next/link';
 import { m, useReducedMotion, useScroll } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, ReactNode } from 'react';
 
 interface StickyBookingBarProps {
   label: string;
   sublabel?: string;
   href: string;
-  price?: string;
+  price?: ReactNode;
   ctaLabel?: string;
   external?: boolean;
 }

@@ -2,15 +2,9 @@
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { SITE_CURRENCY } from '@/lib/constants';
-import { CURRENCIES, FALLBACK_RATES, currencySymbol } from '@/lib/currency';
+import { COUNTRY_TO_CUR, CURRENCIES, FALLBACK_RATES, currencySymbol } from '@/lib/currency';
 
 type Info = { symbol: string; rate: number };
-const COUNTRY_TO_CUR: Record<string, string> = {
-  US: 'USD', CA: 'CAD', AU: 'AUD', NZ: 'NZD', GB: 'GBP', CH: 'CHF', SE: 'SEK', NO: 'NOK', DK: 'DKK',
-  JP: 'JPY', MX: 'MXN', BR: 'BRL', AE: 'AED', SG: 'SGD', HK: 'HKD', IN: 'INR', IS: 'ISK', PL: 'PLN',
-  IE: 'EUR', FR: 'EUR', DE: 'EUR', ES: 'EUR', IT: 'EUR', NL: 'EUR', BE: 'EUR', AT: 'EUR', PT: 'EUR',
-  FI: 'EUR', GR: 'EUR', LU: 'EUR', SK: 'EUR', SI: 'EUR', EE: 'EUR', LV: 'EUR', LT: 'EUR', CY: 'EUR', MT: 'EUR', HR: 'EUR',
-};
 
 type Ctx = {
   code: string;
@@ -41,6 +35,9 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
     const country = (readCookie('country') || '').toUpperCase();
     const chosen = manual && CURRENCIES[manual] ? manual : (COUNTRY_TO_CUR[country] || SITE_CURRENCY);
     setCode(chosen);
+    // Currency is chosen before FX loads so widgets can mount in the visitor currency
+    // instead of first-init as SITE_CURRENCY (EUR).
+    setReady(true);
     (async () => {
       let fetched: Record<string, number> | null = null;
       try {
@@ -59,7 +56,6 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
       }
       if (fetched) setRates({ ...FALLBACK_RATES, ...fetched, [SITE_CURRENCY]: 1 });
       else setRates({ ...FALLBACK_RATES, [SITE_CURRENCY]: 1 });
-      setReady(true);
     })();
   }, []);
 

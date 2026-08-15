@@ -27,6 +27,18 @@ export const FALLBACK_RATES: Record<string, number> = Object.fromEntries(
   Object.entries(CURRENCIES).map(([code, meta]) => [code, meta.fallback]),
 );
 
+export const COUNTRY_TO_CUR: Record<string, string> = {
+  US: 'USD', CA: 'CAD', AU: 'AUD', NZ: 'NZD', GB: 'GBP', CH: 'CHF', SE: 'SEK', NO: 'NOK', DK: 'DKK',
+  JP: 'JPY', MX: 'MXN', BR: 'BRL', AE: 'AED', SG: 'SGD', HK: 'HKD', IN: 'INR', IS: 'ISK', PL: 'PLN',
+  IE: 'EUR', FR: 'EUR', DE: 'EUR', ES: 'EUR', IT: 'EUR', NL: 'EUR', BE: 'EUR', AT: 'EUR', PT: 'EUR',
+  FI: 'EUR', GR: 'EUR', LU: 'EUR', SK: 'EUR', SI: 'EUR', EE: 'EUR', LV: 'EUR', LT: 'EUR', CY: 'EUR', MT: 'EUR', HR: 'EUR',
+};
+
+export function currencyFromCountry(country?: string): string {
+  if (!country) return SITE_CURRENCY;
+  return COUNTRY_TO_CUR[country.toUpperCase()] || SITE_CURRENCY;
+}
+
 export function resolveCurrency(code?: string): string {
   return code && CURRENCIES[code] ? code : SITE_CURRENCY;
 }
@@ -62,8 +74,12 @@ export function formatPrice(
   return `${currencySymbol(to)}${value.toLocaleString('en-GB')}`;
 }
 
-export function displayCopy(text: string): string {
+export function displayCopy(
+  text: string,
+  toCode: string = SITE_CURRENCY,
+  rates: Record<string, number> = FALLBACK_RATES,
+): string {
   return text
-    .replace(/&pound;(\d+(?:,\d{3})*(?:\.\d+)?)/g, (_, raw) => formatPrice(Number(String(raw).replace(/,/g, '')), 'GBP'))
-    .replace(/£(\d+(?:,\d{3})*(?:\.\d+)?)/g, (_, raw) => formatPrice(Number(String(raw).replace(/,/g, '')), 'GBP'));
+    .replace(/&pound;(\d+(?:,\d{3})*(?:\.\d+)?)/g, (_, raw) => formatPrice(Number(String(raw).replace(/,/g, '')), 'GBP', toCode, rates))
+    .replace(/£(\d+(?:,\d{3})*(?:\.\d+)?)/g, (_, raw) => formatPrice(Number(String(raw).replace(/,/g, '')), 'GBP', toCode, rates));
 }
