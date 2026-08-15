@@ -7,6 +7,7 @@ import { getTourBySlug } from '@/data/tours';
 import { getBlogPostBySlug } from '@/data/blog-posts';
 import { itemListSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 import { SITE_URL, SITE_CITY } from '@/lib/constants';
+import { displayCopy } from '@/lib/currency';
 import TourCard from '@/components/ui/TourCard';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import AffiliateDisclosure from '@/components/ui/AffiliateDisclosure';
@@ -25,9 +26,9 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!a) return {};
   return {
     title: a.metaTitle,
-    description: a.metaDescription,
+    description: displayCopy(a.metaDescription),
     alternates: { canonical: `${SITE_URL}/attractions/${a.slug}` },
-    openGraph: { title: a.metaTitle, description: a.metaDescription, url: `${SITE_URL}/attractions/${a.slug}`, type: 'website' },
+    openGraph: { title: a.metaTitle, description: displayCopy(a.metaDescription), url: `${SITE_URL}/attractions/${a.slug}`, type: 'website' },
   };
 }
 
@@ -64,10 +65,10 @@ export default async function AttractionPage({ params }: { params: Params }) {
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">{a.title}</h1>
           {a.capsule && (
             <p className="mt-4 rounded-xl border-l-4 border-green-600 bg-green-50 px-4 py-3 text-base text-gray-800 leading-relaxed">
-              {a.capsule}
+              {displayCopy(a.capsule)}
             </p>
           )}
-          <p className="mt-3 text-lg text-gray-600">{a.intro}</p>
+          <p className="mt-3 text-lg text-gray-600">{displayCopy(a.intro)}</p>
           <div className="mt-4 flex flex-wrap items-center gap-3">
             {top && (
               <TrackedGYGLink
@@ -76,7 +77,7 @@ export default async function AttractionPage({ params }: { params: Params }) {
                 section="attraction-hero-cta"
                 className="inline-flex items-center gap-2 rounded-xl bg-green-600 hover:bg-green-500 text-white font-bold px-6 py-3 shadow-sm transition-colors"
               >
-                Book {a.name} tickets from <LocalPrice gbp={fromPrice} />
+                Book {a.name} tickets from <LocalPrice amount={fromPrice} currency="GBP" />
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
               </TrackedGYGLink>
             )}

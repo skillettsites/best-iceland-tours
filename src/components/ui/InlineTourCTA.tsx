@@ -55,7 +55,7 @@ export default function InlineTourCTA({ tours }: { tours: Tour[] }) {
                     {tour.rating} ({formatReviewCount(tour.reviewCount)})
                   </span>
                   <span>{tour.duration}</span>
-                  <span className="font-semibold text-gray-900">From <LocalPrice gbp={tour.price} /></span>
+                  <span className="font-semibold text-gray-900">From <LocalPrice amount={tour.price} currency={tour.currency} /></span>
                 </div>
               </div>
               <TrackedGYGLink

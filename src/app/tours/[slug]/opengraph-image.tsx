@@ -2,6 +2,7 @@ import { ImageResponse } from 'next/og';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { getTourBySlug, tours } from '@/data/tours';
+import { formatPrice } from '@/lib/currency';
 
 export const runtime = 'nodejs';
 export const alt = 'Tour details';
@@ -70,7 +71,7 @@ export default async function OGImage({ params }: { params: Params }) {
               display: 'flex',
             }}
           >
-            From &pound;{tour.price}
+            From {formatPrice(tour.price, tour.currency)}
           </div>
           <div style={{ fontSize: 22, color: '#fbbf24', display: 'flex' }}>
             {tour.rating}/5 stars

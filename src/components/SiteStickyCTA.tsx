@@ -24,7 +24,7 @@ export default function SiteStickyCTA() {
             {trustStats.totalTours}+ top-rated {SITE_CITY} tours
           </p>
           <p className="text-xs text-on-surface-2">
-            From <LocalPrice gbp={trustStats.minPrice} /> &middot; Free cancellation on most
+            From <LocalPrice amount={trustStats.minPrice} currency="GBP" /> &middot; Free cancellation on most
           </p>
         </div>
         <TrackedGYGLink

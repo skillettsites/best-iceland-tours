@@ -18,6 +18,7 @@ import { breadcrumbSchema, faqSchema } from '@/lib/schema';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import FAQ from '@/components/ui/FAQ';
 import LocalPrice from '@/components/LocalPrice';
+import { displayCopy, formatPrice } from '@/lib/currency';
 import TrackedGYGLink from '@/components/TrackedGYGLink';
 import StickyBookingBar from '@/components/ds/StickyBookingBar';
 
@@ -236,7 +237,7 @@ export default function MonthPage({ slug }: { slug: string }) {
                     <td className={td}>{p.tour.bestFor[0] ?? 'All visitors'}</td>
                     <td className={td}>{p.tour.duration}</td>
                     <td className={`${td} whitespace-nowrap font-semibold text-gray-900`}>
-                      <LocalPrice gbp={p.tour.price} />
+                      <LocalPrice amount={p.tour.price} currency={p.tour.currency} />
                     </td>
                     <td className={`${td} whitespace-nowrap`}>
                       {p.tour.rating} ({p.tour.reviewCount.toLocaleString()})
@@ -385,7 +386,7 @@ export default function MonthPage({ slug }: { slug: string }) {
                   <div className="flex-1 p-4">
                     <p className="text-sm leading-relaxed text-gray-700">
                       <span className="font-semibold text-gray-900">Why it ranks here in {month.name}: </span>
-                      {p.note}
+                      {displayCopy(p.note)}
                     </p>
                     <p className="mt-2 text-sm leading-relaxed text-gray-600">{p.tour.excerpt}</p>
                     <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-600">
@@ -394,7 +395,7 @@ export default function MonthPage({ slug }: { slug: string }) {
                       </span>
                       <span>{p.tour.duration}</span>
                       <span className="font-bold text-gray-900">
-                        From <LocalPrice gbp={p.tour.price} />
+                        From <LocalPrice amount={p.tour.price} currency={p.tour.currency} />
                       </span>
                     </div>
                     <div className="mt-4 flex flex-wrap items-center gap-3">
@@ -439,7 +440,7 @@ export default function MonthPage({ slug }: { slug: string }) {
                   <td className={`${td} font-medium text-gray-900`}>{e.name}</td>
                   <td className={td}>{e.dates}</td>
                   <td className={td}>{e.where}</td>
-                  <td className={td}>{e.cost}</td>
+                  <td className={td}>{displayCopy(e.cost)}</td>
                 </tr>
               ))}
             </tbody>
@@ -666,7 +667,7 @@ export default function MonthPage({ slug }: { slug: string }) {
           label={displayName(lead.tour)}
           sublabel={`Top pick for ${month.name} · Free cancellation on most options`}
           href={lead.tour.affiliateUrl}
-          price={`£${lead.tour.price}`}
+          price={formatPrice(lead.tour.price, lead.tour.currency)}
           ctaLabel="Book Now"
           external
         />

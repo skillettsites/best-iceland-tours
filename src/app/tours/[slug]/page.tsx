@@ -21,6 +21,8 @@ import ImageMosaic from '@/components/ds/ImageMosaic';
 import ViewerCounter from '@/components/ds/ViewerCounter';
 import RevealOnScroll from '@/components/ds/RevealOnScroll';
 import StickyBookingBar from '@/components/ds/StickyBookingBar';
+import LocalPrice from '@/components/LocalPrice';
+import { formatPrice } from '@/lib/currency';
 
 const categoryGuideMap: Record<string, string[]> = {
   landmarks: ['first-time-visiting-iceland', 'iceland-3-day-itinerary', 'best-walking-tours-iceland-2026'],
@@ -122,9 +124,9 @@ export default async function TourPage({ params }: { params: Params }) {
 
       <StickyBookingBar
         label={tour.shortTitle}
-        sublabel={`From £${tour.price} · Free cancellation`}
+        sublabel={`From ${formatPrice(tour.price, tour.currency)} · Free cancellation`}
         href={tour.affiliateUrl}
-        price={`£${tour.price}`}
+        price={formatPrice(tour.price, tour.currency)}
         ctaLabel="Book Now"
         external
       />
@@ -263,7 +265,7 @@ export default async function TourPage({ params }: { params: Params }) {
               <div className="rounded-card-lg border border-border bg-surface p-6 shadow-card">
                 <div className="mb-5 text-center">
                   <span className="text-xs uppercase tracking-wider text-on-surface-2">From</span>
-                  <div className="font-display text-5xl text-on-surface leading-none mt-1">£{tour.price}</div>
+                  <div className="font-display text-5xl text-on-surface leading-none mt-1"><LocalPrice amount={tour.price} currency={tour.currency} /></div>
                   <span className="block mt-1 text-xs text-on-surface-2">per person</span>
                 </div>
                 <TrackedGYGLink
@@ -298,7 +300,7 @@ export default async function TourPage({ params }: { params: Params }) {
                   <div className="flex justify-between"><dt className="text-on-surface-2">Duration</dt><dd className="font-medium text-on-surface">{tour.duration}</dd></div>
                   <div className="flex justify-between"><dt className="text-on-surface-2">Rating</dt><dd className="font-medium text-on-surface">{tour.rating.toFixed(1)}/5</dd></div>
                   <div className="flex justify-between"><dt className="text-on-surface-2">Reviews</dt><dd className="font-medium text-on-surface">{tour.reviewCount.toLocaleString()}</dd></div>
-                  <div className="flex justify-between"><dt className="text-on-surface-2">From</dt><dd className="font-medium text-on-surface">£{tour.price}</dd></div>
+                  <div className="flex justify-between"><dt className="text-on-surface-2">From</dt><dd className="font-medium text-on-surface"><LocalPrice amount={tour.price} currency={tour.currency} /></dd></div>
                 </dl>
               </div>
             </div>

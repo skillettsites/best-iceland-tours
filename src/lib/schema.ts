@@ -1,5 +1,6 @@
 import { Tour, Category, Guide, FAQ, BlogPost } from './types';
-import { SITE_NAME, SITE_URL, SITE_DESCRIPTION, DATA_CHECKED } from './constants';
+import { SITE_NAME, SITE_URL, SITE_DESCRIPTION, DATA_CHECKED, SITE_CURRENCY } from './constants';
+import { convertAmount, FALLBACK_RATES, displayCopy } from './currency';
 
 export function websiteSchema() {
   return {
@@ -63,8 +64,8 @@ export function tourSchema(tour: Tour) {
     },
     offers: {
       '@type': 'Offer',
-      price: tour.price,
-      priceCurrency: tour.currency,
+      price: convertAmount(tour.price, tour.currency, SITE_CURRENCY, FALLBACK_RATES),
+      priceCurrency: SITE_CURRENCY,
       availability: 'https://schema.org/InStock',
       url: tour.affiliateUrl,
       priceValidUntil: '2027-12-31',
@@ -84,8 +85,8 @@ export function touristTripSchema(tour: Tour) {
     touristType: tour.bestFor,
     offers: {
       '@type': 'Offer',
-      price: tour.price,
-      priceCurrency: tour.currency,
+      price: convertAmount(tour.price, tour.currency, SITE_CURRENCY, FALLBACK_RATES),
+      priceCurrency: SITE_CURRENCY,
       availability: 'https://schema.org/InStock',
       url: tour.affiliateUrl,
     },
@@ -139,10 +140,10 @@ export function faqSchema(faqs: FAQ[]) {
     '@type': 'FAQPage',
     mainEntity: faqs.map((faq) => ({
       '@type': 'Question',
-      name: faq.question,
+      name: displayCopy(faq.question),
       acceptedAnswer: {
         '@type': 'Answer',
-        text: faq.answer,
+        text: displayCopy(faq.answer),
       },
     })),
   };
@@ -152,8 +153,8 @@ export function articleSchema(guide: Guide) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: guide.title,
-    description: guide.metaDescription,
+    headline: displayCopy(guide.title),
+    description: displayCopy(guide.metaDescription),
     url: `${SITE_URL}/guides/${guide.slug}`,
     datePublished: guide.publishedDate,
     dateModified: guide.updatedDate,
@@ -174,8 +175,8 @@ export function blogArticleSchema(post: BlogPost) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: post.title,
-    description: post.metaDescription,
+    headline: displayCopy(post.title),
+    description: displayCopy(post.metaDescription),
     image: post.heroImage,
     url: `${SITE_URL}/blog/${post.slug}`,
     datePublished: post.publishedDate,
@@ -197,8 +198,8 @@ export function categorySchema(category: Category) {
   return {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: category.title,
-    description: category.description,
+    name: displayCopy(category.title),
+    description: displayCopy(category.description),
     url: `${SITE_URL}/category/${category.slug}`,
   };
 }
