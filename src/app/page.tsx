@@ -34,11 +34,13 @@ const guideSlugOrder = [
   'is-the-golden-circle-tour-worth-it',
   'how-to-get-around-iceland-tours-vs-rental-car',
 ];
-const whichTicketGuide = guides.find((g) => g.slug === 'best-blue-lagoon-tickets');
+const whichTicketSlugs = ['best-blue-lagoon-tickets', 'best-whale-watching-iceland'];
+const whichTicketGuides = whichTicketSlugs
+  .map((slug) => guides.find((g) => g.slug === slug))
+  .filter((g): g is NonNullable<typeof g> => g !== undefined)
+  .map((g) => ({ href: `/guides/${g.slug}`, title: g.title, excerpt: g.excerpt }));
 const decisionGuides = [
-  ...(whichTicketGuide
-    ? [{ href: `/guides/${whichTicketGuide.slug}`, title: whichTicketGuide.title, excerpt: whichTicketGuide.excerpt }]
-    : []),
+  ...whichTicketGuides,
   ...guideSlugOrder
     .map((slug) => blogPosts.find((p) => p.slug === slug))
     .filter((p): p is NonNullable<typeof p> => p !== undefined)

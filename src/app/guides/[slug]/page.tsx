@@ -14,7 +14,7 @@ import TourCard from '@/components/ui/TourCard';
 import InlineTourCTA from '@/components/ui/InlineTourCTA';
 import StickyBookingBar from '@/components/ds/StickyBookingBar';
 
-const DEDICATED_GUIDE_SLUGS = new Set(['best-blue-lagoon-tickets']);
+const DEDICATED_GUIDE_SLUGS = new Set(['best-blue-lagoon-tickets', 'best-whale-watching-iceland']);
 
 export function generateStaticParams() {
   return guides.filter((guide) => !DEDICATED_GUIDE_SLUGS.has(guide.slug)).map((guide) => ({ slug: guide.slug }));
