@@ -6,6 +6,7 @@ import { blogPosts, getBlogPostBySlug } from '@/data/blog-posts';
 import { getTourBySlug } from '@/data/tours';
 import { blogArticleSchema, faqSchema, breadcrumbSchema } from '@/lib/schema';
 import { SITE_URL } from '@/lib/constants';
+import { displayCopy, formatPrice } from '@/lib/currency';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import FAQ from '@/components/ui/FAQ';
 
@@ -22,11 +23,11 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
 
   return {
     title: post.metaTitle,
-    description: post.metaDescription,
+    description: displayCopy(post.metaDescription),
     alternates: { canonical: `${SITE_URL}/blog/${post.slug}` },
     openGraph: {
       title: post.metaTitle,
-      description: post.metaDescription,
+      description: displayCopy(post.metaDescription),
       url: `${SITE_URL}/blog/${post.slug}`,
       type: 'article',
       images: [{ url: post.heroImage, width: 800, height: 500, alt: post.heroImageAlt }],
@@ -34,7 +35,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     twitter: {
       card: 'summary_large_image',
       title: post.metaTitle,
-      description: post.metaDescription,
+      description: displayCopy(post.metaDescription),
       images: [post.heroImage],
     },
   };
@@ -105,7 +106,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         {/* Header */}
         <header className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{post.title}</h1>
-          <p className="text-lg text-gray-600 leading-relaxed mb-4">{post.excerpt}</p>
+          <p className="text-lg text-gray-600 leading-relaxed mb-4">{displayCopy(post.excerpt)}</p>
           <div className="flex items-center gap-4 text-sm text-gray-500">
             <span>
               Published:{' '}
@@ -142,7 +143,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
             prose-li:text-gray-700
             prose-img:rounded-xl prose-img:shadow-sm
             prose-strong:text-gray-900"
-          dangerouslySetInnerHTML={{ __html: post.content }}
+          dangerouslySetInnerHTML={{ __html: displayCopy(post.content) }}
         />
 
         {/* FAQ */}
@@ -173,8 +174,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                       {t.shortTitle}
                     </h3>
                     <p className="mt-1 text-sm text-gray-500">
-                      From {t.currency === 'GBP' ? '£' : t.currency}
-                      {t.price}
+                      From {formatPrice(t.price, t.currency)}
                     </p>
                   </div>
                 </Link>

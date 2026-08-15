@@ -1,6 +1,6 @@
 'use client';
 
-import { GYG_LOCATION_ID, GYG_PARTNER_ID, SITE_CITY, SITE_CURRENCY } from '@/lib/constants';
+import { GYG_CITY_URL, GYG_PARTNER_ID, SITE_CURRENCY } from '@/lib/constants';
 import TrackedGYGLink from '@/components/TrackedGYGLink';
 
 export default function AvailabilityWidget({
@@ -39,7 +39,7 @@ export default function AvailabilityWidget({
             <a
               target="_blank"
               rel="sponsored"
-              href={`https://www.getyourguide.com/${SITE_CITY.toLowerCase().replace(/\s+/g, '-')}-l${GYG_LOCATION_ID}/`}
+              href={GYG_CITY_URL}
             >
               GetYourGuide
             </a>

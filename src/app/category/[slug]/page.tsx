@@ -5,6 +5,7 @@ import { categories, getCategoryBySlug } from '@/data/categories';
 import { getToursByCategory } from '@/data/tours';
 import { categorySchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 import { SITE_URL, SITE_CITY } from '@/lib/constants';
+import { displayCopy } from '@/lib/currency';
 import TourCard from '@/components/ui/TourCard';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import AffiliateDisclosure from '@/components/ui/AffiliateDisclosure';
@@ -96,7 +97,7 @@ export default async function CategoryPage({ params }: { params: Params }) {
         <div className="mb-8">
           <span className="text-4xl mb-4 block">{category.icon}</span>
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">{category.title}</h1>
-          <p className="mt-3 text-lg text-gray-600 max-w-3xl">{category.description}</p>
+          <p className="mt-3 text-lg text-gray-600 max-w-3xl">{displayCopy(category.description)}</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -135,7 +136,7 @@ export default async function CategoryPage({ params }: { params: Params }) {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">About {category.title} in {SITE_CITY}</h2>
             <div className="prose max-w-none text-gray-700 space-y-4">
               {categorySeoContent[category.slug].paragraphs.map((p, i) => (
-                <p key={i}>{p}</p>
+                <p key={i}>{displayCopy(p)}</p>
               ))}
             </div>
 

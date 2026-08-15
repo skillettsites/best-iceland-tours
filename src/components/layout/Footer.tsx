@@ -71,7 +71,7 @@ export default function Footer() {
                       className="text-sm hover:text-white transition-colors flex items-center justify-between gap-2 min-h-[32px]"
                     >
                       <span className="line-clamp-1">{tour.shortTitle}</span>
-                      <span className="text-xs text-gray-500 shrink-0">from <LocalPrice gbp={tour.price} /></span>
+                      <span className="text-xs text-gray-500 shrink-0">from <LocalPrice amount={tour.price} currency={tour.currency} /></span>
                     </Link>
                   </li>
                 ))}

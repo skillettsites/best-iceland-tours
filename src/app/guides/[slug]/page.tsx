@@ -7,6 +7,7 @@ import { getTourBySlug } from '@/data/tours';
 import { categories } from '@/data/categories';
 import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 import { SITE_URL } from '@/lib/constants';
+import { displayCopy, formatPrice } from '@/lib/currency';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import FAQ from '@/components/ui/FAQ';
 import TourCard from '@/components/ui/TourCard';
@@ -26,11 +27,11 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
 
   return {
     title: guide.metaTitle,
-    description: guide.metaDescription,
+    description: displayCopy(guide.metaDescription),
     alternates: { canonical: `${SITE_URL}/guides/${guide.slug}` },
     openGraph: {
       title: guide.metaTitle,
-      description: guide.metaDescription,
+      description: displayCopy(guide.metaDescription),
       url: `${SITE_URL}/guides/${guide.slug}`,
       type: 'article',
     },
@@ -78,10 +79,10 @@ export default async function GuidePage({ params }: { params: Params }) {
             <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">{guide.title}</h1>
             {guide.answerCapsule && (
               <p className="mt-4 rounded-xl border-l-4 border-green-600 bg-green-50 px-4 py-3 text-base text-gray-800 leading-relaxed">
-                {guide.answerCapsule}
+                {displayCopy(guide.answerCapsule)}
               </p>
             )}
-            <p className="mt-4 text-lg text-gray-600">{guide.excerpt}</p>
+            <p className="mt-4 text-lg text-gray-600">{displayCopy(guide.excerpt)}</p>
             <time className="mt-3 block text-sm text-gray-500" dateTime={guide.updatedDate}>
               Updated: {new Date(guide.updatedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
             </time>
@@ -137,7 +138,7 @@ export default async function GuidePage({ params }: { params: Params }) {
                       {relatedTours[0].rating} ({relatedTours[0].reviewCount.toLocaleString()} reviews)
                     </span>
                     <span>{relatedTours[0].duration}</span>
-                    <span className="font-bold text-gray-900">From <LocalPrice gbp={relatedTours[0].price} /></span>
+                    <span className="font-bold text-gray-900">From <LocalPrice amount={relatedTours[0].price} currency={relatedTours[0].currency} /></span>
                   </div>
                 </div>
                 <div className="flex flex-col items-start sm:items-end gap-1">
@@ -147,7 +148,7 @@ export default async function GuidePage({ params }: { params: Params }) {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-green-500 transition-colors whitespace-nowrap"
                   >
-                    Book now from <LocalPrice gbp={relatedTours[0].price} />
+                    Book now from <LocalPrice amount={relatedTours[0].price} currency={relatedTours[0].currency} />
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                     </svg>
@@ -188,7 +189,7 @@ export default async function GuidePage({ params }: { params: Params }) {
                 <div key={i}>
                   <section id={section.heading.toLowerCase().replace(/[^a-z0-9]+/g, '-')}>
                     <h2>{section.heading}</h2>
-                    <div dangerouslySetInnerHTML={{ __html: section.content }} />
+                    <div dangerouslySetInnerHTML={{ __html: displayCopy(section.content) }} />
                   </section>
                   {ctaTours.length > 0 && <InlineTourCTA tours={ctaTours} />}
                 </div>
@@ -285,7 +286,7 @@ export default async function GuidePage({ params }: { params: Params }) {
           label={relatedTours[0].shortTitle}
           sublabel="Free cancellation · Instant confirmation"
           href={relatedTours[0].affiliateUrl}
-          price={`£${relatedTours[0].price}`}
+          price={formatPrice(relatedTours[0].price, relatedTours[0].currency)}
           ctaLabel="Book Now"
           external
         />

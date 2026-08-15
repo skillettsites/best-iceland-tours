@@ -1,13 +1,37 @@
 'use client';
 
-import { useCurrency, convertGBP } from '@/components/CurrencyProvider';
+import { useCurrency } from '@/components/CurrencyProvider';
+import { SITE_CURRENCY } from '@/lib/constants';
+import { convertAmount, currencySymbol, resolveCurrency } from '@/lib/currency';
 
-// Renders a stored GBP catalogue amount in the visitor's currency (approx).
-// Default market display is EUR, including SSR / first paint, so the footer and
-// cards are not forced to £ while FX loads.
-export default function LocalPrice({ gbp, className }: { gbp: number; className?: string }) {
-  const { code, info } = useCurrency();
-  if (code === 'GBP') return <span className={className}>&pound;{gbp}</span>;
-  const val = convertGBP(gbp, code, info.rate);
-  return <span className={className} title={`Approx, from £${gbp}. Exact price shown on GetYourGuide.`}>{'≈ '}{info.symbol}{val.toLocaleString('en-GB')}</span>;
+export default function LocalPrice({
+  amount,
+  currency,
+  className,
+}: {
+  amount: number;
+  currency?: string;
+  className?: string;
+}) {
+  const { code, info, ready, rates } = useCurrency();
+  const from = resolveCurrency(currency);
+  const displayCode = ready ? resolveCurrency(code) : SITE_CURRENCY;
+  const displaySymbol = ready ? info.symbol : currencySymbol(SITE_CURRENCY);
+  const val = convertAmount(amount, from, displayCode, rates);
+  const converted = from !== displayCode;
+  const showApprox = converted && displayCode !== SITE_CURRENCY;
+
+  if (!showApprox) {
+    return (
+      <span className={className}>
+        {displaySymbol}{val.toLocaleString('en-GB')}
+      </span>
+    );
+  }
+
+  return (
+    <span className={className} title="Approximate conversion. Exact price shown on GetYourGuide.">
+      {'≈ '}{displaySymbol}{val.toLocaleString('en-GB')}
+    </span>
+  );
 }
