@@ -14,14 +14,17 @@ import TourCard from '@/components/ui/TourCard';
 import InlineTourCTA from '@/components/ui/InlineTourCTA';
 import StickyBookingBar from '@/components/ds/StickyBookingBar';
 
+const DEDICATED_GUIDE_SLUGS = new Set(['best-blue-lagoon-tickets']);
+
 export function generateStaticParams() {
-  return guides.map((guide) => ({ slug: guide.slug }));
+  return guides.filter((guide) => !DEDICATED_GUIDE_SLUGS.has(guide.slug)).map((guide) => ({ slug: guide.slug }));
 }
 
 type Params = Promise<{ slug: string }>;
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { slug } = await params;
+  if (DEDICATED_GUIDE_SLUGS.has(slug)) return {};
   const guide = getGuideBySlug(slug);
   if (!guide) return {};
 
@@ -40,6 +43,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
 
 export default async function GuidePage({ params }: { params: Params }) {
   const { slug } = await params;
+  if (DEDICATED_GUIDE_SLUGS.has(slug)) notFound();
   const guide = getGuideBySlug(slug);
   if (!guide) notFound();
 

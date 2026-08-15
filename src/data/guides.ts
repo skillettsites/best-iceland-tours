@@ -2,6 +2,74 @@ import { Guide } from '@/lib/types';
 
 export const guides: Guide[] = [
   {
+    slug: 'best-blue-lagoon-tickets',
+    title: 'Which Blue Lagoon ticket is actually the best in 2026? (Comfort vs Premium vs Retreat)',
+    metaTitle: 'Which Blue Lagoon Ticket to Book 2026 | Comfort vs Premium vs Retreat',
+    metaDescription:
+      'Comfort, Premium or Retreat? An honest top 3 of the Blue Lagoon packages people actually book on GetYourGuide, with live ratings and who each one is for.',
+    excerpt:
+      'Quick answer: book Comfort if you want the famous public lagoon. Book Premium if you want a robe and extra drinks on the same lagoon. Book Retreat only if you want the private spa suite. Comfort is the one almost everyone should take.',
+    answerCapsule:
+      'Comfort is the Blue Lagoon ticket to book for most visitors. Premium is the same public lagoon with extras. Retreat is a separate private spa, not a nicer Comfort locker.',
+    quickPicks: [
+      {
+        useCase: 'the famous lagoon',
+        operator: 'Comfort admission',
+        verdict: 'Official public-lagoon ticket. Rated 4.6 from 6,109 reviews, from £108.',
+        href: 'https://www.getyourguide.com/activity/-t393203?partner_id=LPT26IL&utm_medium=online_publisher&cmp=best_iceland_tours',
+      },
+      {
+        useCase: 'a robe and extras',
+        operator: 'Premium admission',
+        verdict: 'Same lagoon, bathrobe and extra drinks or masks. Rated 4.6 from 607 reviews.',
+        href: 'https://www.getyourguide.com/activity/-t880939?partner_id=LPT26IL&utm_medium=online_publisher&cmp=best_iceland_tours',
+      },
+      {
+        useCase: 'a private spa suite',
+        operator: 'Retreat Spa',
+        verdict: 'Private changing suite and Retreat Lagoon. Rated 4.7 from 40 reviews.',
+        href: 'https://www.getyourguide.com/activity/-t347136?partner_id=LPT26IL&utm_medium=online_publisher&cmp=best_iceland_tours',
+      },
+    ],
+    sections: [
+      {
+        heading: 'The short version',
+        content:
+          '<p>Three live GetYourGuide products cover the Blue Lagoon packages people actually book: official Comfort admission, official Premium admission, and the Retreat Spa with a private changing suite. Comfort is the public lagoon ticket. Premium is the same lagoon with extras. Retreat is a different spa.</p>',
+      },
+    ],
+    relatedTourSlugs: ['official-blue-lagoon-iceland-comfort-admission'],
+    faqs: [
+      {
+        question: 'Which Blue Lagoon ticket is the best?',
+        answer:
+          'Comfort is the best Blue Lagoon ticket for almost everyone. It is the official public-lagoon admission, rated 4.6 from 6,109 reviews, from £108. Book Premium only if you want a robe and extra drinks on the same lagoon. Book Retreat only if you want the private spa suite.',
+      },
+      {
+        question: 'What is the difference between Comfort and Premium at the Blue Lagoon?',
+        answer:
+          'Both are official tickets to the same public lagoon. Comfort includes a towel, a drink and a silica mask, from £108. Premium adds a bathrobe and extra drinks or masks. Premium is not a quieter pool.',
+      },
+      {
+        question: 'Is the Blue Lagoon Retreat ticket worth it?',
+        answer:
+          'Only if you want a private changing suite and the Retreat Lagoon. The live GetYourGuide product is Official Blue Lagoon: Retreat Spa & Private Changing Suite, rated 4.7 from 40 reviews. Most visitors should book Comfort instead.',
+      },
+      {
+        question: 'Does GetYourGuide sell Blue Lagoon Signature admission?',
+        answer:
+          'Not as a live standalone package in this comparison. Official Blue Lagoon sells Signature on its own site. The live GetYourGuide packages compared here are Comfort, Premium and Retreat.',
+      },
+      {
+        question: 'Do I need to book Blue Lagoon tickets in advance?',
+        answer:
+          'Yes. Entry is timed and peak slots sell out. Comfort, Premium and Retreat on GetYourGuide include free cancellation on most options up to 24 hours before, so booking ahead is the low-risk move.',
+      },
+    ],
+    publishedDate: '2026-08-15',
+    updatedDate: '2026-08-15',
+  },
+  {
     slug: 'blue-lagoon-vs-sky-lagoon',
     title: 'Blue Lagoon vs Sky Lagoon: Which to Book (2026)',
     metaTitle: 'Blue Lagoon vs Sky Lagoon 2026: Compared From £86',

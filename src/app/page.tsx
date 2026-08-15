@@ -4,6 +4,7 @@ import TrackedGYGLink from '@/components/TrackedGYGLink';
 import { tours } from '@/data/tours';
 import { categories } from '@/data/categories';
 import { blogPosts } from '@/data/blog-posts';
+import { guides } from '@/data/guides';
 import { SITE_CITY, GYG_CITY_URL } from '@/lib/constants';
 import { trustStats } from '@/lib/trust';
 
@@ -33,9 +34,16 @@ const guideSlugOrder = [
   'is-the-golden-circle-tour-worth-it',
   'how-to-get-around-iceland-tours-vs-rental-car',
 ];
-const decisionGuides = guideSlugOrder
-  .map((slug) => blogPosts.find((p) => p.slug === slug))
-  .filter((p): p is NonNullable<typeof p> => p !== undefined);
+const whichTicketGuide = guides.find((g) => g.slug === 'best-blue-lagoon-tickets');
+const decisionGuides = [
+  ...(whichTicketGuide
+    ? [{ href: `/guides/${whichTicketGuide.slug}`, title: whichTicketGuide.title, excerpt: whichTicketGuide.excerpt }]
+    : []),
+  ...guideSlugOrder
+    .map((slug) => blogPosts.find((p) => p.slug === slug))
+    .filter((p): p is NonNullable<typeof p> => p !== undefined)
+    .map((p) => ({ href: `/blog/${p.slug}`, title: p.title, excerpt: p.excerpt })),
+];
 
 const testimonials = [
   { quote: `Booking ahead through the site was effortless. We skipped the long queue and walked straight in. Easily the highlight of our trip to ${SITE_CITY}.`, author: 'Sarah M.', location: 'United States', rating: 5 },
@@ -195,9 +203,9 @@ export default function HomePage() {
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {decisionGuides.map((post, i) => (
-              <RevealOnScroll key={post.slug} delay={(i % 3) * 0.08}>
+              <RevealOnScroll key={post.href} delay={(i % 3) * 0.08}>
                 <Link
-                  href={`/blog/${post.slug}`}
+                  href={post.href}
                   className="group flex h-full flex-col rounded-card-lg border border-border bg-surface p-6 shadow-card transition-all hover:-translate-y-1 hover:shadow-lg"
                 >
                   <h3 className="text-lg font-semibold text-on-surface group-hover:text-primary transition-colors">
