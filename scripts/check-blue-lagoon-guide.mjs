@@ -21,7 +21,9 @@ const pageBundle = [
 
 const errors = [];
 
-const gygHrefs = [...pageBundle.matchAll(/https:\/\/www\.getyourguide\.com[^"' \s)]+/g)].map((m) => m[0]);
+const gygHrefs = [...pageBundle.matchAll(/https:\/\/www\.getyourguide\.com[^"' \s)`]+/g)]
+  .map((m) => m[0])
+  .filter((href) => !href.includes('${'));
 if (gygHrefs.length < 3) errors.push(`expected at least 3 GYG hrefs, got ${gygHrefs.length}`);
 for (const href of gygHrefs) {
   if (!href.includes('partner_id=LPT26IL')) errors.push(`missing LPT26IL: ${href}`);
@@ -62,8 +64,9 @@ if (/data-gyg-currency=\{?['"]EUR['"]\}?/.test(widget) || widget.includes('SITE_
 
 const page = text['src/app/guides/best-blue-lagoon-tickets/page.tsx'];
 if (page.includes('£') || page.includes('&pound;')) errors.push('dedicated page has leftover £');
-if (!page.includes('partner_id=LPT26IL') && !text['src/app/guides/best-blue-lagoon-tickets/products.ts'].includes('LPT26IL')) {
-  errors.push('products missing partner id');
+const products = text['src/app/guides/best-blue-lagoon-tickets/products.ts'];
+if (!products.includes('GYG_PARTNER_ID') || !products.includes('GYG_CAMPAIGN')) {
+  errors.push('products must build hrefs from GYG_PARTNER_ID and GYG_CAMPAIGN');
 }
 
 if (errors.length) {
