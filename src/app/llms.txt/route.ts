@@ -26,6 +26,8 @@ const DECISION_VERDICTS: Record<string, string> = {
     'Verdict: glacier hike (from £141) for a year-round active adventure; Perlan ice cave (from £43) for a cheap, weather-proof, family-friendly ice experience, and the only ice-cave option outside winter.',
   'how-to-get-around-iceland-tours-vs-rental-car':
     'Verdict: guided day tours are the best value for solo travellers, couples and winter trips; a rental car is cheaper only for a group of four sharing, ideally in summer.',
+  'is-whale-watching-in-iceland-worth-it':
+    'Verdict: yes in summer from Reykjavik if you book a refundable tour with a no-sighting policy (classic boat from £72, RIB from £145); sightings are common but never guaranteed.',
 };
 
 function line(items: string[]): string {

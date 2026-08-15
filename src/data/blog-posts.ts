@@ -597,6 +597,106 @@ export const blogPosts: BlogPost[] = [
     publishedDate: '2026-07-25',
     updatedDate: '2026-07-25',
   },
+
+  {
+    slug: 'is-whale-watching-in-iceland-worth-it',
+    title: 'Is Whale Watching in Iceland Worth It? (2026)',
+    metaTitle: 'Is Whale Watching in Iceland Worth It? (2026)',
+    metaDescription:
+      'Is whale watching in Iceland worth it? Honest 2026 verdict on season, boat vs RIB, prices from £72, and why a no-sighting policy matters.',
+    excerpt:
+      'Yes in summer from Reykjavik, if you book a refundable tour with a no-sighting policy. Here is the honest split between a classic boat and a RIB.',
+    heroImage: 'https://cdn.getyourguide.com/img/tour/97c3e549d7e1d7d93de8356bd5d2d1dd9732045127bef033571357c0601b6826.jpeg/99.jpg',
+    heroImageAlt: 'Whale watching cruise leaving Reykjavik Old Harbour into Faxafloi Bay',
+    content: `<p>Yes, whale watching in Iceland is worth it in summer from Reykjavik, as long as you book a refundable tour with a no-sighting policy. Pick a classic boat if you want the cheaper, stabler ride. Pick a RIB if you want speed and closer views. Sightings are common in Faxafloi Bay but never guaranteed, and winter is a colder, lower-odds gamble.</p>
+
+<p>The ranked departures live on our <a href="/attractions/whale-watching">whale watching tours in Iceland</a> page. This guide is the decision: whether to book at all, and which style of boat.</p>
+
+<h2>Season is the real filter</h2>
+
+<p>Boats leave Reykjavik's Old Harbour all year, but the operators put the peak at <strong>April to October</strong>. July and August give the longest days, the calmest decks and the best chance of humpbacks as well as minkes, white-beaked dolphins and harbour porpoises. April to June and September to October still work, with fewer boats. November to March still finds whales, but it is cold, weather-dependent, and a poorer first pick if you only have one free morning.</p>
+
+<p>If you are here in summer, this is one of the easiest half-days you can add: a ten-minute walk from the city centre, no car, back in town for dinner.</p>
+
+<h2>Classic boat or RIB</h2>
+
+<p>A <strong>classic whale-watching cruise starts from £72</strong> and runs about three hours. You get a heated cabin, toilets, a cafe and space to move. That is the right call with children, anyone who gets seasick easily, or anyone who just wants a stable deck and a lower price.</p>
+
+<p>${link('248622', 'Check the whale watching and marine life cruise')}</p>
+
+<p>The other classic option is the <strong>Original 3-Hour Whale Watching Tour from £79</strong>. Elding, the operator, states whales are seen on more than 90% of sailings and lists a sighting guarantee: if you see nothing, you can try again for free. Warm overalls are included.</p>
+
+<p>${link('34789', 'See the original 3-hour whale watching tour')}</p>
+
+<p>A <strong>RIB speedboat starts from £145</strong> and lasts about two hours. You sit closer to the water, cover more of the bay, and get nearer to whatever shows up. It is wetter, bumpier and not suitable for young children (typically ages 10 and over). Book it if the thrill and the closer views matter more than the extra cost.</p>
+
+<p>${link('402119', 'Check whale watching by RIB speedboat')}</p>
+
+<p>The highest-rated RIB is the <strong>whale and puffin watching RIB from £146</strong>, a small-group run that pairs marine mammals with puffins in season.</p>
+
+<p>${link('52864', 'See the whale and puffin watching RIB boat tour')}</p>
+
+<p>If you want both wildlife types on a regular boat, the <strong>whales and puffins express cruise combo starts from £100</strong> and runs about four hours.</p>
+
+<p>${link('74963', 'Check the whales and puffins express cruise combo')}</p>
+
+<h2>Sightings are not a promise</h2>
+
+<p>No honest operator guarantees a whale. What they do offer is a second chance, and the terms differ. Elding lets you sail again free if you see nothing. Sea Trips Reykjavik, on the marine life cruise, does not refund but gives a free return ticket valid for up to three years, subject to availability. The RIB speedboat also offers a complimentary ticket for another day if wildlife does not show. Always read the know-before-you-go notes on the option you book.</p>
+
+<p>That policy is why a paid tour is worth it over hoping from the harbour wall. You are buying a boat, a guide who knows Faxafloi Bay, and a retry if the animals stay down.</p>
+
+<h2>When to skip it</h2>
+
+<p><strong>Book it if:</strong> you are in Reykjavik between April and October, you have a free morning or afternoon, and you pick a refundable option with a no-sighting retry.</p>
+
+<p><strong>Skip it, or wait, if:</strong> a rough winter forecast is already cancelling sailings, anyone in your group gets badly seasick on small boats and you were about to book a RIB, or you expected a guaranteed close-up with a humpback. Wild animals do not keep a timetable.</p>
+
+<h2>The verdict</h2>
+
+<p>Yes: whale watching in Iceland is worth it in summer from Reykjavik if you book a refundable tour with a no-sighting policy. Take the classic boat from £72 if you want cheaper and stabler. Take a RIB from £145 if you want speed and closer views. Treat any sighting as a bonus, dress warmer than you think, and keep a spare slot in the trip so you can use the retry if the first sailing is quiet.</p>`,
+    relatedTourSlugs: [
+      'reykjav-k-whale-watching-and-marine-life-cruise',
+      'reykjavik-the-original-3-hour-whale-watching-tour',
+      'reykjavik-whales-and-puffins-express-cruise-combo-tour',
+      'reykjavik-whale-watching-by-rib-speedboat',
+      'reykjavik-whale-and-puffin-watching-rib-boat-tour',
+    ],
+    relatedBlogSlugs: [
+      'is-the-golden-circle-tour-worth-it',
+      'best-iceland-day-tours-from-reykjavik',
+      'is-a-northern-lights-tour-worth-it',
+    ],
+    faqs: [
+      {
+        question: 'Is whale watching in Iceland worth it?',
+        answer:
+          'Yes in summer from Reykjavik, if you book a refundable tour with a no-sighting policy. Classic boats start from around £72 and suit families. RIBs start from around £145 if you want a faster, closer ride. Sightings are common but never guaranteed.',
+      },
+      {
+        question: 'What is the best time of year for whale watching in Iceland?',
+        answer:
+          'Peak season is April to October, with July and August the most comfortable. Boats sail from Reykjavik all year, and whales are still seen in winter, but the decks are colder and the weather cancels more sailings.',
+      },
+      {
+        question: 'Should you book a classic boat or a RIB for whale watching?',
+        answer:
+          'Book a classic boat from around £72 if you want a cheaper, stabler three-hour cruise with a heated cabin. Book a RIB from around £145 if you want a two-hour speedboat, closer views and do not mind spray. RIBs are typically for ages 10 and over.',
+      },
+      {
+        question: 'What happens if you do not see any whales?',
+        answer:
+          'It depends on the operator. Elding lists a sighting guarantee and lets you sail again free. Sea Trips Reykjavik does not refund but offers a free return ticket valid up to three years, subject to availability. The RIB speedboat also offers a complimentary ticket for another day. Check the terms on the option you book.',
+      },
+      {
+        question: 'How much is whale watching from Reykjavik?',
+        answer:
+          'A classic whale-watching cruise starts from around £72. The original 3-hour tour is from around £79, the whales and puffins combo from around £100, the RIB speedboat from around £145, and the whale and puffin RIB from around £146.',
+      },
+    ],
+    publishedDate: '2026-08-15',
+    updatedDate: '2026-08-15',
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
