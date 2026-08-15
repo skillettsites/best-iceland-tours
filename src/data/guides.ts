@@ -70,6 +70,78 @@ export const guides: Guide[] = [
     updatedDate: '2026-08-15',
   },
   {
+    slug: 'best-whale-watching-iceland',
+    title: 'Which whale watching tour is actually the best in 2026? (Marine Life Cruise vs RIB Speedboat)',
+    metaTitle: 'Which Whale Watching Tour to Book 2026 | Classic Boat vs RIB',
+    metaDescription:
+      'Classic boat or RIB? An honest top 3 of the Reykjavik whale watching tours people actually book on GetYourGuide, with live ratings and who each one is for.',
+    excerpt:
+      'Quick answer: book the Marine Life Cruise if you want the classic heated-cabin boat. Book the RIB Speedboat if you want a faster, closer ride. Book the Whales and Puffins Express combo if you want both wildlife types on one sailing. The Marine Life Cruise is the one almost everyone should take.',
+    answerCapsule:
+      'The Marine Life Cruise is the whale watching tour to book for most visitors. The RIB Speedboat is the faster, closer option. The Whales and Puffins Express combo adds puffins on a classic boat. The Marine Life Cruise is the one almost everyone should take.',
+    quickPicks: [
+      {
+        useCase: 'the classic boat',
+        operator: 'Marine Life Cruise',
+        verdict: 'Heated-cabin cruise from Reykjavik Old Harbour. Rated 4.5 from 11,257 reviews.',
+        href: 'https://www.getyourguide.com/activity/-t248622?partner_id=LPT26IL&utm_medium=online_publisher&cmp=best_iceland_tours',
+      },
+      {
+        useCase: 'a faster RIB',
+        operator: 'RIB Speedboat',
+        verdict: 'Closer views, wetter ride, survival suits included. Rated 4.6 from 796 reviews.',
+        href: 'https://www.getyourguide.com/activity/-t402119?partner_id=LPT26IL&utm_medium=online_publisher&cmp=best_iceland_tours',
+      },
+      {
+        useCase: 'whales and puffins',
+        operator: 'Whales & Puffins combo',
+        verdict: 'Both wildlife types on one classic-boat sailing. Rated 4.5 from 615 reviews.',
+        href: 'https://www.getyourguide.com/activity/-t74963?partner_id=LPT26IL&utm_medium=online_publisher&cmp=best_iceland_tours',
+      },
+    ],
+    sections: [
+      {
+        heading: 'The short version',
+        content:
+          '<p>Three live GetYourGuide products cover the Reykjavik whale watching tours people actually book: the Whale Watching and Marine Life Cruise, Whale Watching by RIB Speedboat, and the Whales and Puffins Express Cruise Combo. The Marine Life Cruise is the classic heated-cabin boat. The RIB is a faster, closer ride. The combo adds puffins on a regular boat.</p>',
+      },
+    ],
+    relatedTourSlugs: [
+      'reykjav-k-whale-watching-and-marine-life-cruise',
+      'reykjavik-whale-watching-by-rib-speedboat',
+      'reykjavik-whales-and-puffins-express-cruise-combo-tour',
+    ],
+    faqs: [
+      {
+        question: 'Which whale watching tour is the best in Iceland?',
+        answer:
+          'The Marine Life Cruise is the best whale watching tour for almost everyone. It is the classic heated-cabin boat from Reykjavik Old Harbour, rated 4.5 from 11,257 reviews. Book the RIB Speedboat only if you want a faster, closer ride. Book the Whales and Puffins Express combo only if you want both wildlife types on one sailing.',
+      },
+      {
+        question: 'What is the difference between a classic whale watching boat and a RIB?',
+        answer:
+          'Both leave Reykjavik Old Harbour and look for the same animals in Faxafloi Bay. The Marine Life Cruise has a heated indoor cabin, toilets and a cafe. The RIB Speedboat is a rigid inflatable with survival suits, a shorter run and none of that cabin comfort. The RIB is not a quieter or more guaranteed sighting.',
+      },
+      {
+        question: 'Is the whale watching RIB worth it?',
+        answer:
+          'Only if you want speed and a closer viewpoint. The live GetYourGuide product is Reykjavik: Whale Watching by RIB Speedboat, rated 4.6 from 796 reviews. It is not suitable for children under 10. Most visitors should book the Marine Life Cruise instead.',
+      },
+      {
+        question: 'Can I see whales and puffins on the same tour?',
+        answer:
+          'Yes, in puffin season. The live combo is Reykjavik: Whales and Puffins Express Cruise Combo Tour, rated 4.5 from 615 reviews. It is still a classic boat, not a RIB. Puffins leave in late summer, so this is the wrong pick in winter.',
+      },
+      {
+        question: 'Do I need to book whale watching in Iceland in advance?',
+        answer:
+          'Yes in July and August, when the best morning departures sell out. The Marine Life Cruise, RIB Speedboat and Whales and Puffins combo on GetYourGuide include free cancellation on most options up to 24 hours before, so booking ahead is the low-risk move.',
+      },
+    ],
+    publishedDate: '2026-08-15',
+    updatedDate: '2026-08-15',
+  },
+  {
     slug: 'blue-lagoon-vs-sky-lagoon',
     title: 'Blue Lagoon vs Sky Lagoon: Which to Book (2026)',
     metaTitle: 'Blue Lagoon vs Sky Lagoon 2026: Compared From £86',
