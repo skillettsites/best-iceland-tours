@@ -142,6 +142,74 @@ export const guides: Guide[] = [
     updatedDate: '2026-08-15',
   },
   {
+    slug: 'best-helicopter-iceland',
+    title: 'Which helicopter tour is actually the best in 2026? (Volcanic lava vs geothermal landing vs Fire & Ice)',
+    metaTitle: 'Which Iceland Helicopter Tour to Book 2026 | Lava vs Landing',
+    metaDescription:
+      'Volcanic lava, a geothermal landing, or Fire and Ice? An honest top 3 of the Reykjavik helicopter tours people actually book on GetYourGuide, with live ratings and who each one is for.',
+    excerpt:
+      'Quick answer: book the New Volcanic Area flight if you want the Reykjanes lava fields from the air. Book the Geothermal Tour if you want a 15-minute landing beside hot springs. Book Fire and Ice only if you want two landings, on a glacier and at Hengill. The volcanic lava flight is the one almost everyone should take.',
+    answerCapsule:
+      'The New Volcanic Area flight is the helicopter tour to book for most visitors. The Geothermal Tour is the landing-beside-hot-springs option. Fire and Ice adds a glacier landing and a second geothermal stop. The volcanic lava flight is the one almost everyone should take.',
+    quickPicks: [
+      {
+        useCase: 'the lava flyover',
+        operator: 'New Volcanic Area',
+        verdict: 'Reykjanes lava fields from Reykjavik. Rated 4.8 from 539 reviews.',
+        href: 'https://www.getyourguide.com/activity/-t418541?partner_id=LPT26IL&utm_medium=online_publisher&cmp=best_iceland_tours',
+      },
+      {
+        useCase: 'a hot-springs landing',
+        operator: 'Geothermal Tour',
+        verdict: 'One-hour flight with a 15-minute landing beside remote hot springs. Rated 4.9 from 286 reviews.',
+        href: 'https://www.getyourguide.com/activity/-t46584?partner_id=LPT26IL&utm_medium=online_publisher&cmp=best_iceland_tours',
+      },
+      {
+        useCase: 'glacier and volcano landings',
+        operator: 'Fire & Ice',
+        verdict: 'Two landings: Þórisjökull glacier and Hengill. Rated 4.8 from 142 reviews.',
+        href: 'https://www.getyourguide.com/activity/-t418522?partner_id=LPT26IL&utm_medium=online_publisher&cmp=best_iceland_tours',
+      },
+    ],
+    sections: [
+      {
+        heading: 'The short version',
+        content:
+          '<p>Three live GetYourGuide products cover the Reykjavik helicopter tours people actually book: the New Volcanic Area Helicopter Tour, the 1-Hour Geothermal Tour, and Fire and Ice with two landings. The volcanic flight is the Reykjanes lava flyover. The Geothermal Tour adds a hot-springs landing. Fire and Ice lands on a glacier and at Hengill.</p>',
+      },
+    ],
+    relatedTourSlugs: ['from-reykjavik-new-volcanic-area-helicopter-tour'],
+    faqs: [
+      {
+        question: 'Which helicopter tour is the best in Iceland?',
+        answer:
+          'The New Volcanic Area Helicopter Tour is the best Reykjavik helicopter for almost everyone. It is the 40-minute lava flyover over the Reykjanes Peninsula, rated 4.8 from 539 reviews. Book the Geothermal Tour only if you want a 15-minute landing beside hot springs. Book Fire and Ice only if you want two landings, on a glacier and at Hengill.',
+      },
+      {
+        question: 'What is the difference between the volcanic lava flight and the Geothermal Tour?',
+        answer:
+          'Both leave Reykjavik Domestic Airport in a small helicopter. The New Volcanic Area flight is a 40-minute flyover of Reykjanes lava fields and the new volcanic area. The Geothermal Tour is a one-hour flight over Hengill hot springs, power plants and craters, with a 15-minute landing beside steaming ground. The Geothermal Tour is not a longer look at the same lava.',
+      },
+      {
+        question: 'Is the Fire and Ice helicopter tour worth it?',
+        answer:
+          'Only if you want two landings. The live GetYourGuide product is From Reykjavik: Fire And Ice Helicopter Tour with 2 Landings, rated 4.8 from 142 reviews. You land on Þórisjökull glacier and again at Hengill. Most visitors should book the volcanic lava flight or the Geothermal Tour instead.',
+      },
+      {
+        question: 'Do Iceland helicopter tours include a landing?',
+        answer:
+          'Not always. The New Volcanic Area flight is a flyover. The Geothermal Tour includes one 15-minute landing beside remote hot springs. Fire and Ice includes two landings, on a glacier and at Hengill. Landings depend on weather.',
+      },
+      {
+        question: 'Do I need to book a Reykjavik helicopter tour in advance?',
+        answer:
+          'Yes in summer, when the best morning departures and four-passenger minimums fill up. The volcanic lava flight, Geothermal Tour and Fire and Ice on GetYourGuide include free cancellation on most options up to 24 hours before, so booking ahead is the low-risk move. Flights are weather-dependent.',
+      },
+    ],
+    publishedDate: '2026-08-15',
+    updatedDate: '2026-08-15',
+  },
+  {
     slug: 'blue-lagoon-vs-sky-lagoon',
     title: 'Blue Lagoon vs Sky Lagoon: Which to Book (2026)',
     metaTitle: 'Blue Lagoon vs Sky Lagoon 2026: Compared From £86',
