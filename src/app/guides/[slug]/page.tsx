@@ -1,4 +1,5 @@
 import LocalPrice from '@/components/LocalPrice';
+import DisplayCopy, { DisplayCopyHtml } from '@/components/DisplayCopy';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -86,11 +87,13 @@ export default async function GuidePage({ params }: { params: Params }) {
           <header className="mb-10">
             <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">{guide.title}</h1>
             {guide.answerCapsule && (
-              <p className="mt-4 rounded-xl border-l-4 border-green-600 bg-green-50 px-4 py-3 text-base text-gray-800 leading-relaxed">
-                {displayCopy(guide.answerCapsule)}
-              </p>
+              <DisplayCopy
+                as="p"
+                className="mt-4 rounded-xl border-l-4 border-green-600 bg-green-50 px-4 py-3 text-base text-gray-800 leading-relaxed"
+                text={guide.answerCapsule}
+              />
             )}
-            <p className="mt-4 text-lg text-gray-600">{displayCopy(guide.excerpt)}</p>
+            <DisplayCopy as="p" className="mt-4 text-lg text-gray-600" text={guide.excerpt} />
             <time className="mt-3 block text-sm text-gray-500" dateTime={guide.updatedDate}>
               Updated: {new Date(guide.updatedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
             </time>
@@ -118,7 +121,7 @@ export default async function GuidePage({ params }: { params: Params }) {
                   )}
                   <p className="text-xs font-bold uppercase tracking-wide text-green-700 mb-1">Best for {pick.useCase}</p>
                   <p className="font-bold text-gray-900">{pick.operator}</p>
-                  <p className="mt-1 text-sm text-gray-600 flex-1">{pick.verdict}</p>
+                  <DisplayCopy as="p" className="mt-1 text-sm text-gray-600 flex-1" text={pick.verdict} />
                   <span className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-green-700">
                     Book now
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
@@ -197,7 +200,7 @@ export default async function GuidePage({ params }: { params: Params }) {
                 <div key={i}>
                   <section id={section.heading.toLowerCase().replace(/[^a-z0-9]+/g, '-')}>
                     <h2>{section.heading}</h2>
-                    <div dangerouslySetInnerHTML={{ __html: displayCopy(section.content) }} />
+                    <DisplayCopyHtml html={section.content} />
                   </section>
                   {ctaTours.length > 0 && <InlineTourCTA tours={ctaTours} />}
                 </div>
@@ -246,7 +249,7 @@ export default async function GuidePage({ params }: { params: Params }) {
                   {otherGuides.map(g => (
                     <li key={g.slug}>
                       <Link href={`/guides/${g.slug}`} className="text-green-700 font-medium hover:underline">{g.title}</Link>
-                      <p className="text-sm text-gray-500 mt-0.5">{g.excerpt}</p>
+                      <DisplayCopy as="p" className="text-sm text-gray-500 mt-0.5" text={g.excerpt} />
                     </li>
                   ))}
                 </ul>

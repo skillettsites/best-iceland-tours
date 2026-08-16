@@ -64,6 +64,10 @@ if (/data-gyg-currency=\{?['"]EUR['"]\}?/.test(widget) || widget.includes('SITE_
 
 const page = text['src/app/guides/best-blue-lagoon-tickets/page.tsx'];
 if (page.includes('£') || page.includes('&pound;')) errors.push('dedicated page has leftover £');
+if (!page.includes('DisplayCopy')) errors.push('which-ticket related excerpts must use DisplayCopy');
+if (!page.includes("text={g.excerpt.replace(/^Quick answer:\\s*/i, '')}")) {
+  errors.push('which-ticket related excerpts must convert the Sky Lagoon excerpt');
+}
 const products = text['src/app/guides/best-blue-lagoon-tickets/products.ts'];
 if (!products.includes('GYG_PARTNER_ID') || !products.includes('GYG_CAMPAIGN')) {
   errors.push('products must build hrefs from GYG_PARTNER_ID and GYG_CAMPAIGN');

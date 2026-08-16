@@ -212,8 +212,8 @@ export const guides: Guide[] = [
   {
     slug: 'blue-lagoon-vs-sky-lagoon',
     title: 'Blue Lagoon vs Sky Lagoon: Which to Book (2026)',
-    metaTitle: 'Blue Lagoon vs Sky Lagoon 2026: Compared From £86',
-    metaDescription: 'Blue Lagoon vs Sky Lagoon compared for 2026. Sky Lagoon from £86 rated 4.8, Blue Lagoon from £108 rated 4.6. Which is closer, cheaper and worth booking.',
+    metaTitle: 'Blue Lagoon vs Sky Lagoon 2026: Which to Book',
+    metaDescription: 'Blue Lagoon vs Sky Lagoon compared for 2026. Sky Lagoon rated 4.8, Blue Lagoon rated 4.6. Which is closer, cheaper and worth booking.',
     excerpt: 'Quick answer: Sky Lagoon is the better booking for most visitors (from £87, rated 4.8 from 7,408 reviews), because it is cheaper than the Blue Lagoon at £108, rates higher, and sits minutes from Reykjavik rather than 45 minutes away. Book the Blue Lagoon if you specifically want the famous one, ideally as a stop on the way to or from the airport.',
     quickPicks: [
       { useCase: 'most visitors', operator: 'Sky Lagoon', verdict: 'Higher rated and cheaper, closer to Reykjavik. Rated 4.8 from 7,408 reviews, from £87.', href: 'https://www.getyourguide.com/activity/-t400599?partner_id=LPT26IL&utm_medium=online_publisher&cmp=best_iceland_tours' },
