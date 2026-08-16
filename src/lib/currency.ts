@@ -81,5 +81,7 @@ export function displayCopy(
 ): string {
   return text
     .replace(/&pound;(\d+(?:,\d{3})*(?:\.\d+)?)/g, (_, raw) => formatPrice(Number(String(raw).replace(/,/g, '')), 'GBP', toCode, rates))
-    .replace(/£(\d+(?:,\d{3})*(?:\.\d+)?)/g, (_, raw) => formatPrice(Number(String(raw).replace(/,/g, '')), 'GBP', toCode, rates));
+    .replace(/£(\d+(?:,\d{3})*(?:\.\d+)?)/g, (_, raw) => formatPrice(Number(String(raw).replace(/,/g, '')), 'GBP', toCode, rates))
+    .replace(/&euro;(\d+(?:,\d{3})*(?:\.\d+)?)/g, (_, raw) => formatPrice(Number(String(raw).replace(/,/g, '')), 'EUR', toCode, rates))
+    .replace(/€(\d+(?:,\d{3})*(?:\.\d+)?)/g, (_, raw) => formatPrice(Number(String(raw).replace(/,/g, '')), 'EUR', toCode, rates));
 }

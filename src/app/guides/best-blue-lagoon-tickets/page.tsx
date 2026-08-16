@@ -8,6 +8,7 @@ import FAQ from '@/components/ui/FAQ';
 import AffiliateDisclosure from '@/components/ui/AffiliateDisclosure';
 import TrackedGYGLink from '@/components/TrackedGYGLink';
 import LocalPrice from '@/components/LocalPrice';
+import DisplayCopy from '@/components/DisplayCopy';
 import AvailabilityWidget from '@/components/ui/AvailabilityWidget';
 import TopThreeCards from './TopThreeCards';
 import BlueLagoonWidget from './BlueLagoonWidget';
@@ -233,7 +234,11 @@ export default function BestBlueLagoonTicketsPage() {
                     <Link href={`/guides/${g.slug}`} className="font-medium text-green-700 hover:underline">
                       {g.title}
                     </Link>
-                    <p className="mt-0.5 text-sm text-gray-500">{g.excerpt.replace(/^Quick answer:\s*/i, '')}</p>
+                    <DisplayCopy
+                      as="p"
+                      className="mt-0.5 text-sm text-gray-500"
+                      text={g.excerpt.replace(/^Quick answer:\s*/i, '')}
+                    />
                   </li>
                 ))}
               </ul>
