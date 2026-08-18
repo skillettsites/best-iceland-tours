@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { getGuideBySlug, guides } from '@/data/guides';
-import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
+import { articleSchema, breadcrumbSchema, comparisonListSchema, faqSchema } from '@/lib/schema';
 import { SITE_URL } from '@/lib/constants';
 import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import FAQ from '@/components/ui/FAQ';
@@ -29,39 +29,6 @@ export const metadata: Metadata = {
     type: 'article',
   },
 };
-
-function offerSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'Iceland helicopter tours compared',
-    itemListElement: TOP_THREE.map((ticket, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      item: {
-        '@type': 'Product',
-        name: ticket.name,
-        image: ticket.imageUrl,
-        url: ticket.href,
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: ticket.rating,
-          reviewCount: ticket.reviewCount,
-          bestRating: 5,
-          worstRating: 1,
-        },
-        offers: {
-          '@type': 'Offer',
-          price: ticket.fromAmount,
-          priceCurrency: ticket.fromCurrency,
-          availability: 'https://schema.org/InStock',
-          url: ticket.href,
-          priceValidUntil: '2027-12-31',
-        },
-      },
-    })),
-  };
-}
 
 const RELATED_EXCERPTS: Record<string, string> = {
   'best-blue-lagoon-tickets':
@@ -92,7 +59,7 @@ export default function BestHelicopterIcelandPage() {
           { name: guide.title, url: PAGE_URL },
         ]),
         faqSchema(guide.faqs),
-        offerSchema(),
+        comparisonListSchema('Iceland helicopter tours compared', TOP_THREE),
       ]
         .filter(Boolean)
         .map((schema, i) => (

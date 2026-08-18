@@ -57,9 +57,13 @@ export function tourSchema(tour: Tour) {
       bestRating: 5,
       worstRating: 1,
     },
+    sku: tour.gygTourId,
+    // Google needs the Brand type here, not Organization, and treats brand as the global
+    // identifier when there is no gtin or mpn. The tours are sold by GetYourGuide rather
+    // than by this site, so GetYourGuide is the accurate brand and seller.
     brand: {
-      '@type': 'Organization',
-      name: SITE_NAME,
+      '@type': 'Brand',
+      name: 'GetYourGuide',
     },
     offers: {
       '@type': 'Offer',
@@ -67,7 +71,13 @@ export function tourSchema(tour: Tour) {
       priceCurrency: tour.currency,
       availability: 'https://schema.org/InStock',
       url: tour.affiliateUrl,
+      validFrom: DATA_CHECKED,
       priceValidUntil: '2027-12-31',
+      seller: {
+        '@type': 'Organization',
+        name: 'GetYourGuide',
+        url: 'https://www.getyourguide.com',
+      },
     },
   };
 }
@@ -102,6 +112,74 @@ export function touristTripSchema(tour: Tour) {
         name: h,
       })),
     },
+  };
+}
+
+/**
+ * Shape shared by the ranked product tables on the "which one" comparison guides.
+ * Every comparison guide's products.ts satisfies this, so all of them get complete
+ * merchant-listing markup from one place.
+ */
+export interface RankedProduct {
+  name: string;
+  gygTourId: string;
+  href: string;
+  imageUrl: string;
+  rating: number;
+  reviewCount: number;
+  fromAmount: number;
+  fromCurrency: string;
+  why: string;
+}
+
+/** A single ranked pick as a Product, with the fields Google's merchant listings expect. */
+export function rankedProductSchema(item: RankedProduct) {
+  return {
+    '@type': 'Product',
+    name: item.name,
+    description: item.why,
+    image: item.imageUrl,
+    url: item.href,
+    sku: item.gygTourId,
+    brand: {
+      '@type': 'Brand',
+      name: 'GetYourGuide',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: item.rating,
+      reviewCount: item.reviewCount,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    offers: {
+      '@type': 'Offer',
+      price: item.fromAmount,
+      priceCurrency: item.fromCurrency,
+      availability: 'https://schema.org/InStock',
+      url: item.href,
+      validFrom: DATA_CHECKED,
+      priceValidUntil: '2027-12-31',
+      seller: {
+        '@type': 'Organization',
+        name: 'GetYourGuide',
+        url: 'https://www.getyourguide.com',
+      },
+    },
+  };
+}
+
+/** The ranked picks on a comparison guide, in order. */
+export function comparisonListSchema(name: string, items: RankedProduct[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name,
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: rankedProductSchema(item),
+    })),
   };
 }
 
