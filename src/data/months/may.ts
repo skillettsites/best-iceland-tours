@@ -4,15 +4,15 @@ const may: MonthData = {
   slug: 'may',
   name: 'May',
   index: 5,
-  season: 'Shoulder season, the driest month and one of the four cheapest',
+  season: 'Shoulder season, the driest month outside high summer and one of the four cheapest',
   capsule:
-    'May is the driest month of the year and one of the cheapest, with around 10 wet days and 63.7 percent hotel occupancy. Daylight is already close to summer at 18 hours 32 minutes mid-month, rising to about 20 hours by the 31st. The puffins are settled and the northern lights are impossible.',
+    'May is the driest month outside high summer and one of the cheapest, with around 10 wet days and 63.7 percent hotel occupancy. Daylight is already close to summer at 18 hours 32 minutes mid-month, rising to about 20 hours by the 31st. The puffins are settled and the northern lights are impossible.',
   metaDescription:
-    'Iceland in May: the driest month, 18h32m of daylight, puffins settled on the cliffs, whales running and 63.7 percent occupancy. The 10 best tours ranked for May, with verified prices.',
+    'Iceland in May: the driest of the shoulder months, 18h32m of daylight, puffins settled on the cliffs, whales running and 63.7 percent occupancy. The 10 best tours ranked for May, with verified prices.',
   verdict:
-    'Yes, and it is arguably the best value month of the year. May has the driest weather, around 10 wet days, 18 hours 32 minutes of daylight mid-month, settled puffin colonies and whale watching, all at 63.7 percent occupancy against August’s 89.8 percent. The one thing you cannot have is the aurora.',
+    'Yes, and it is arguably the best value month of the year. May has the driest weather of any shoulder month, around 10 wet days, 18 hours 32 minutes of daylight mid-month, settled puffin colonies and whale watching, all at 63.7 percent occupancy against August’s 89.8 percent. The one thing you cannot have is the aurora.',
   verdictBody: [
-    'May is the month people underrate. It is the driest month in Reykjavik, it has almost summer daylight, the puffins are back and settled after their 20 April return, the whale boats are running, and it costs a fraction of what July does. Statistics Iceland put occupancy at 63.7 percent against 87.8 percent in July, and operators name May among the four cheapest months alongside February, April and October.',
+    'May is the month people underrate. It is the driest month in Reykjavik outside high summer, it has almost summer daylight, the puffins are back and settled after their 20 April return, the whale boats are running, and it costs a fraction of what July does. Statistics Iceland put occupancy at 63.7 percent against 87.8 percent in July, and operators name May among the four cheapest months alongside February, April and October.',
     'The scenery is at a particular moment in May. Winter snow is still on the high ground while the lowlands green up, and the meltwater is still running, so the waterfalls are at high volume. The South Coast and Golden Circle look better in May than in August, and there are far fewer people looking at them.',
     'The trade-off is absolute and it is worth being blunt: you will not see the northern lights. Not unlikely, not unlucky, impossible. The published season ends on 15 April and does not reopen until 1 September, and in May the sky over Reykjavik never gets dark. Anyone selling you a May aurora experience is selling you something else.',
     'The highlands also stay shut for the whole month. On 2026 actual dates the earliest F-road to open was F35 Kjolur, between 1 and 6 June. Landmannalaugar and the interior are a June, July or August plan, not a May one.',
@@ -21,14 +21,14 @@ const may: MonthData = {
     highC: 10.1,
     lowC: 3.8,
     wetDays: 10,
-    rainNote: 'The driest month of the year, around 10 wet days',
+    rainNote: 'The driest month outside high summer, around 10 wet days',
     daylightMid: '18h 32m',
     daylightStart: 'about 17h',
     daylightEnd: 'about 20h',
     capsule:
-      'May is the driest month in Reykjavik, with around 10 wet days and an average high of 10.1C against a low of 3.8C. Daylight averages 18 hours 32 minutes mid-month, rising from about 17 hours on 1 May to about 20 hours by the 31st.',
+      'May is the driest month in Reykjavik outside high summer, with around 10 wet days and an average high of 10.1C against a low of 3.8C. Daylight averages 18 hours 32 minutes mid-month, rising from about 17 hours on 1 May to about 20 hours by the 31st.',
     body: [
-      'Ten wet days is the best rain figure of the year, and it is the single strongest practical argument for May. Rain in Iceland is best judged by frequency rather than volume, because published Reykjavik rainfall totals vary widely between sources, and by frequency May is comfortably the driest month.',
+      'Ten wet days is bettered only by June and July, and it is the single strongest practical argument for May over the other shoulder months. Rain in Iceland is best judged by frequency rather than volume, because published Reykjavik rainfall totals vary widely between sources, and by frequency May is the driest month outside June and July.',
       'Temperature is modest rather than warm. A 10.1C average high is pleasant in shelter and cold on a boat, and the overnight average of 3.8C means frost is still possible. The wind has not changed, so a waterproof windproof shell is still the layer that matters most.',
       'By the end of May you have about 20 hours of daylight and it never really gets dark in between. That is what makes long day trips easy and aurora hunting pointless. Bring a sleep mask, and use the light: an evening departure in May finishes in full daylight.',
     ],
@@ -37,7 +37,7 @@ const may: MonthData = {
     'May is quiet for the quality of the conditions. Keflavik departures are 159,571 against 302,057 in July, and hotel occupancy is 63.7 percent against July’s 87.8 percent. It is one of the four cheapest months named by operators, and it has the year’s driest weather.',
   crowdsBody: [
     'The gap between May and the peak is the whole argument. Statistics Iceland record 63.7 percent occupancy in May and 89.8 percent in August, a 26 point difference, and Icelandic Tourist Board departure counts show 159,571 against 312,964. Summer Reykjavik hotel rates run roughly 25 to 35 percent above shoulder season, and May is shoulder.',
-    'What you get for that is close to the summer product. Long days, open roads outside the highlands, puffins, whales, glacier tours and the driest month of the year. The things you genuinely cannot do are aurora hunting and the interior.',
+    'What you get for that is close to the summer product. Long days, open roads outside the highlands, puffins, whales, glacier tours and the driest weather of any shoulder month. The things you genuinely cannot do are aurora hunting and the interior.',
     'Booking pressure in May is light. Day tours are typically available within the same week. The genuine scarcity in Iceland sits in highland huts, which go 9 to 12 months ahead, and multi-day treks at 3 to 6 months, neither of which is a May product anyway. Schedule anything weather-dependent early in your trip so you can move it.',
   ],
   toursCapsule:
@@ -111,7 +111,7 @@ const may: MonthData = {
     {
       slug: 'from-reykjavik-new-volcanic-area-helicopter-tour',
       score: 4,
-      note: 'May has the driest weather of the year, which is the best possible input for a 40-minute flight.',
+      note: 'May has the driest weather of any shoulder month, which is a good input for a 40-minute flight.',
     },
     {
       slug: 'reykjav-k-golden-circle-afternoon-small-group-tour',
@@ -131,7 +131,7 @@ const may: MonthData = {
     {
       slug: 'reykjavik-city-walking-tour-in-small-group-with-local-guide',
       score: 4,
-      note: 'At £38 the cheapest tour here, and May is the driest month to walk the city in.',
+      note: 'At £38 the cheapest tour here, and May is the driest shoulder month to walk the city in.',
     },
     {
       slug: 'reykjavik-sky-lagoon-entrance-pass-with-7-step-spa-ritual',
@@ -247,12 +247,12 @@ const may: MonthData = {
     {
       question: 'Are the puffins in Iceland in May?',
       answer:
-        'Yes, and May is the first month they are properly settled. The published puffin season runs 20 April to 20 August, so by May the colonies are established rather than just arriving. That makes May through to mid-August the reliable window, and May has the added advantage of being the driest month of the year.',
+        'Yes, and May is the first month they are properly settled. The published puffin season runs 20 April to 20 August, so by May the colonies are established rather than just arriving. That makes May through to mid-August the reliable window, and May has the added advantage of the driest weather of any shoulder month.',
     },
     {
       question: 'Is May a good time to visit Iceland?',
       answer:
-        'It is arguably the best value month of the year. May has the driest weather at around 10 wet days, 18 hours 32 minutes of daylight mid-month, settled puffins, whale watching and glacier tours, at 63.7 percent hotel occupancy against August’s 89.8 percent. The only real losses are the aurora and the highlands.',
+        'It is arguably the best value month of the year. May has the driest weather of any shoulder month at around 10 wet days, 18 hours 32 minutes of daylight mid-month, settled puffins, whale watching and glacier tours, at 63.7 percent hotel occupancy against August’s 89.8 percent. The only real losses are the aurora and the highlands.',
     },
     {
       question: 'How much daylight does Iceland get in May?',
@@ -271,7 +271,7 @@ const may: MonthData = {
     },
   ],
   hubCapsule:
-    'The driest month and arguably the best value of the year. Around 10 wet days, 18 hours 32 minutes of daylight mid-month, settled puffin colonies and whale watching, at 63.7 percent occupancy against August’s 89.8. The northern lights are impossible and the highland F-roads are still shut.',
+    'The driest of the shoulder months and arguably the best value of the year. Around 10 wet days, 18 hours 32 minutes of daylight mid-month, settled puffin colonies and whale watching, at 63.7 percent occupancy against August’s 89.8. The northern lights are impossible and the highland F-roads are still shut.',
 };
 
 export default may;

@@ -1,4 +1,4 @@
-import { MonthData, yearForMonth, MONTH_PAGE_BASE_YEAR, VISITORS_2025, OCCUPANCY_2025 } from './types';
+import { MonthData, yearForMonth, VISITORS_2025, OCCUPANCY_2025 } from './types';
 import august from './august';
 import september from './september';
 import october from './october';
@@ -9,11 +9,13 @@ import february from './february';
 import march from './march';
 import april from './april';
 import may from './may';
+import june from './june';
+import july from './july';
 
 export type { MonthData, MonthTourPick, MonthEvent, MonthClosure } from './types';
 export { yearForMonth, MONTH_PAGE_BASE_YEAR, VISITORS_2025, VISITORS_2025_TOTAL, OCCUPANCY_2025 } from './types';
 
-/** The ten months with a dedicated page, in publication order (August 2026 through May 2027). */
+/** The twelve months with a dedicated page, in publication order (August 2026 through July 2027). */
 export const months: MonthData[] = [
   august,
   september,
@@ -25,6 +27,8 @@ export const months: MonthData[] = [
   march,
   april,
   may,
+  june,
+  july,
 ];
 
 /** Calendar order, January to December, used by the hub and the footer month strip. */
@@ -44,10 +48,7 @@ export function adjacentMonths(month: MonthData): { prev: MonthData; next: Month
   };
 }
 
-/**
- * A hub row. June and July have no dedicated page in this set, so they render as
- * anchored sections on the hub instead of linking out to a spoke that does not exist.
- */
+/** A hub row on /best-time-to-visit-iceland, one per month, all linking to their own page. */
 export interface HubMonth {
   name: string;
   slug: string;
@@ -55,50 +56,19 @@ export interface HubMonth {
   year: number;
   season: string;
   capsule: string;
-  /** null for June and July, which live on the hub only. */
-  href: string | null;
+  href: string;
   visitors: number;
   occupancy: number;
 }
 
-const juneCapsule =
-  'The midnight sun month and the start of true peak season. Occupancy jumps to 79.7 percent and Keflavik departures to 233,802. The highland F-roads finally open through June: on 2026 actual dates F35 Kjolur opened between 1 and 6 June and F208 between 2 and 25 June. There is effectively no darkness.';
-
-const julyCapsule =
-  'One of the two warmest months and the second busiest, at 302,057 Keflavik departures and 87.8 percent occupancy. Every road is open, including the last of the F-roads: on 2026 actual dates F261 opened on 5 July and F26 Sprengisandur on 6 July. Expect summer rates roughly 25 to 35 percent above shoulder season.';
-
-export const hubMonths: HubMonth[] = [
-  ...monthsByCalendar.map((m) => ({
-    name: m.name,
-    slug: m.slug,
-    index: m.index,
-    year: yearForMonth(m.index),
-    season: m.season,
-    capsule: m.hubCapsule,
-    href: `/iceland-in-${m.slug}`,
-    visitors: VISITORS_2025[m.slug],
-    occupancy: OCCUPANCY_2025[m.slug],
-  })),
-  {
-    name: 'June',
-    slug: 'june',
-    index: 6,
-    year: MONTH_PAGE_BASE_YEAR + 1,
-    season: 'Peak season begins, midnight sun',
-    capsule: juneCapsule,
-    href: null,
-    visitors: VISITORS_2025.june,
-    occupancy: OCCUPANCY_2025.june,
-  },
-  {
-    name: 'July',
-    slug: 'july',
-    index: 7,
-    year: MONTH_PAGE_BASE_YEAR + 1,
-    season: 'Peak season, still near round-the-clock light',
-    capsule: julyCapsule,
-    href: null,
-    visitors: VISITORS_2025.july,
-    occupancy: OCCUPANCY_2025.july,
-  },
-].sort((a, b) => a.index - b.index);
+export const hubMonths: HubMonth[] = monthsByCalendar.map((m) => ({
+  name: m.name,
+  slug: m.slug,
+  index: m.index,
+  year: yearForMonth(m.index),
+  season: m.season,
+  capsule: m.hubCapsule,
+  href: `/iceland-in-${m.slug}`,
+  visitors: VISITORS_2025[m.slug],
+  occupancy: OCCUPANCY_2025[m.slug],
+}));

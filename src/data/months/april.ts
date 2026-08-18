@@ -21,12 +21,12 @@ const april: MonthData = {
     highC: 7.0,
     lowC: 0.8,
     wetDays: 11,
-    rainNote: 'Noticeably drier, around 11 wet days, the second driest month after May',
+    rainNote: 'Noticeably drier than winter, around 11 wet days, the driest month of the first half of the year after May',
     daylightMid: '15h 11m',
     daylightStart: 'about 13h 30m',
     daylightEnd: 'about 17h',
     capsule:
-      'April in Reykjavik averages a high of 7.0C and a low of 0.8C across around 11 wet days, making it the second driest month of the year. Daylight averages 15 hours 11 minutes mid-month, climbing from about 13 and a half hours on the 1st to about 17 hours by the 30th.',
+      'April in Reykjavik averages a high of 7.0C and a low of 0.8C across around 11 wet days, making it markedly drier than any winter month. Daylight averages 15 hours 11 minutes mid-month, climbing from about 13 and a half hours on the 1st to about 17 hours by the 30th.',
     body: [
       'The jump in daylight is the headline. Gaining three and a half hours across April takes you from an autumn-length day to a summer-length one inside a single month, and by 30 April you have more daylight than London gets at midsummer. It also means the aurora window closes: from mid-April the sky simply does not get dark enough.',
       'April is drier than any month since last spring, at around 11 wet days against 15 in December and January. The average high of 7.0C is a real improvement, but the overnight average of 0.8C means frost, ice on paths and snow on higher ground are all still normal.',
@@ -258,7 +258,7 @@ const april: MonthData = {
     },
   ],
   hubCapsule:
-    'The changeover month and one of the four cheapest. Aurora runs until 15 April, puffins return from 20 April and whale watching reopens. Daylight jumps from about 13 and a half hours to about 17, occupancy is only 56.6 percent, and it is the second driest month of the year.',
+    'The changeover month and one of the four cheapest. Aurora runs until 15 April, puffins return from 20 April and whale watching reopens. Daylight jumps from about 13 and a half hours to about 17, occupancy is only 56.6 percent, and it is markedly drier than any winter month.',
 };
 
 export default april;

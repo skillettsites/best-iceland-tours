@@ -103,7 +103,7 @@ export default function BestTimeToVisitIcelandPage() {
       '@type': 'ListItem',
       position: i + 1,
       name: `Iceland in ${m.name}`,
-      url: m.href ? `${SITE_URL}${m.href}` : `${PAGE_URL}#${m.slug}`,
+      url: `${SITE_URL}${m.href}`,
     })),
   };
 
@@ -140,7 +140,7 @@ export default function BestTimeToVisitIcelandPage() {
             <p className="mt-4 rounded-xl border-l-4 border-green-600 bg-green-50 px-4 py-3 text-base leading-relaxed text-gray-800">
               September is the best all-round month, the only one with an open northern lights season, an
               open whale season and 13 hours of daylight together. May is the best value at 63.7 percent
-              occupancy and the driest weather. For the aurora alone, come between November and January,
+              occupancy and the driest weather outside high summer. June is the driest month overall. For the aurora alone, come between November and January,
               when the nights run to 19 hours.
             </p>
             <time className="mt-3 block text-sm text-gray-500" dateTime={CONTENT_DATE}>
@@ -211,8 +211,8 @@ export default function BestTimeToVisitIcelandPage() {
                 </tr>
                 <tr>
                   <td className={`${td} font-medium text-gray-900`}>The driest weather</td>
-                  <td className={td}>May</td>
-                  <td className={td}>Around 10 wet days, the fewest of the year</td>
+                  <td className={td}>June</td>
+                  <td className={td}>Around 9 wet days and 43.3mm, the lowest of the year</td>
                 </tr>
                 <tr>
                   <td className={`${td} font-medium text-gray-900`}>The highlands and F-roads</td>
@@ -250,15 +250,9 @@ export default function BestTimeToVisitIcelandPage() {
                   return (
                     <tr key={hm.slug}>
                       <td className={`${td} font-medium text-gray-900`}>
-                        {hm.href ? (
-                          <Link href={hm.href} className="text-green-700 hover:underline">
-                            {hm.name}
-                          </Link>
-                        ) : (
-                          <a href={`#${hm.slug}`} className="text-green-700 hover:underline">
-                            {hm.name}
-                          </a>
-                        )}
+                        <Link href={hm.href} className="text-green-700 hover:underline">
+                          {hm.name}
+                        </Link>
                       </td>
                       <td className={td}>
                         {full ? `${full.weather.highC}C / ${full.weather.lowC}C` : 'See section'}
@@ -340,13 +334,9 @@ export default function BestTimeToVisitIcelandPage() {
             {hubMonths.map((hm) => (
               <section key={hm.slug} id={hm.slug} className="scroll-mt-24">
                 <h2 className="text-xl font-bold text-gray-900 sm:text-2xl">
-                  {hm.href ? (
-                    <Link href={hm.href} className="text-gray-900 hover:text-green-700">
-                      Iceland in {hm.name}
-                    </Link>
-                  ) : (
-                    <>Iceland in {hm.name}</>
-                  )}
+                  <Link href={hm.href} className="text-gray-900 hover:text-green-700">
+                    Iceland in {hm.name}
+                  </Link>
                 </h2>
                 <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-green-700">
                   {hm.season}
@@ -356,26 +346,12 @@ export default function BestTimeToVisitIcelandPage() {
                   <span>{hm.visitors.toLocaleString()} visitors in 2025</span>
                   <span>{hm.occupancy}% hotel occupancy</span>
                 </div>
-                {hm.href ? (
-                  <Link
-                    href={hm.href}
-                    className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-green-700 hover:underline"
-                  >
-                    Iceland in {hm.name}: weather, events and the best tours &rarr;
-                  </Link>
-                ) : (
-                  <p className="mt-3 text-sm text-gray-500">
-                    {hm.name} does not have its own page yet. The nearest guides are{' '}
-                    <Link href="/iceland-in-may" className="font-semibold text-green-700 hover:underline">
-                      Iceland in May
-                    </Link>{' '}
-                    and{' '}
-                    <Link href="/iceland-in-august" className="font-semibold text-green-700 hover:underline">
-                      Iceland in August
-                    </Link>
-                    .
-                  </p>
-                )}
+                <Link
+                  href={hm.href}
+                  className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-green-700 hover:underline"
+                >
+                  Iceland in {hm.name}: weather, events and the best tours &rarr;
+                </Link>
               </section>
             ))}
           </div>
@@ -387,9 +363,12 @@ export default function BestTimeToVisitIcelandPage() {
           <p className="mt-4 leading-relaxed text-gray-700">
             Visitor numbers are Icelandic Tourist Board departure counts through Keflavik for the full year
             2025. Hotel occupancy is Statistics Iceland table SAM01104. Daylight is from worlddata.info,
-            cross-checked against Icelandic operator daylight tables. Reykjavik climate is from
-            climatestotravel.com, and we publish wet days rather than millimetres because published
-            Reykjavik rainfall totals differ materially between sources.
+            cross-checked against Icelandic operator daylight tables, and the June and July figures are
+            calculated for Reykjavik directly. Reykjavik climate for August through May is from
+            climatestotravel.com; the June and July figures are Icelandic Met Office records for
+            Reykjavik station 1 over the 1991 to 2020 standard period. We publish wet days in preference
+            to millimetres because published Reykjavik rainfall totals differ materially between sources,
+            and quote millimetres only where they come from the Met Office series itself.
           </p>
           <p className="mt-4 leading-relaxed text-gray-700">
             Tour seasons come from published operator seasons rather than from live booking calendars,
@@ -412,25 +391,15 @@ export default function BestTimeToVisitIcelandPage() {
               Jump to a month
             </h2>
             <div className="flex flex-wrap gap-2">
-              {hubMonths.map((m) =>
-                m.href ? (
-                  <Link
-                    key={m.slug}
-                    href={m.href}
-                    className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-gray-900 transition-colors hover:border-green-300"
-                  >
-                    {m.name}
-                  </Link>
-                ) : (
-                  <a
-                    key={m.slug}
-                    href={`#${m.slug}`}
-                    className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-gray-900 transition-colors hover:border-green-300"
-                  >
-                    {m.name}
-                  </a>
-                )
-              )}
+              {hubMonths.map((m) => (
+                <Link
+                  key={m.slug}
+                  href={m.href}
+                  className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-gray-900 transition-colors hover:border-green-300"
+                >
+                  {m.name}
+                </Link>
+              ))}
             </div>
             <p className="mt-3 text-xs text-gray-500">
               {months.length} months have a dedicated guide. June and July are covered on this page.
