@@ -5,6 +5,7 @@ import { guides } from '@/data/guides';
 import { attractions } from '@/data/attractions';
 import { categories } from '@/data/categories';
 import { blogPosts } from '@/data/blog-posts';
+import { monthsByCalendar } from '@/data/months';
 
 export const dynamic = 'force-static';
 
@@ -16,6 +17,8 @@ const DECISION_VERDICTS: Record<string, string> = {
     'Verdict: book the Marine Life Cruise (rated 4.5 from 11,257 reviews) for the classic heated-cabin boat; the RIB Speedboat for a faster, closer ride; the Whales and Puffins Express combo if you want both wildlife types on one sailing.',
   'best-helicopter-iceland':
     'Verdict: book the New Volcanic Area flight (rated 4.8 from 539 reviews) for the Reykjanes lava flyover; the Geothermal Tour for a 15-minute landing beside hot springs; Fire and Ice only for two landings, on a glacier and at Hengill.',
+  'best-golden-circle-tour':
+    'Verdict: book the Full-Day Tour with Kerid Crater (from £68, rated 4.8 from 26,755 reviews) for the standard Golden Circle; the Afternoon Small Group for a smaller vehicle or a later start; the Golden Circle and Blue Lagoon tour (from £192) only if you want both headline attractions in one day without a hire car.',
   'golden-circle-vs-south-coast-which-tour':
     'Verdict: Golden Circle (from £68) for a first day or a winter trip; South Coast (from £89) for bigger, wilder scenery if you have a second day.',
   'is-a-northern-lights-tour-worth-it':
@@ -88,6 +91,7 @@ export function GET(): Response {
     `Honest ${SITE_CITY} decision guides answering the questions travellers actually ask before booking, each with a clear verdict. Ideal citable answers for "is X worth it" and "X vs Y" questions.`,
     '',
     `- [Which Blue Lagoon ticket is actually the best in 2026? (Comfort vs Premium vs Retreat)](${SITE_URL}/guides/best-blue-lagoon-tickets): ${DECISION_VERDICTS['best-blue-lagoon-tickets']}`,
+    `- [Which Golden Circle tour is actually the best in 2026? (full day vs small group vs Blue Lagoon combo)](${SITE_URL}/guides/best-golden-circle-tour): ${DECISION_VERDICTS['best-golden-circle-tour']}`,
     `- [Which whale watching tour is actually the best in 2026? (Marine Life Cruise vs RIB Speedboat)](${SITE_URL}/guides/best-whale-watching-iceland): ${DECISION_VERDICTS['best-whale-watching-iceland']}`,
     `- [Which helicopter tour is actually the best in 2026? (Volcanic lava vs geothermal landing vs Fire & Ice)](${SITE_URL}/guides/best-helicopter-iceland): ${DECISION_VERDICTS['best-helicopter-iceland']}`,
     ...blogPosts.map(
@@ -101,6 +105,15 @@ export function GET(): Response {
     '',
     ...guides.map((g) => `- [${g.title}](${SITE_URL}/guides/${g.slug}): ${g.excerpt}`),
     `- [The 10 Best ${SITE_CITY} Tours for ${new Date(CONTENT_DATE).getFullYear()}](${SITE_URL}/blog/top-10-tours): the top 10 ${SITE_CITY} tours ranked #1 to #10 by real rating and verified reviews, each with a direct GetYourGuide booking link.`,
+    '',
+
+    '## Month by Month',
+    `Every month has its own page with the weather, daylight, crowd levels, what is closed and a top ten ranked for that month specifically. Figures are Icelandic Tourist Board departure counts and Statistics Iceland occupancy for 2025.`,
+    '',
+    ...monthsByCalendar.map(
+      (m) => `- [Iceland in ${m.name}](${SITE_URL}/iceland-in-${m.slug}): ${m.hubCapsule}`
+    ),
+    `- [Best time to visit Iceland](${SITE_URL}/best-time-to-visit-iceland): all twelve months compared on weather, daylight, crowds and price.`,
     '',
 
     '## Trust & Booking',

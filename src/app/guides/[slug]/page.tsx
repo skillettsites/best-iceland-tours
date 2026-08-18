@@ -3,7 +3,7 @@ import DisplayCopy, { DisplayCopyHtml } from '@/components/DisplayCopy';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { guides, getGuideBySlug } from '@/data/guides';
+import { guides, getGuideBySlug, DEDICATED_GUIDE_SLUGS } from '@/data/guides';
 import { getTourBySlug } from '@/data/tours';
 import { categories } from '@/data/categories';
 import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
@@ -14,12 +14,6 @@ import FAQ from '@/components/ui/FAQ';
 import TourCard from '@/components/ui/TourCard';
 import InlineTourCTA from '@/components/ui/InlineTourCTA';
 import StickyBookingBar from '@/components/ds/StickyBookingBar';
-
-const DEDICATED_GUIDE_SLUGS = new Set([
-  'best-blue-lagoon-tickets',
-  'best-whale-watching-iceland',
-  'best-helicopter-iceland',
-]);
 
 export function generateStaticParams() {
   return guides.filter((guide) => !DEDICATED_GUIDE_SLUGS.has(guide.slug)).map((guide) => ({ slug: guide.slug }));

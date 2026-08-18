@@ -1,5 +1,17 @@
 import { Guide } from '@/lib/types';
 
+/**
+ * Guides that have their own hand-built route under src/app/guides/<slug>/.
+ * The /guides/[slug] route must skip these, or the same guide renders at one URL twice.
+ * Add a slug here in the same commit that adds the dedicated route.
+ */
+export const DEDICATED_GUIDE_SLUGS = new Set([
+  'best-blue-lagoon-tickets',
+  'best-whale-watching-iceland',
+  'best-helicopter-iceland',
+  'best-golden-circle-tour',
+]);
+
 export const guides: Guide[] = [
   {
     slug: 'best-blue-lagoon-tickets',
@@ -208,6 +220,88 @@ export const guides: Guide[] = [
     ],
     publishedDate: '2026-08-15',
     updatedDate: '2026-08-15',
+  },
+  {
+    slug: 'best-golden-circle-tour',
+    title: 'Which Golden Circle tour is actually the best in 2026? (full day vs small group vs Blue Lagoon combo)',
+    metaTitle: 'Which Golden Circle Tour to Book 2026 | Full Day vs Small Group',
+    metaDescription:
+      'Full-day coach, afternoon small group or the Blue Lagoon combo? An honest top 3 of the Golden Circle tours people actually book on GetYourGuide, with live ratings and who each one is for.',
+    excerpt:
+      'Quick answer: book the Full-Day Tour with Kerid Crater if you want the standard Golden Circle, because it is the cheapest of the three and the most reviewed tour on this site. Book the Afternoon Small Group Tour for a smaller vehicle or a later start. Book the Golden Circle and Blue Lagoon tour if you want both headline attractions in one day.',
+    answerCapsule:
+      'The Full-Day Tour with Kerid Crater is the Golden Circle tour to book for most visitors, at £68 and rated 4.8 from 26,755 reviews. The Afternoon Small Group Tour is the smaller, later option. The Golden Circle and Blue Lagoon tour packages both headline attractions into one 11-hour day.',
+    quickPicks: [
+      {
+        useCase: 'the standard full day',
+        operator: 'Full-Day Tour with Kerid Crater',
+        verdict: 'Thingvellir, Geysir, Gullfoss and Kerid. Rated 4.8 from 26,755 reviews, from £68.',
+        href: 'https://www.getyourguide.com/activity/-t67012?partner_id=LPT26IL&utm_medium=online_publisher&cmp=best_iceland_tours',
+      },
+      {
+        useCase: 'a small group or a later start',
+        operator: 'Afternoon Small Group Tour',
+        verdict: 'The same three headline stops in six hours, leaving after lunch. Rated 4.7 from 1,397 reviews, from £79.',
+        href: 'https://www.getyourguide.com/activity/-t396783?partner_id=LPT26IL&utm_medium=online_publisher&cmp=best_iceland_tours',
+      },
+      {
+        useCase: 'the Blue Lagoon on the same day',
+        operator: 'Golden Circle and Blue Lagoon Tour',
+        verdict: 'Both headline attractions in one 11-hour day with the transfer solved. Rated 4.9 from 5,903 reviews, from £192.',
+        href: 'https://www.getyourguide.com/activity/-t302953?partner_id=LPT26IL&utm_medium=online_publisher&cmp=best_iceland_tours',
+      },
+    ],
+    sections: [
+      {
+        heading: 'The short version',
+        content:
+          '<p>Three live GetYourGuide products cover the Golden Circle tours people actually book: the Golden Circle Full-Day Tour with Kerid Crater, the Golden Circle Afternoon Small Group Tour, and the combined Golden Circle, Kerid Crater and Blue Lagoon Tour. All three visit Thingvellir National Park, the Geysir geothermal area and Gullfoss waterfall. What changes is the vehicle, the start time and whether the Blue Lagoon is bundled in.</p><p>The full-day tour with Kerid is the one to book for most people. It is the cheapest of the three at £68, it is rated 4.8, and it carries 26,755 reviews, more than any other tour on this site.</p>',
+      },
+      {
+        heading: 'What the price difference actually buys',
+        content:
+          '<p>The afternoon small group costs £11 more than the full-day coach and runs two hours shorter, so the premium is for group size and timing rather than for extra sightseeing. The Blue Lagoon combo at £192 costs more than booking the £68 tour and £108 Comfort admission separately, which comes to £176. What that difference buys is the transfer and the timing, which matters most if you do not have a hire car.</p>',
+      },
+    ],
+    relatedTourSlugs: [
+      'reykjavik-golden-circle-full-day-tour-with-kerid-crater',
+      'reykjav-k-golden-circle-afternoon-small-group-tour',
+      'reykjavik-golden-circle-kerid-crater-and-blue-lagoon-tour',
+    ],
+    faqs: [
+      {
+        question: 'Which Golden Circle tour is the best?',
+        answer:
+          'The Golden Circle Full-Day Tour with Kerid Crater for most visitors. It is the cheapest of the three at £68, the highest rated of the classic coach runs at 4.8, and it has 26,755 reviews, more than any other tour on this site. It also covers Kerid crater, which the shorter runs usually drop.',
+      },
+      {
+        question: 'How long does a Golden Circle tour take?',
+        answer:
+          'Between six and eleven hours depending on which one you book. The afternoon small group runs about six hours, the full-day coach seven to eight and a half, and the combined Golden Circle and Blue Lagoon day about eleven.',
+      },
+      {
+        question: 'What are the stops on the Golden Circle?',
+        answer:
+          'Three headline stops on every version: Thingvellir National Park, the Geysir geothermal area where Strokkur erupts, and Gullfoss waterfall. The full-day tour and the Blue Lagoon combo also include the Kerid crater lake.',
+      },
+      {
+        question: 'Is it cheaper to book the Golden Circle and Blue Lagoon together?',
+        answer:
+          'No. The combined tour is £192, while the full-day Golden Circle at £68 plus Blue Lagoon Comfort admission at £108 comes to £176. The combo costs more, and what you are paying for is the transfer and the timing rather than extra sightseeing. It is usually worth it if you have no hire car, because the lagoon sits between Reykjavik and the airport.',
+      },
+      {
+        question: 'Do Golden Circle tours run in winter?',
+        answer:
+          'Yes. The route runs every day of the year and the stops do not close. What changes is the usable light: between November and February the early full-day departure is the safer booking, because an afternoon start leaves very little daylight at the sites.',
+      },
+      {
+        question: 'Do you need a guide for the Golden Circle, or can you drive it?',
+        answer:
+          'You can drive it. The route is on paved main roads and needs no special vehicle in summer. The guided tours exist for winter road conditions, for visitors without a hire car, and for the commentary. If you are weighing the two, the tours against rental car comparison on this site covers the costs on both sides.',
+      },
+    ],
+    publishedDate: '2026-08-18',
+    updatedDate: '2026-08-18',
   },
   {
     slug: 'blue-lagoon-vs-sky-lagoon',

@@ -34,7 +34,12 @@ const guideSlugOrder = [
   'is-the-golden-circle-tour-worth-it',
   'how-to-get-around-iceland-tours-vs-rental-car',
 ];
-const whichTicketSlugs = ['best-blue-lagoon-tickets', 'best-whale-watching-iceland', 'best-helicopter-iceland'];
+const whichTicketSlugs = [
+  'best-blue-lagoon-tickets',
+  'best-golden-circle-tour',
+  'best-whale-watching-iceland',
+  'best-helicopter-iceland',
+];
 const whichTicketGuides = whichTicketSlugs
   .map((slug) => guides.find((g) => g.slug === slug))
   .filter((g): g is NonNullable<typeof g> => g !== undefined)
